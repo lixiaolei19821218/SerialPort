@@ -1,0 +1,6 @@
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\bin\Debug\BarcodeTest.exe.config
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\bin\Debug\BarcodeTest.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\bin\Debug\BarcodeTest.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\obj\Debug\BarcodeTest.csprojResolveAssemblyReference.cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\obj\Debug\BarcodeTest.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\obj\Debug\BarcodeTest.pdb

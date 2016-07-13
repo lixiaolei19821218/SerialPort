@@ -1,0 +1,14 @@
+c:\users\lei\documents\visual studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\TestConsole.exe.config
+c:\users\lei\documents\visual studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\TestConsole.exe
+c:\users\lei\documents\visual studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\TestConsole.pdb
+c:\users\lei\documents\visual studio 2012\Projects\SerialPoint\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+c:\users\lei\documents\visual studio 2012\Projects\SerialPoint\TestConsole\obj\Debug\TestConsole.exe
+c:\users\lei\documents\visual studio 2012\Projects\SerialPoint\TestConsole\obj\Debug\TestConsole.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\Monitor.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\EntityFramework.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\Monitor.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\EntityFramework.xml
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\TestConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\TestConsole.exe.config
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\obj\Debug\TestConsole.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\obj\Debug\TestConsole.pdb

@@ -1,0 +1,12 @@
+D:\SerialPoint\Test\bin\Debug\Test.exe.config
+D:\SerialPoint\Test\bin\Debug\Test.exe
+D:\SerialPoint\Test\bin\Debug\Test.pdb
+D:\SerialPoint\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\SerialPoint\Test\obj\Debug\Test.exe
+D:\SerialPoint\Test\obj\Debug\Test.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\bin\Debug\Test.exe.config
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\obj\Debug\Test.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\obj\Debug\Test.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\bin\Debug\Test.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\bin\Debug\Test.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache

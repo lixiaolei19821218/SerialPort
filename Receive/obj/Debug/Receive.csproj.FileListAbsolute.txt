@@ -1,0 +1,9 @@
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug\Receive.exe.config
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug\Receive.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug\Receive.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug\EntityFramework.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug\EntityFramework.xml
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\obj\Debug\Receive.csprojResolveAssemblyReference.cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\obj\Debug\Receive.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\obj\Debug\Receive.pdb

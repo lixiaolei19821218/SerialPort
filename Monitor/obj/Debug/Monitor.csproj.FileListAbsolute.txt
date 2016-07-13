@@ -1,0 +1,37 @@
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\Monitor.exe.config
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\Monitor.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\Monitor.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\MainWindow.baml
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\MainWindow.g.cs
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\App.g.cs
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor_MarkupCompile.cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor.g.resources
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor.Properties.Resources.resources
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor.csproj.GenerateResource.Cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\Monitor.csprojResolveAssemblyReference.cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\EntityFramework.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\EntityFramework.xml
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\View\RouteModify.baml
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\obj\Debug\View\RouteModify.g.cs
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Monitor\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\SerialPoint\Monitor\bin\Debug\Monitor.exe.config
+D:\SerialPoint\Monitor\obj\Debug\Monitor.exe
+D:\SerialPoint\Monitor\obj\Debug\Monitor.pdb
+D:\SerialPoint\Monitor\bin\Debug\Monitor.exe
+D:\SerialPoint\Monitor\bin\Debug\Monitor.pdb
+D:\SerialPoint\Monitor\bin\Debug\EntityFramework.dll
+D:\SerialPoint\Monitor\bin\Debug\EntityFramework.xml
+D:\SerialPoint\Monitor\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\SerialPoint\Monitor\obj\Debug\Monitor.csprojResolveAssemblyReference.cache
+D:\SerialPoint\Monitor\obj\Debug\MainWindow.baml
+D:\SerialPoint\Monitor\obj\Debug\View\RouteModify.baml
+D:\SerialPoint\Monitor\obj\Debug\MainWindow.g.cs
+D:\SerialPoint\Monitor\obj\Debug\View\RouteModify.g.cs
+D:\SerialPoint\Monitor\obj\Debug\App.g.cs
+D:\SerialPoint\Monitor\obj\Debug\Monitor_MarkupCompile.cache
+D:\SerialPoint\Monitor\obj\Debug\Monitor.g.resources
+D:\SerialPoint\Monitor\obj\Debug\Monitor.Properties.Resources.resources
+D:\SerialPoint\Monitor\obj\Debug\Monitor.csproj.GenerateResource.Cache
