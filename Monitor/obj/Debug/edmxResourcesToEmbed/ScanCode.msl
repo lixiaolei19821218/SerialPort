@@ -4,17 +4,10 @@
     <EntitySetMapping Name="BarCodes">
       <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
         <MappingFragment StoreEntitySet="BarCodes">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="QRCodes">
-      <EntityTypeMapping TypeName="ScanCodeModel.QRCode">
-        <MappingFragment StoreEntitySet="QRCodes">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -25,6 +18,17 @@
           <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
           <ScalarProperty Name="Barcode" ColumnName="Barcode" />
           <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QRCodes">
+      <EntityTypeMapping TypeName="ScanCodeModel.QRCode">
+        <MappingFragment StoreEntitySet="QRCodes">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -155,7 +155,7 @@ namespace Monitor.ViewModel
             }
               * */
             Message = textResource["waitingOrders"];
-            InitOrders();
+            InitOrdersTest();
         }
 
         #region 初始化COM口，接收二位码
@@ -324,6 +324,29 @@ namespace Monitor.ViewModel
             ZipHelper.UnRAR(dayFolder, dayFolder, zipName);
 
             string orderFile = Directory.GetFiles(dayFolder, "*.Order")[0];
+            StreamReader sr = new StreamReader(orderFile);
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                string[] temp = line.Split(',');
+                OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]), RouteId = temp[9], RouteName = temp[10] };
+                orderLines.Add(ol);
+            }
+            sr.Close();
+            int totalCount = orderLines.Sum(ol => ol.Count);
+            var t = from ol in orderLines group ol by ol.OrderNumber into g select new Order() { Number = g.Key, Retailer = g.First().Retailer, OrderLines = g.ToList(), TotalCount = g.Sum(l => l.Count), RouteId = g.First().RouteId, RouteName = g.First().RouteName };
+            orders = t.ToList();
+            var r = from o in orders group o by o.RouteId into g select new Route() { Id = g.Key, Name = g.First().RouteName, Orders = g.ToList() };
+            routes = new ObservableCollection<Route>(r);
+            OrderCount = Enumerable.Count(orders);
+            CartonCount = orders.Sum(o => o.TotalCount);
+            CurrentOrder = orders[0];
+            Message = textResource["readOrderSuccess"];
+        }
+
+        private void InitOrdersTest()
+        {            
+            string orderFile = ConfigurationManager.AppSettings["orderFilePath"];
             StreamReader sr = new StreamReader(orderFile);
             string line;
             while ((line = sr.ReadLine()) != null)
@@ -568,7 +591,7 @@ namespace Monitor.ViewModel
                                     //Console.WriteLine(barCodes.Count);
                                     //swQueueCount.WriteLine(string.Format("dequeue:{0}", barCodes.Count));
                                 }
-                                BarCode barCode = new BarCode() { Code = code, OrderNumber = CurrentOrder.Number };
+                                BarCode barCode = new BarCode() { Code = code, OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now };
                                 repo.BarCodes.Add(barCode);
                                 repo.SaveChanges();
                             }
@@ -632,7 +655,7 @@ namespace Monitor.ViewModel
                                 {
                                     code = qrCodes.Dequeue();
                                 }
-                                QRCode qrCode = new QRCode() { Code = code };
+                                QRCode qrCode = new QRCode() { URL = code, Code = code.Split(new string[]{"/q/"}, StringSplitOptions.RemoveEmptyEntries)[1], OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now };
                                 repo.QRCodes.Add(qrCode);
                                 repo.SaveChanges();
                             }

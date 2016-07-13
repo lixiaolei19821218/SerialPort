@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ScanCodeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ScanCodeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="ScanCodeModelStoreContainer">
           <EntitySet Name="BarCodes" EntityType="ScanCodeModel.Store.BarCodes" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Cartons" EntityType="ScanCodeModel.Store.Cartons" store:Type="Tables" Schema="dbo" />
@@ -39,7 +39,8 @@
           <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="DateTime" Type="datetime" />
         </EntityType>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ScanCodeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -55,27 +56,27 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Type="DateTime" Name="DateTime" Precision="3" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Carton">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="QRCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Barcode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="OrderNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="ScanTimes" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="QRCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Barcode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ScanTimes" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="QRCode">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="URL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="OrderNumber" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="DateTime" Precision="3" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrderNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -86,32 +87,32 @@
           <EntitySetMapping Name="BarCodes">
             <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
               <MappingFragment StoreEntitySet="BarCodes">
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Cartons">
             <EntityTypeMapping TypeName="ScanCodeModel.Carton">
               <MappingFragment StoreEntitySet="Cartons">
-                <ScalarProperty Name="ScanTimes" ColumnName="ScanTimes" />
-                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
-                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
-                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="ScanTimes" ColumnName="ScanTimes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="QRCodes">
             <EntityTypeMapping TypeName="ScanCodeModel.QRCode">
               <MappingFragment StoreEntitySet="QRCodes">
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="URL" ColumnName="URL" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -129,7 +130,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
       </DesignerInfoPropertySet>

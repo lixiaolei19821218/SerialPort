@@ -17,5 +17,6 @@ namespace Monitor
         public int Id { get; set; }
         public string Code { get; set; }
         public string OrderNumber { get; set; }
+        public Nullable<System.DateTime> DateTime { get; set; }
     }
 }

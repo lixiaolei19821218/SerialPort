@@ -12,6 +12,7 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" />
   </EntityType>
   <EntityType Name="Cartons">
     <Key>
@@ -28,6 +29,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" />
   </EntityType>
 </Schema>

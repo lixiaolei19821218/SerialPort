@@ -12,3 +12,12 @@ C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\TestConsole\bin\D
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\TestConsole.exe.config
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\obj\Debug\TestConsole.exe
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\obj\Debug\TestConsole.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\TestConsole.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\TestConsole.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\Monitor.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\EntityFramework.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\Monitor.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\EntityFramework.xml
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll

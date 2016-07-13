@@ -15,6 +15,9 @@ namespace Monitor
     public partial class QRCode
     {
         public int Id { get; set; }
+        public string URL { get; set; }
         public string Code { get; set; }
+        public string OrderNumber { get; set; }
+        public Nullable<System.DateTime> DateTime { get; set; }
     }
 }

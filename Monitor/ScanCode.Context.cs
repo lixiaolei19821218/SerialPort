@@ -26,7 +26,7 @@ namespace Monitor
         }
     
         public DbSet<BarCode> BarCodes { get; set; }
-        public DbSet<QRCode> QRCodes { get; set; }
         public DbSet<Carton> Cartons { get; set; }
+        public DbSet<QRCode> QRCodes { get; set; }
     }
 }
