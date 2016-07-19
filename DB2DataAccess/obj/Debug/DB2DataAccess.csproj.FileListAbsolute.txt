@@ -1,0 +1,6 @@
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\DB2DataAccess\bin\Debug\DB2DataAccess.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\DB2DataAccess\bin\Debug\DB2DataAccess.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\DB2DataAccess\bin\Debug\IBM.Data.DB2.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\DB2DataAccess\obj\Debug\DB2DataAccess.csprojResolveAssemblyReference.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\DB2DataAccess\obj\Debug\DB2DataAccess.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\DB2DataAccess\obj\Debug\DB2DataAccess.pdb

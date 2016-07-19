@@ -14,6 +14,7 @@ using System.Collections.Specialized;
 using System.Net;
 using System.Net.Sockets;
 using Monitor.View;
+using IBM.Data.DB2;
 
 namespace Monitor.ViewModel
 {
@@ -148,14 +149,13 @@ namespace Monitor.ViewModel
             if (InitComPort() == false)
             {
                 return;
-            }/*
+            }
             if (InitSocket() == false)
             {
                 return;
-            }
-              * */
+            }            
             Message = textResource["waitingOrders"];
-            InitOrdersTest();
+            InitOrders();
         }
 
         #region 初始化COM口，接收二位码
@@ -207,6 +207,11 @@ namespace Monitor.ViewModel
             try
             {
                 SerialPort port = sender as SerialPort;
+                //int a = port.ReadChar();
+                //int b = port.ReadChar();
+                string s = port.ReadExisting();
+                byte[] buffer = new byte[1024];
+                port.Read(buffer, 0, 1024);
                 string code = port.ReadLine();
                 if (code == "C2")
                 {
@@ -288,7 +293,7 @@ namespace Monitor.ViewModel
         private void InitOrders()
         {
             IPHostEntry IpEntry = Dns.GetHostEntry(Dns.GetHostName());
-            string myip = IpEntry.AddressList[1].ToString();
+            string myip = IpEntry.AddressList[2].ToString();
             IPAddress ip = IPAddress.Parse(myip);
             Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             server.Bind(new IPEndPoint(ip, 8089));  //绑定IP地址：端口  
@@ -401,6 +406,29 @@ namespace Monitor.ViewModel
 
         private void SubmitToDB(object o)
         {
+            var qrcodes = repo.QRCodes.Where(q => q.DateTime.Value.Date == DateTime.Today);
+            var barcodes = repo.BarCodes.Where(b => b.DateTime.Value.Date == DateTime.Today);
+
+            string connectString = ConfigurationManager.ConnectionStrings["db2"].ConnectionString;
+            DB2Connection cn = new DB2Connection(connectString);
+            cn.Open();
+            string qrCmd = "INSERT INTO \"DB2ADMIN\".\"QRCODES\"(\"URL\", \"CODE\", \"ORDERNUMBER\", \"SAVETIME\") VALUES('{0}', '{1}', '{2}', '{3}')";           
+            foreach (QRCode qrcode in qrcodes)
+            {
+                string sql = string.Format(qrCmd, qrcode.URL, qrcode.Code, qrcode.OrderNumber, qrcode.DateTime);
+                DB2Command cmd = new DB2Command(sql, cn);
+                cmd.ExecuteNonQuery();
+            }
+            string barCmd = "INSERT INTO \"DB2ADMIN\".\"BARCODES\"(\"CODE\", \"ORDERNUMBER\", \"SAVETIME\") VALUES('{0}', '{1}', '{2}')";
+            foreach (BarCode barcode in barcodes)
+            {
+                string sql = string.Format(barCmd, barcode.Code, barcode.OrderNumber, barcode.DateTime);
+                DB2Command cmd = new DB2Command(sql, cn);
+                cmd.ExecuteNonQuery();
+            }
+            cn.Close();
+            #region old
+            /* old
             //从数据库中读取暂存的条码
             //List<QRCode> qrCodes = repo.QRCodes.ToList();
             //List<BarCode> barCodes = repo.BarCodes.ToList();
@@ -477,7 +505,7 @@ namespace Monitor.ViewModel
                             else
                             {
                                 logWriter.WriteLine("漏扫未填充。");
-                                /*
+                                
                                 //填充先后品牌相同的NA
                                 foreach (BarCode barcode in naBarcodes)
                                 {
@@ -491,7 +519,7 @@ namespace Monitor.ViewModel
                                             barcode.Code = before.Code;
                                         }
                                     }
-                                }*/
+                                }
                             }
 
                         }
@@ -518,7 +546,8 @@ namespace Monitor.ViewModel
                 repo.SaveChanges();
                 logWriter.WriteLine();
             }
-
+            */
+            #endregion
         }
 
         private bool CanSubmitToDB(object o)

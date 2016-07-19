@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeTest", "BarcodeTest\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor", "Monitor\Monitor.csproj", "{7C4D7895-C23C-46B3-ADBC-4C61BE138821}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Route(2)", "http://localhost:7584", "{B2EC9E6F-F789-4D46-B4AD-599AC5AC50A8}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Route", "http://localhost:7584", "{B2EC9E6F-F789-4D46-B4AD-599AC5AC50A8}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
@@ -33,6 +33,31 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Route(2)", "http://localhos
 		Release.AspNetCompiler.Debug = "False"
 		SlnRelativePath = "Route\"
 	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WeiXin", "http://localhost:18601", "{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{9756c512-7b05-4bff-89e6-a482410a77b7}|DB2DataAccess.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_18601"
+		Debug.AspNetCompiler.PhysicalPath = "WeiXin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_18601\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_18601"
+		Release.AspNetCompiler.PhysicalPath = "WeiXin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_18601\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "WeiXin\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB2DataAccess", "DB2DataAccess\DB2DataAccess.csproj", "{9756C512-7B05-4BFF-89E6-A482410A77B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +93,14 @@ Global
 		{B2EC9E6F-F789-4D46-B4AD-599AC5AC50A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2EC9E6F-F789-4D46-B4AD-599AC5AC50A8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{B2EC9E6F-F789-4D46-B4AD-599AC5AC50A8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

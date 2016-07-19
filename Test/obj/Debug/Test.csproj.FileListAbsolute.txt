@@ -10,3 +10,18 @@ C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\obj\Debug\Te
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\bin\Debug\Test.exe
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\bin\Debug\Test.pdb
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\Test\bin\Debug\Test.exe.config
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\Test\obj\Debug\Test.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\Test\obj\Debug\Test.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\Test\bin\Debug\Test.exe
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\Test\bin\Debug\Test.pdb
+C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPort\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\SerialPort\Test\bin\Debug\Test.exe.config
+D:\SerialPort\Test\obj\Debug\Test.exe
+D:\SerialPort\Test\obj\Debug\Test.pdb
+D:\SerialPort\Test\bin\Debug\Test.exe
+D:\SerialPort\Test\bin\Debug\Test.pdb
+D:\SerialPort\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Test\bin\Debug\Test.exe.config
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Test\obj\Debug\Test.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Test\obj\Debug\Test.pdb

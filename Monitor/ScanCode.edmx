@@ -52,9 +52,9 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OrderNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Carton">
@@ -87,9 +87,9 @@
             <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
               <MappingFragment StoreEntitySet="BarCodes">
                 <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

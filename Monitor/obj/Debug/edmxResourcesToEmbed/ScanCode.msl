@@ -5,9 +5,9 @@
       <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
         <MappingFragment StoreEntitySet="BarCodes">
           <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

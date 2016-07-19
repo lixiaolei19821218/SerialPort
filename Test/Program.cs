@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
+using System.Data.OleDb;
 using System.IO;
 using System.IO.Ports;
 using System.Linq;
@@ -14,6 +16,13 @@ namespace Test
     {
         static void Main(string[] args)
         {
+            //string strConn = "Provider=IBMDADB2.1;server=ddzycw; HOSTNAME=10.89.128.13; PROTOCOL=TCPIP;uid=db2admin; pwd='pdzyc=1234'";
+             //OleDbConnection conn = new OleDbConnection(strConn);
+             //conn.Open();
+
+            OdbcConnection odbcConn = new OdbcConnection("Driver={IBM DB2 ODBC DRIVER};Server=10.89.128.137:50000;DSN=dzycwx;UID=db2admin;PWD='pdzyc=1234';Protocol=TCPIP");
+            odbcConn.Open();
+
             IPAddress ip = IPAddress.Parse("10.89.245.30");
             IPEndPoint ipep = new IPEndPoint(ip, 8089);  
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
