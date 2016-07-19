@@ -37,7 +37,7 @@
             </li>
             <li>
                 <div class="listleft">品牌</div>
-                <div class="listright">云烟（软珍品）</div>
+                <div class="listright" runat="server" id="sdItem"></div>
             </li>
             <li style="height: 4rem;">
                 <div class="listleft">对应的32<br>
@@ -47,16 +47,16 @@
             </li>
             <li>
                 <div class="listleft">扫描记录</div>
-                <div class="listright">1次</div>
+                <div class="listright" runat="server" id="scanTimes"></div>
             </li>
         </ul>
     </div>
     <footer>
         <div class="footleft">
-            <img src="img/bar2.png" /><span>点击关注官方微信</span>
+            <img src="/img/bar2.png" /><span>点击关注官方微信</span>
         </div>
         <div class="footright">
-            <img src="img/bar3.png" /><span>举报电话</span><p>12313</p>
+            <img src="/img/bar3.png" /><span>举报电话</span><p>12313</p>
         </div>
     </footer>
 </body>
