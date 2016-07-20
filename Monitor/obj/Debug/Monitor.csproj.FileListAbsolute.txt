@@ -72,3 +72,24 @@ D:\SerialPort\Monitor\obj\Debug\Monitor_MarkupCompile.cache
 D:\SerialPort\Monitor\obj\Debug\Monitor.g.resources
 D:\SerialPort\Monitor\obj\Debug\Monitor.Properties.Resources.resources
 D:\SerialPort\Monitor\obj\Debug\Monitor.csproj.GenerateResource.Cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\Monitor.exe.config
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\Monitor.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\Monitor.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\EntityFramework.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\IBM.Data.DB2.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\EntityFramework.xml
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor.csprojResolveAssemblyReference.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\MainWindow.baml
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\View\RouteModify.baml
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\MainWindow.g.cs
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\View\RouteModify.g.cs
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\App.g.cs
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor_MarkupCompile.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor.g.resources
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor.Properties.Resources.resources
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\Monitor.csproj.GenerateResource.Cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\DB2DataAccess.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\bin\Debug\DB2DataAccess.pdb

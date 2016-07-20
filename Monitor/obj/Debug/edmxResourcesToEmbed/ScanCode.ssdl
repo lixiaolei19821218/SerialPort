@@ -2,7 +2,6 @@
 <Schema Namespace="ScanCodeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="ScanCodeModelStoreContainer">
     <EntitySet Name="BarCodes" EntityType="ScanCodeModel.Store.BarCodes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Cartons" EntityType="ScanCodeModel.Store.Cartons" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="QRCodes" EntityType="ScanCodeModel.Store.QRCodes" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="BarCodes">
@@ -13,16 +12,7 @@
     <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="DateTime" Type="datetime" />
-  </EntityType>
-  <EntityType Name="Cartons">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="QRCode" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Barcode" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="ScanTimes" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="int" />
   </EntityType>
   <EntityType Name="QRCodes">
     <Key>
@@ -33,5 +23,7 @@
     <Property Name="Code" Type="nvarchar" MaxLength="50" />
     <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="DateTime" Type="datetime" />
+    <Property Name="NationCustCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sequence" Type="int" />
   </EntityType>
 </Schema>

@@ -22,8 +22,7 @@ namespace Monitor
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
-            //Monitor.Helper.ZipHelper.UnZip("d:\\pic.zip", "d:\\lxlts\\");
+        {            
             InitializeComponent();
             DataContext = new MainWindowVM();
         }       

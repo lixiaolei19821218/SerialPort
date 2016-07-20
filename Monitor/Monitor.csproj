@@ -72,9 +72,6 @@
     <Compile Include="BarCode.cs">
       <DependentUpon>ScanCode.tt</DependentUpon>
     </Compile>
-    <Compile Include="Carton.cs">
-      <DependentUpon>ScanCode.tt</DependentUpon>
-    </Compile>
     <Compile Include="Helper\DelegateCommand.cs" />
     <Compile Include="Helper\ViewModelBase.cs" />
     <Compile Include="Helper\ZipHelper.cs" />
@@ -167,7 +164,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DB2DataAccess\DB2DataAccess.csproj">
+      <Project>{9756c512-7b05-4bff-89e6-a482410a77b7}</Project>
+      <Name>DB2DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

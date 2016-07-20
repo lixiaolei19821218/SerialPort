@@ -38,6 +38,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WeiXin", "http://localhost:
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB2DataAccess", "DB2DataAccess\DB2DataAccess.csproj", "{9756C512-7B05-4BFF-89E6-A482410A77B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sync32Code", "Sync32Code\Sync32Code.csproj", "{071D5BCC-6F6C-4A8B-8BFD-4C1DBB5CA528}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,8 +78,15 @@ Global
 		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9756C512-7B05-4BFF-89E6-A482410A77B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071D5BCC-6F6C-4A8B-8BFD-4C1DBB5CA528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071D5BCC-6F6C-4A8B-8BFD-4C1DBB5CA528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071D5BCC-6F6C-4A8B-8BFD-4C1DBB5CA528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071D5BCC-6F6C-4A8B-8BFD-4C1DBB5CA528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

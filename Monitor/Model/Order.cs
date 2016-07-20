@@ -9,6 +9,7 @@ namespace Monitor.Model
     public class Order
     {
         public string Number { get; set; }
+        public string RetailerId { get; set; }
         public string Retailer { get; set; }
         public List<OrderLine> OrderLines { get; set; }
         public int TotalCount { get; set; }

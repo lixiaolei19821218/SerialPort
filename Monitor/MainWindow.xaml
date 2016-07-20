@@ -13,7 +13,7 @@
             <Setter Property="Margin" Value="5"/>
         </Style>
     </Window.Resources>
-    <StackPanel>
+    <StackPanel>  
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -109,7 +109,14 @@
             </Grid>
         </Grid>
         <StatusBar>
-            <Label Content="{Binding Path=Message}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Width="500" Content="{Binding Path=Message}"/>
+                <ProgressBar Grid.Column="1" Width="300" Visibility="{Binding Path=ShowProgressBar}"  Name="progressBar" IsIndeterminate="True"/>
+            </Grid>            
         </StatusBar>
     </StackPanel>
 </Window>

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="BarCodes">
       <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
         <MappingFragment StoreEntitySet="BarCodes">
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
           <ScalarProperty Name="DateTime" ColumnName="DateTime" />
           <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
           <ScalarProperty Name="Code" ColumnName="Code" />
@@ -11,20 +12,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Cartons">
-      <EntityTypeMapping TypeName="ScanCodeModel.Carton">
-        <MappingFragment StoreEntitySet="Cartons">
-          <ScalarProperty Name="ScanTimes" ColumnName="ScanTimes" />
-          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
-          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
-          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="QRCodes">
       <EntityTypeMapping TypeName="ScanCodeModel.QRCode">
         <MappingFragment StoreEntitySet="QRCodes">
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="NationCustCode" ColumnName="NationCustCode" />
           <ScalarProperty Name="DateTime" ColumnName="DateTime" />
           <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
           <ScalarProperty Name="Code" ColumnName="Code" />

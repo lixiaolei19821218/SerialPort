@@ -4,10 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ae37ce14a9ac4582b04e2f4782755ab7" Name="关系图1" ZoomLevel="116">
-        <EntityTypeShape EntityType="ScanCodeModel.BarCode" Width="1.5" PointX="15.25" PointY="4.75" />
-        <EntityTypeShape EntityType="ScanCodeModel.Carton" Width="1.5" PointX="9.75" PointY="3.375" />
-        <EntityTypeShape EntityType="ScanCodeModel.QRCode" Width="1.5" PointX="12.25" PointY="4.875" />
+      <Diagram DiagramId="ae37ce14a9ac4582b04e2f4782755ab7" Name="关系图1" ZoomLevel="74">
+        <EntityTypeShape EntityType="ScanCodeModel.BarCode" Width="1.5" PointX="11.574971291969984" PointY="19.450487637636478" />
+        <EntityTypeShape EntityType="ScanCodeModel.QRCode" Width="1.5" PointX="2.2380972347399672" PointY="23.056074987657404" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

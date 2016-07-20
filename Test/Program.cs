@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Monitor.Model;
+using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Data.OleDb;
@@ -16,101 +17,28 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //string strConn = "Provider=IBMDADB2.1;server=ddzycw; HOSTNAME=10.89.128.13; PROTOCOL=TCPIP;uid=db2admin; pwd='pdzyc=1234'";
-             //OleDbConnection conn = new OleDbConnection(strConn);
-             //conn.Open();
-
-            OdbcConnection odbcConn = new OdbcConnection("Driver={IBM DB2 ODBC DRIVER};Server=10.89.128.137:50000;DSN=dzycwx;UID=db2admin;PWD='pdzyc=1234';Protocol=TCPIP");
-            odbcConn.Open();
-
-            IPAddress ip = IPAddress.Parse("10.89.245.30");
-            IPEndPoint ipep = new IPEndPoint(ip, 8089);  
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Bind(ipep);
-            socket.Listen(10);
-
-           
-            Socket client = socket.Accept();
-
-
-            //获得[文件名]  
-            string SendFileName = System.Text.Encoding.Unicode.GetString(TransferFiles.ReceiveVarData(client));
-            //MessageBox.Show("文件名" + SendFileName);  
-
-            //获得[包的大小]  
-            string bagSize = System.Text.Encoding.Unicode.GetString(TransferFiles.ReceiveVarData(client));
-            //MessageBox.Show("包大小" + bagSize);  
-
-            //获得[包的总数量]  
-            int bagCount = int.Parse(System.Text.Encoding.Unicode.GetString(TransferFiles.ReceiveVarData(client)));
-            //MessageBox.Show("包的总数量" + bagCount);  
-
-            //获得[最后一个包的大小]  
-            string bagLast = System.Text.Encoding.Unicode.GetString(TransferFiles.ReceiveVarData(client));  
-
-
-            int file_name = 1;
-
-            string fileaddr = "d:\\" + file_name.ToString() + ".zip";
-
-            FileStream MyFileStream = new FileStream(fileaddr, FileMode.Create, FileAccess.Write);
-
-            //        int SendedCount = 0;  
-
-            while (true)
+            List<OrderLine> orderLines = new List<OrderLine>();
+            StreamReader sr = new StreamReader("QrCode20160720170329.Order");
+            string line;
+            while ((line = sr.ReadLine()) != null)
             {
-                byte[] data = TransferFiles.ReceiveVarData(client);
-                if (data.Length == 0)
-                {
-                    break;
-                }
-                else
-                {
-                    // SendedCount++;  
-                    MyFileStream.Write(data, 0, data.Length);
-                }
+                string[] temp = line.Split(',');
+                OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]), RouteId = temp[9], RouteName = temp[10] };
+                orderLines.Add(ol);
             }
-
-            MyFileStream.Close();
-
-            client.Close();  
+            sr.Close();
+            int totalCount = orderLines.Sum(ol => ol.Count);
+            var t = from ol in orderLines group ol by ol.OrderNumber into g select new Order() { Number = g.Key, Retailer = g.First().Retailer, OrderLines = g.ToList(), TotalCount = g.Sum(l => l.Count), RouteId = g.First().RouteId, RouteName = g.First().RouteName, RetailerId = g.First().RetailerId };
+            List<Order> orders = t.ToList();
+            StreamWriter sw = new StreamWriter("result.txt");
+            foreach (Order order in orders.OrderBy(o => o.Number))
+            {
+                sw.WriteLine(string.Format("{0}, {1}", order.Number, order.TotalCount));
+            }
+            sw.Close();
             
-            string sendMessage = "client send Message Hellp" + DateTime.Now;
-            socket.Send(Encoding.ASCII.GetBytes(sendMessage));  
 
-            string[] portNames = SerialPort.GetPortNames();
-            SerialPort port2 = new SerialPort("COM4");
-            port2.BaudRate = 57600;
-            port2.DataBits = 8;
-            port2.Parity = Parity.None;
-            port2.StopBits = StopBits.One;
-            //port2.ReadTimeout = 100;
-            port2.Open();
             
-            string t0 = port2.ReadTo(",");
-            string t1 = port2.ReadTo(",");
-            string t2 = port2.ReadTo(",");
-
-            string p2 = port2.ReadExisting();
-            string p1 = port2.ReadLine();
-
-            List<SerialPort> ports = new List<SerialPort>();
-            foreach (string portName in portNames)
-            {
-                SerialPort port = new SerialPort(portName);
-                port.BaudRate = 9600;
-                port.DataBits = 8;
-                port.Parity = Parity.None;
-                port.StopBits = StopBits.One;
-                port.Open();
-                ports.Add(port);
-            }
-
-            string t = ports[1].ReadExisting();
-            foreach (SerialPort port in ports)
-            {
-
-            }
         }
     }
 

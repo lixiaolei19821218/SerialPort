@@ -29,51 +29,59 @@ public partial class Query : System.Web.UI.Page
                 //查询V3
                 DB2 v3DB = new DB2(ConfigurationManager.ConnectionStrings["v3"].ConnectionString);
                 string orderNumber = qrRow["orderNumber"].ToString();
+                string qrSequence = qrRow["sequence"].ToString();
+                string qrNationCustCode = qrRow["qrNationCustCode"].ToString();
+
                 sql = string.Format("select * from db2inst2.sd_co where CO_NUM = '{0}'", orderNumber);
-                DataRow orderRow = v3DB.GetDataRow(sql);               
-                string custId = orderRow["CUST_ID"].ToString();
-                sql = string.Format("select * from db2inst2.rm_cust where CUST_ID = '{0}'", custId);
+                DataRow orderRow = v3DB.GetDataRow(sql);
+                soldDate.InnerText = orderRow["BORN_DATE"].ToString();
+                string nationCustCode = orderRow["nation_cust_code"].ToString();
+                sql = string.Format("select * from db2inst2.rm_cust where nation_cust_code = '{0}'", nationCustCode);
                 DataRow custRow = v3DB.GetDataRow(sql);
                 custCode.InnerText = custRow["CUST_CODE"].ToString();
                 custName.InnerText = custRow["CUST_NAME"].ToString();
                 busiAddr.InnerText = custRow["BUSI_ADDR"].ToString();
 
-                //记录查询
+                //查询次数
                 sql = string.Format("INSERT INTO \"DB2ADMIN\".\"QUERIES\"(\"IPADDRESS\", \"QUERYTIME\", \"QRCODEID\") VALUES('{0}', '{1}', '{2}')", Request.UserHostAddress, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), qrRow["Id"].ToString());
                 weixinDB.Insert(sql);
                 DataRow countRow = weixinDB.GetDataRow("select count(*) from \"DB2ADMIN\".\"QUERIES\"");
                 scanTimes.InnerText = countRow[0].ToString();               
 
-                //查询订单号相同的二维码并查找其在订单中的位置
-                sql = string.Format("select * from qrcodes where orderNumber = '{0}'", orderNumber);
-                DataTable qrTable = weixinDB.GetDataTable(sql);                
-                int index = -1;
-                for (int i = 0; i < qrTable.Rows.Count; i++)
+                //查找序号和订单号相同的barcode
+                sql = string.Format("select * from barcodes where orderNumber = '{0}' and sequence = {1}", orderNumber, qrSequence);
+                DataRow barRow = weixinDB.GetDataRow(sql);
+                if (barRow != null)
                 {
-                    if (qrTable.Rows[i]["code"].ToString() == qrcode)
+                    string barcode = barRow["code"].ToString();
+                    sql = string.Format("select * from db2inst2.sd_item where stand_bar_code = '{0}'", barcode);
+                    DataRow itemRow = v3DB.GetDataRow(sql);
+                    if (itemRow != null)
                     {
-                        index = i;
-                        break;
+                        sdItem.InnerText = itemRow["stand_bar_name"].ToString();
                     }
                 }
-                if (index != -1)
-                {
-                    sql = string.Format("select * from barcodes where orderNumber = '{0}'", orderNumber);
-                    DataTable barTable = weixinDB.GetDataTable(sql);
-                    if (barTable.Rows.Count > index)
-                    {
-                        DataRow barRow = barTable.Rows[index];
-                        string barcode = barRow["code"].ToString();
-                        sql = string.Format("select * from db2inst2.sd_item where stand_bar_code = '{0}'", barcode);
-                        DataRow itemRow = v3DB.GetDataRow(sql);
-                        if (itemRow != null)
-                        {
-                            sdItem.InnerText = itemRow["stand_bar_name"].ToString();
-                        }
-                    }
-                }
-
                 v3DB.Close();
+
+                //查找序号和客户编码相同的32位码
+                sql = string.Format("select * from codes32 where nationCustCode = '{0}' and sequence = {1}", qrNationCustCode, qrSequence + 1);
+                DataRow code32Row = weixinDB.GetDataRow(sql);
+                if (code32Row != null)
+                {
+                    string code = code32Row["code"].ToString();
+                    if (code.Length == 32)
+                    {
+                        code32.InnerHtml = string.Format("{0}&nbsp;{1}&nbsp;{2}&nbsp;{3}&nbsp;<br/>{4}&nbsp;{5}&nbsp;{6}&nbsp;{7}&nbsp;", 
+                            code.Substring(0, 4), 
+                            code.Substring(4, 4),
+                            code.Substring(8, 4),
+                            code.Substring(12, 4),
+                            code.Substring(16, 4),
+                            code.Substring(20, 4),
+                            code.Substring(24, 4),
+                            code.Substring(28, 4));
+                    }
+                }
             }
 
             weixinDB.Close();

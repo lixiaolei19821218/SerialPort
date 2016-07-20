@@ -12,12 +12,11 @@ namespace TestConsole
 {
     class Program
     {
-        static SerialPort qrPortSend = new SerialPort("COM3");
-        static SerialPort barPortSend = new SerialPort("COM5");
+        static SerialPort qrPortSend = new SerialPort("COM3");       
         static SerialPort shiftPortSend = new SerialPort("COM1");
         static StreamWriter swBar = new StreamWriter("bar.txt");
         static StreamWriter swQR = new StreamWriter("qr.txt");
-        static StreamReader sr = new StreamReader(@"QrCode20160707082416.Order");
+        static StreamReader sr = new StreamReader(@"QrCode20160720170329.Order");
 
         static char[] constant = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
@@ -26,8 +25,7 @@ namespace TestConsole
 
         static void Main(string[] args)
         {
-            List<OrderLine> orderLines = new List<OrderLine>();
-            //StreamReader sr = new StreamReader(@"C:\Users\lei\Desktop\Work\RetailerOrder20150509105427.Order");
+            List<OrderLine> orderLines = new List<OrderLine>();          
             string line;
             while ((line = sr.ReadLine()) != null)
             {
@@ -47,26 +45,23 @@ namespace TestConsole
             qrPortSend.StopBits = StopBits.One;
             qrPortSend.WriteBufferSize = 1024 * 1;
             qrPortSend.Open();
-
-            barPortSend.BaudRate = 9600;
-            barPortSend.DataBits = 8;
-            barPortSend.Parity = Parity.None;
-            barPortSend.StopBits = StopBits.One;
-            barPortSend.Open();
-
+           
             shiftPortSend.BaudRate = 9600;
             shiftPortSend.DataBits = 8;
             shiftPortSend.Parity = Parity.None;
             shiftPortSend.StopBits = StopBits.One;
             shiftPortSend.Open();
 
-            //triggerEvent += new TriggerHandle(Program_triggerEvent);
-
+            int c0 = 0;
             foreach (Order order in orders)
             {
                 //发送切户信号
-                shiftPortSend.WriteLine("C2");
-                Thread.Sleep(500);
+                if (c0 > 0)
+                {
+                    shiftPortSend.Write(new byte[] { 194 }, 0, 1);//194的十六进制是c2
+                    Thread.Sleep(500);
+                }
+                c0++;
                 //将订单行项目随机排序
                 OrderLine[] randomLines = order.OrderLines.OrderBy(l => Guid.NewGuid()).ToArray();
                 foreach (OrderLine orderline in randomLines)
@@ -76,83 +71,13 @@ namespace TestConsole
                     {
                         string qrcode = string.Format("http://scdzyc.cn/q/{0}", new string(constant.OrderBy(c => Guid.NewGuid()).Take(7).ToArray()));
                         Console.WriteLine(qrcode);
-                        qrPortSend.Write(qrcode + ",");
-                        Console.WriteLine(barcode);
-                        barPortSend.WriteLine(barcode);                       
+                        qrPortSend.Write(qrcode + ",");                                                        
                         Thread.Sleep(100);
                     }                    
                 }                
             }
             swBar.Close();
-            swQR.Close();
-            /*
-            SendShift();
-            for (int i = 0; i < 10000000; i++)
-            {
-                triggerEvent(i);
-            }
-            */
-            /*
-           Thread shiftThread = new Thread(new ThreadStart(SendShift));
-           shiftThread.Start();
-
-           Thread.Sleep(3000);
-           
-           Thread qrThread = new Thread(new ThreadStart(SendQR));
-           qrThread.Start();
-
-           Thread.Sleep(100);
-
-           Thread barThread = new Thread(SendBar);
-           barThread.Start();*/
-        }
-
-        static void Program_triggerEvent(int i)
-        {
-            string code = string.Format("QRCode-{0:D16}", i);
-            Console.WriteLine(code);            
-            qrPortSend.WriteLine(code);            
-            code = string.Format("BarCode-{0:D16}", i);
-            Console.WriteLine(code);            
-            barPortSend.WriteLine(code);
-            Thread.Sleep(100);
-            i++;
-        }
-
-        private static void SendShift()
-        {
-            while (true)
-            {
-                shiftPortSend.WriteLine("Shift");
-                //Console.WriteLine("Shift");
-                Thread.Sleep(3000);
-            }
-        }
-
-        private static void SendQR()
-        {
-            int i = 0;
-            while (true)
-            {
-                string code = string.Format("QRCode-{0:D16}", i++);
-                Console.WriteLine(code);
-                //swQR.WriteLine(code);
-                qrPortSend.WriteLine(code);
-                Thread.Sleep(100);
-            }
-        }
-
-        private static void SendBar()
-        {
-            int i = 0;
-            while (true)
-            {
-                string code = string.Format("BarCode-{0:D16}", i++);
-                Console.WriteLine(code);
-                //swBar.WriteLine(code);
-                barPortSend.WriteLine(code);
-                Thread.Sleep(100);
-            }
-        }
+            swQR.Close();            
+        }        
     }
 }

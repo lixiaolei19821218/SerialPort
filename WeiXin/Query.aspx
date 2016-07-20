@@ -33,7 +33,7 @@
             </li>
             <li>
                 <div class="listleft">销售日期</div>
-                <div class="listright">2016-07-13</div>
+                <div class="listright" runat="server" id="soldDate"></div>
             </li>
             <li>
                 <div class="listleft">品牌</div>
@@ -42,8 +42,7 @@
             <li style="height: 4rem;">
                 <div class="listleft">对应的32<br>
                     位激活码</div>
-                <div class="listright">1234&nbsp;5678&nbsp;1234&nbsp;5678&nbsp;<br>
-                    1234&nbsp;5678&nbsp;1234&nbsp;5678&nbsp;</div>
+                <div class="listright" runat="server" id="code32"></div>
             </li>
             <li>
                 <div class="listleft">扫描记录</div>
