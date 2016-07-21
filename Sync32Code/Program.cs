@@ -13,7 +13,8 @@ namespace Sync32Code
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
+            Console.WriteLine("开始同步数据..");
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["code32"].ConnectionString);
             connection.Open();
             string sql = string.Format("select * from BP_ORDER_BARCODE where OB_SORT_DATE = '{0}'", DateTime.Today);
@@ -35,6 +36,8 @@ namespace Sync32Code
                 weixinDB.Insert(sql);                
             }
             weixinDB.Close();
+            Console.WriteLine("同步完成。");
+            Console.ReadKey();
         }
     }
 }

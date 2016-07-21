@@ -52,7 +52,7 @@
     </div>
     <footer>
         <div class="footleft">
-            <img src="/img/bar2.png" /><span>点击关注官方微信</span>
+            <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDM4NjUxMw==&mid=202971893&idx=1&sn=8f08da96ea778ebd85ccf85ec8e8bc1a#rd'"><img src="/img/bar2.png" /><span>点击关注官方微信</span></a>
         </div>
         <div class="footright">
             <img src="/img/bar3.png" /><span>举报电话</span><p>12313</p>
