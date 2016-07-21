@@ -18,7 +18,7 @@ namespace Test
         static void Main(string[] args)
         {
             List<OrderLine> orderLines = new List<OrderLine>();
-            StreamReader sr = new StreamReader("QrCode20160720170329.Order");
+            StreamReader sr = new StreamReader("QrCode20160721141445.Order");
             string line;
             while ((line = sr.ReadLine()) != null)
             {

@@ -49,7 +49,15 @@ public partial class Query : System.Web.UI.Page
                 weixinDB.Insert(sql);
                 //sql = string.Format("select count(*) from \"DB2ADMIN\".\"QUERIES\" where \"QRCODEID\" = {0}", qrId);
                 //DataRow countRow = weixinDB.GetDataRow(sql);
-                int count = int.Parse(qrRow["QUERYCOUNT"].ToString());
+                int count;
+                if (string.IsNullOrWhiteSpace(qrRow["QUERYCOUNT"].ToString()))
+                {
+                    count = 0;
+                }
+                else
+                {
+                    count = int.Parse(qrRow["QUERYCOUNT"].ToString());
+                }
                 sql = string.Format("UPDATE \"DB2ADMIN\".\"QRCODES\" SET \"QUERYCOUNT\" = {0} WHERE \"DB2ADMIN\".\"QRCODES\".\"ID\" = {1};", ++count, qrId);
                 weixinDB.Update(sql);
                 scanTimes.InnerText = count.ToString();

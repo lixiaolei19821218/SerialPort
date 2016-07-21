@@ -167,11 +167,11 @@ namespace Monitor.ViewModel
             if (InitComPort() == false)
             {
                 return;
-            }
+            }/*
             if (InitSocket() == false)
             {
                 return;
-            }            
+            }  */          
             Message = textResource["waitingOrders"];
             Thread receivOrders = new Thread(InitOrdersTest) { IsBackground = true };
             receivOrders.Start();
@@ -192,6 +192,7 @@ namespace Monitor.ViewModel
             catch (Exception ex)
             {
                 swLog.WriteLine(ex.Message);
+                swLog.Flush();
                 Message = string.Format(textResource["openShiftComFail"], shiftSignalPort.PortName);
                 return false;
             }
@@ -207,6 +208,7 @@ namespace Monitor.ViewModel
             catch (Exception ex)
             {
                 swLog.WriteLine(ex.Message);
+                swLog.Flush();
                 Message = string.Format(textResource["openQrComFail"], qrCodePort.PortName);
                 return false;
             }
@@ -254,7 +256,7 @@ namespace Monitor.ViewModel
             {
                 swLog.WriteLine(ex.Message);
                 swLog.WriteLine(ex.StackTrace);
-                swLog.Close();
+                swLog.Flush();
             }
         }
 
@@ -267,7 +269,15 @@ namespace Monitor.ViewModel
                 App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddQRCodeToCurrent), code);
                 lock (syncObj)
                 {
-                    QRCode qrcode = new QRCode() { URL = code, Code = code.Split(new string[] { "/q/" }, StringSplitOptions.RemoveEmptyEntries)[1], OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++};
+                    QRCode qrcode;
+                    if (code == "NG")
+                    {
+                        qrcode = new QRCode() { URL = code, Code = code, OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++ };                    
+                    }
+                    else
+                    {
+                        qrcode = new QRCode() { URL = code, Code = code.Split(new string[] { "/q/" }, StringSplitOptions.RemoveEmptyEntries)[1], OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++ };
+                    }
                     qrCodes.Enqueue(qrcode);
                 }
             }
@@ -275,7 +285,8 @@ namespace Monitor.ViewModel
             {
                 swLog.WriteLine(ex.Message);
                 swLog.WriteLine(ex.StackTrace);
-                swLog.Close();
+                swLog.Flush();
+                //swLog.Close();
             }
         }
         #endregion
@@ -634,7 +645,8 @@ namespace Monitor.ViewModel
                             {
                                 swLog.WriteLine(ex.Message);
                                 swLog.WriteLine(ex.StackTrace);
-                                swLog.Close();
+                                swLog.Flush();
+                                //swLog.Close();
                             }
                         }
                     }
@@ -666,7 +678,7 @@ namespace Monitor.ViewModel
                             {
                                 swLog.WriteLine(ex.Message);
                                 swLog.WriteLine(ex.StackTrace);
-                                swLog.Close();
+                                swLog.Flush();
                             }
                         }
                     }
@@ -700,7 +712,7 @@ namespace Monitor.ViewModel
                             {
                                 swLog.WriteLine(ex.Message);
                                 swLog.WriteLine(ex.StackTrace);
-                                swLog.Close();
+                                swLog.Flush();
                             }
                         }
                     }
@@ -728,7 +740,7 @@ namespace Monitor.ViewModel
                             {
                                 swLog.WriteLine(ex.Message);
                                 swLog.WriteLine(ex.StackTrace);
-                                swLog.Close();
+                                swLog.Flush();
                             }
                         }
                     }

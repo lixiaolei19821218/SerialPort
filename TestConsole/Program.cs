@@ -70,6 +70,10 @@ namespace TestConsole
                     for (int i = 0; i < orderline.Count; i++)
                     {
                         string qrcode = string.Format("http://scdzyc.cn/q/{0}", new string(constant.OrderBy(c => Guid.NewGuid()).Take(7).ToArray()));
+                        if (order.Number == "DZ10000005591490" && i == 1 )
+                        {
+                            qrcode = "NG";
+                        }
                         Console.WriteLine(qrcode);
                         qrPortSend.Write(qrcode + ",");                                                        
                         Thread.Sleep(100);
