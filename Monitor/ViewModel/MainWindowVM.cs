@@ -167,11 +167,11 @@ namespace Monitor.ViewModel
             if (InitComPort() == false)
             {
                 return;
-            }/*
+            }
             if (InitSocket() == false)
             {
                 return;
-            }  */          
+            }            
             Message = textResource["waitingOrders"];
             Thread receivOrders = new Thread(InitOrdersTest) { IsBackground = true };
             receivOrders.Start();
