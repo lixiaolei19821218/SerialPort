@@ -56,5 +56,11 @@ namespace DB2DataAccess
             DB2Command cmd = new DB2Command(sql, connection);
             cmd.ExecuteNonQuery();
         }
+
+        public void Update(string sql)
+        {
+            DB2Command cmd = new DB2Command(sql, connection);
+            cmd.ExecuteNonQuery();
+        }
     }
 }
