@@ -160,7 +160,7 @@ namespace Monitor.ViewModel
 
             App.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
             App.Current.MainWindow.Closed += MainWindow_Closed;
-        }        
+        }       
 
         private void Start(object o)
         {
@@ -681,6 +681,7 @@ namespace Monitor.ViewModel
                                 swLog.Flush();
                             }
                         }
+                        Thread.Sleep(1);
                     }
                 }
             }
@@ -743,6 +744,7 @@ namespace Monitor.ViewModel
                                 swLog.Flush();
                             }
                         }
+                        Thread.Sleep(1);
                     }
                 }
             }

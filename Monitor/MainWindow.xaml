@@ -12,6 +12,9 @@
         <Style TargetType="ListBox">
             <Setter Property="Margin" Value="5"/>
         </Style>
+        <Style TargetType="Label">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
     </Window.Resources>
     <StackPanel>  
         <Grid>
@@ -61,16 +64,16 @@
                 <GroupBox Header="订单信息">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
                             <ColumnDefinition />                           
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Label Content="订单总数" Grid.ColumnSpan="2"/>
+                        <Label Content="订单总数"/>
                         <Label Grid.Column="2" Content="{Binding Path=OrderCount}"/>
-                        <Label Grid.Row="1" Content="条烟总数" Grid.ColumnSpan="2"/>
+                        <Label Grid.Row="1" Content="条烟总数"/>
                         <Label Grid.Row="1" Grid.Column="2" Content="{Binding Path=CartonCount}"/>
                     </Grid>
                 </GroupBox>                
@@ -83,7 +86,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Label Content="订单号"/>

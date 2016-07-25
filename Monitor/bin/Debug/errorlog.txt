@@ -1,0 +1,1251 @@
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
+基础提供程序在 Open 上失败。
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Monitor.ViewModel.MainWindowVM.SaveQRCode() 位置 d:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\ViewModel\MainWindowVM.cs:行号 738
