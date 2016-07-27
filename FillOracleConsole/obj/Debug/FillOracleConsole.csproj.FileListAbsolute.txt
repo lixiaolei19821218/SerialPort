@@ -1,0 +1,10 @@
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.exe.config
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.csprojResolveAssemblyReference.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.xml
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll

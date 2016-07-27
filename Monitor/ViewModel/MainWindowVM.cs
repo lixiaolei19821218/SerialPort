@@ -23,6 +23,7 @@ namespace Monitor.ViewModel
     {
         private ScanCodeEntities repo = new ScanCodeEntities();
         private NameValueCollection textResource = ConfigurationManager.GetSection("textResource") as NameValueCollection;
+        private string ngBarcode = ConfigurationManager.AppSettings["ngBarcode"];
         /// <summary>
         /// 保存从.order文件中读取的订单条目
         /// </summary>
@@ -447,22 +448,165 @@ namespace Monitor.ViewModel
         {
             Message = textResource["submittingToDB2"];
             ShowProgressBar = "Visible";
-            var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Today.Date);
-            var barcodes = repo.BarCodes.ToList().Where(b => b.DateTime.HasValue && b.DateTime.Value.Date == DateTime.Today.Date);
+            //var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Today.Date);
+            var barcodes = repo.BarCodes.ToList().Where(b => b.DateTime.HasValue && b.DateTime.Value.Date == DateTime.Today.Date.AddDays(-6));
 
             string connectionString = ConfigurationManager.ConnectionStrings["weixin"].ConnectionString;
             DB2 weixinDB = new DB2(connectionString);
-
+            /*
             string qrCmd = "INSERT INTO \"DB2ADMIN\".\"QRCODES\"(\"URL\", \"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\", \"NATIONCUSTCODE\") VALUES('{0}', '{1}', '{2}', '{3}', {4}, '{5}')";
             foreach (QRCode qrcode in qrcodes)
             {
                 string sql = string.Format(qrCmd, qrcode.URL, qrcode.Code, qrcode.OrderNumber, qrcode.DateTime.HasValue ? qrcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", qrcode.Sequence.HasValue ? qrcode.Sequence : -1, qrcode.NationCustCode);
                 weixinDB.Insert(sql);
             }
+            */
+           
+            //补空
+            if (orders == null)
+            {
+                string orderFolder = ConfigurationManager.AppSettings["orderFolder"];
+                string dayFolder = Path.Combine(orderFolder, DateTime.Today.AddDays(-6).ToString("yyyyMMdd"));           
+                string orderFile = Directory.GetFiles(dayFolder, "*.Order")[0];
+                StreamReader sr = new StreamReader(orderFile);
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] temp = line.Split(',');
+                    OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]), RouteId = temp[9], RouteName = temp[10] };
+                    orderLines.Add(ol);
+                }
+                sr.Close();
+                int totalCount = orderLines.Sum(ol => ol.Count);
+                var t = from ol in orderLines group ol by ol.OrderNumber into g select new Order() { Number = g.Key, Retailer = g.First().Retailer, OrderLines = g.ToList(), TotalCount = g.Sum(l => l.Count), RouteId = g.First().RouteId, RouteName = g.First().RouteName, RetailerId = g.First().RetailerId };
+                orders = t.ToList();
+            }
+           
+            var barcodeOrderGroups = barcodes.GroupBy(b => b.OrderNumber);//扫描后的条码按订单号分组
+            foreach (Order o in orders)
+            {
+                var barcodeOrderGroup = barcodeOrderGroups.First(g => g.Key == o.Number).ToList();
+                if (barcodeOrderGroup.Any(b => b.Code == ngBarcode))
+                {
+                    //先补缝隙XXXXXX,000000,XXXXXXX
+                    int begin = 0;
+                    int barcodeCount = barcodeOrderGroup.Count();
+                    while (begin < barcodeCount)
+                    {
+                        BarCode beginBarcode = barcodeOrderGroup[begin];
+                        if (beginBarcode.Code == ngBarcode)
+                        {
+                            begin++;
+                        }
+                        else
+                        {
+                            BarCode endBarcode = barcodeOrderGroup.Last(b => b.Code == beginBarcode.Code);
+                            if (endBarcode != null)
+                            {
+                                int last = barcodeOrderGroup.IndexOf(endBarcode);
+                                string revisedCode = endBarcode.Code;
+                                for (int i = begin; i <= last; i++)
+                                {
+                                    barcodeOrderGroup[i].RevisedCode = revisedCode;
+                                }
+                                begin = last + 1;
+                            }
+                        }
+                    }
+                    //查看是否全部补齐
+                    if (barcodeOrderGroup.Any(b => b.RevisedCode == ngBarcode))
+                    {
+                        var barcodeBrandGroups = barcodeOrderGroup.Where(c => c.Code != ngBarcode).GroupBy(c => c.Code);//扫描后的条码按条码分组
+                        int brandCount = barcodeBrandGroups.Count();//扫描后的品牌数量
+
+                        if (o.TotalCount > barcodeOrderGroup.Count)//订单内条烟全部触发 应该是==
+                        {
+                            int index = 0; //条烟在订单内的序号                            
+                            if (o.OrderLines.Count > brandCount)//全部触发且品牌无漏扫 应该是==
+                            {
+                                for (int i = 0; i < brandCount; i++)
+                                {
+                                    var barcodeBrandGroup = barcodeBrandGroups.ElementAt(i);
+                                    string brandId = barcodeBrandGroup.Key;
+                                    int count = o.OrderLines.Find(l => l.BrandId == brandId).Count;//订单内该品牌的实际条烟数量
+                                    for (int j = 0; j < count; j++)
+                                    {
+                                        BarCode barcode = barcodeOrderGroup.ElementAt(index);
+                                        barcode.RevisedCode = brandId;
+                                        index++;
+                                    }
+                                }
+                            }
+                            else//全部触发但是有品牌的条码全部漏扫
+                            {
+                                if (o.OrderLines.Count - brandCount == 1)//先只处理一个品牌全漏扫的情况
+                                {
+
+                                }
+                            }
+                        }
+                        else//有没有触发的条烟
+                        {
+                            if (o.OrderLines.Count > brandCount)//有漏触发但品牌无漏扫 应该是==
+                            {
+                                foreach (BarCode barcode in barcodeOrderGroup)
+                                {
+                                    
+                                }
+
+                                string mark = string.Empty;
+                                List<BarCode> group = new List<BarCode>();
+                                List<List<BarCode>> groups = new List<List<BarCode>>();
+                                foreach (BarCode barcode in barcodeOrderGroup)
+                                {
+                                    if (barcode.RevisedCode != mark)
+                                    {
+                                        groups.Add(group);
+                                        group = new List<BarCode>();
+                                        mark = barcode.RevisedCode;
+                                    }                                    
+                                    group.Add(barcode);
+                                }
+                                if (groups.Count > 1)
+                                {
+                                    for (int i = 0; i < groups.Count; i++)
+                                    {
+                                        if (i == 0 && groups[i].First().RevisedCode == ngBarcode)
+                                        {
+                                            foreach (BarCode b in groups[i])
+                                            {
+                                                b.RevisedCode = groups[i + 1].First().RevisedCode;
+                                            }
+                                        }
+                                        else if (i == groups.Count - 1 && groups[i].First().RevisedCode == ngBarcode)
+                                        {
+                                            foreach (BarCode b in groups[i])
+                                            {
+                                                b.RevisedCode = groups[i - 1].First().RevisedCode;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (groups[i].First().RevisedCode == ngBarcode)
+                                            {
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            else//有漏触发并且品牌无漏扫 应该是==
+                            {
+                            }
+                        }
+                    }                   
+                }
+            }
+
             string barCmd = "INSERT INTO \"DB2ADMIN\".\"BARCODES\"(\"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\") VALUES('{0}', '{1}', '{2}', {3})";
             foreach (BarCode barcode in barcodes)
-            {
-                string sql = string.Format(barCmd, barcode.Code, barcode.OrderNumber, barcode.DateTime.HasValue ? barcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", barcode.Sequence.HasValue ? barcode.Sequence : -1);
+            {                
+                string sql = string.Format(barCmd, barcode.RevisedCode, barcode.OrderNumber, barcode.DateTime.HasValue ? barcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", barcode.Sequence.HasValue ? barcode.Sequence : -1);
                 weixinDB.Insert(sql);
             }
             weixinDB.Close();

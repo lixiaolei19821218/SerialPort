@@ -18,6 +18,7 @@
           <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="DateTime" Type="datetime" />
           <Property Name="Sequence" Type="int" />
+          <Property Name="RevisedCode" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="QRCodes">
           <Key>
@@ -48,6 +49,7 @@
           <Property Type="String" Name="OrderNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="DateTime" Precision="3" />
           <Property Type="Int32" Name="Sequence" />
+          <Property Type="String" Name="RevisedCode" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="QRCode">
           <Key>
@@ -70,6 +72,7 @@
           <EntitySetMapping Name="BarCodes">
             <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
               <MappingFragment StoreEntitySet="BarCodes">
+                <ScalarProperty Name="RevisedCode" ColumnName="RevisedCode" />
                 <ScalarProperty Name="Sequence" ColumnName="Sequence" />
                 <ScalarProperty Name="DateTime" ColumnName="DateTime" />
                 <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
