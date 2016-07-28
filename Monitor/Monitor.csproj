@@ -78,6 +78,7 @@
     <Compile Include="Model\Carton.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderLine.cs" />
+    <Compile Include="Model\RevisedBarcode.cs" />
     <Compile Include="Model\Route.cs" />
     <Compile Include="QRCode.cs">
       <DependentUpon>ScanCode.tt</DependentUpon>

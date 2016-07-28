@@ -4,6 +4,7 @@
     <EntitySetMapping Name="BarCodes">
       <EntityTypeMapping TypeName="ScanCodeModel.BarCode">
         <MappingFragment StoreEntitySet="BarCodes">
+          <ScalarProperty Name="RevisedCode" ColumnName="RevisedCode" />
           <ScalarProperty Name="Sequence" ColumnName="Sequence" />
           <ScalarProperty Name="DateTime" ColumnName="DateTime" />
           <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />

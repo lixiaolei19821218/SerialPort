@@ -449,7 +449,7 @@ namespace Monitor.ViewModel
             Message = textResource["submittingToDB2"];
             ShowProgressBar = "Visible";
             //var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Today.Date);
-            var barcodes = repo.BarCodes.ToList().Where(b => b.DateTime.HasValue && b.DateTime.Value.Date == DateTime.Today.Date.AddDays(-6));
+            var barcodes = repo.BarCodes.ToList().Where(b => b.DateTime.HasValue && b.DateTime.Value.Date == DateTime.Today.Date.AddDays(-7));
 
             string connectionString = ConfigurationManager.ConnectionStrings["weixin"].ConnectionString;
             DB2 weixinDB = new DB2(connectionString);
@@ -466,7 +466,7 @@ namespace Monitor.ViewModel
             if (orders == null)
             {
                 string orderFolder = ConfigurationManager.AppSettings["orderFolder"];
-                string dayFolder = Path.Combine(orderFolder, DateTime.Today.AddDays(-6).ToString("yyyyMMdd"));           
+                string dayFolder = Path.Combine(orderFolder, DateTime.Today.AddDays(-7).ToString("yyyyMMdd"));           
                 string orderFile = Directory.GetFiles(dayFolder, "*.Order")[0];
                 StreamReader sr = new StreamReader(orderFile);
                 string line;
@@ -528,12 +528,15 @@ namespace Monitor.ViewModel
                                 {
                                     var barcodeBrandGroup = barcodeBrandGroups.ElementAt(i);
                                     string brandId = barcodeBrandGroup.Key;
-                                    int count = o.OrderLines.Find(l => l.BrandId == brandId).Count;//订单内该品牌的实际条烟数量
-                                    for (int j = 0; j < count; j++)
+                                    OrderLine orderLine = o.OrderLines.Find(l => l.BrandId == brandId);//订单内该品牌的实际条烟数量
+                                    if (orderLine != null)
                                     {
-                                        BarCode barcode = barcodeOrderGroup.ElementAt(index);
-                                        barcode.RevisedCode = brandId;
-                                        index++;
+                                        for (int j = 0; j < orderLine.Count; j++)
+                                        {
+                                            BarCode barcode = barcodeOrderGroup.ElementAt(index);
+                                            barcode.RevisedCode = brandId;
+                                            index++;
+                                        }
                                     }
                                 }
                             }
@@ -549,11 +552,6 @@ namespace Monitor.ViewModel
                         {
                             if (o.OrderLines.Count > brandCount)//有漏触发但品牌无漏扫 应该是==
                             {
-                                foreach (BarCode barcode in barcodeOrderGroup)
-                                {
-                                    
-                                }
-
                                 string mark = string.Empty;
                                 List<BarCode> group = new List<BarCode>();
                                 List<List<BarCode>> groups = new List<List<BarCode>>();
@@ -587,9 +585,33 @@ namespace Monitor.ViewModel
                                         }
                                         else
                                         {
-                                            if (groups[i].First().RevisedCode == ngBarcode)
+                                            List<BarCode> g = groups[i];
+                                            
+                                            if (g.First().RevisedCode == ngBarcode)
                                             {
-
+                                                string codeBefore = groups[i - 1].First().RevisedCode;
+                                                string codeAfter = groups[i + 1].First().RevisedCode;
+                                                //先用前面的条烟验证
+                                                int actualCount = barcodes.Count(b => b.RevisedCode == codeBefore);
+                                                int expectCount = o.OrderLines.Find(ol => ol.BrandId == codeBefore).Count;
+                                                if (actualCount == expectCount)
+                                                {
+                                                    foreach (BarCode b in g)
+                                                    {
+                                                        b.RevisedCode = codeAfter;
+                                                    }
+                                                    continue;
+                                                }
+                                                actualCount = barcodes.Count(b => b.RevisedCode == codeAfter);
+                                                expectCount = o.OrderLines.Find(ol => ol.BrandId == codeAfter).Count;
+                                                if (actualCount == expectCount)
+                                                {
+                                                    foreach (BarCode b in g)
+                                                    {
+                                                        b.RevisedCode = codeBefore;
+                                                    }
+                                                    continue;
+                                                }
                                             }
                                         }
                                     }
@@ -601,6 +623,7 @@ namespace Monitor.ViewModel
                         }
                     }                   
                 }
+                repo.SaveChanges();
             }
 
             string barCmd = "INSERT INTO \"DB2ADMIN\".\"BARCODES\"(\"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\") VALUES('{0}', '{1}', '{2}', {3})";
