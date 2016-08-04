@@ -74,6 +74,8 @@ namespace Monitor.ViewModel
             }
         }
 
+        public int Delay { get; set; }
+
         private SerialPort shiftSignalPort = new SerialPort(ConfigurationManager.AppSettings["shiftCOM"]);
         private SerialPort qrCodePort = new SerialPort(ConfigurationManager.AppSettings["qrcodeCOM"]);
         private byte[] result = new byte[1024];//接收从网口来的barcode
@@ -111,6 +113,7 @@ namespace Monitor.ViewModel
                 RaisePropertyChanged("CurrentOrder");
             }
         }
+        private Order barcodeCurrentOrder;//条码的切户需要延时
 
         private string message;
         public string Message
@@ -142,6 +145,7 @@ namespace Monitor.ViewModel
         {           
             Message = textResource["welcome"];
             ShowProgressBar = "Hidden";
+            Delay = int.Parse(ConfigurationManager.AppSettings["delay"]);
             //当前订单和当前订单的二维码条码
             CurrentOrder = new Order();
             CurrentQRCodes = new ObservableCollection<string>();
@@ -247,9 +251,12 @@ namespace Monitor.ViewModel
                     {
                         orderIndex = 1;
                     }
-                    App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });
-                    App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
+                    App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });                    
                     CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
+
+                    Thread.Sleep(Delay);
+                    App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
+                    barcodeCurrentOrder = orders[orderIndex];
                     orderIndex++;
                 }
             }
@@ -322,7 +329,7 @@ namespace Monitor.ViewModel
                 int receiveLength = clientSocket.Receive(result, length, 0);
                 string code = Encoding.ASCII.GetString(result, 0, receiveLength).Trim();
                 App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
-                BarCode barcode = new BarCode() { Code = code, OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++ };
+                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++ };
                 barCodes.Enqueue(barcode);
             }
         }
@@ -919,6 +926,9 @@ namespace Monitor.ViewModel
 
         void MainWindow_Closed(object sender, EventArgs e)
         {
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            config.AppSettings.Settings["delay"].Value = Delay.ToString();
+            config.Save();
             swLog.Close();
         }
 

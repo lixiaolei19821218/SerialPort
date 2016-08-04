@@ -58,10 +58,19 @@
             </GroupBox>
             <Grid Grid.Column="3" Margin="0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="500"/>
+                    <RowDefinition Height="450"/>
                 </Grid.RowDefinitions>
-                <GroupBox Header="订单信息">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="条码切户延时"/>
+                    <TextBox Grid.Column="1" Text="{Binding Path=Delay}" Height="20" Width="Auto"/>
+                </Grid>
+                <GroupBox Grid.Row="1" Header="订单信息">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
@@ -77,7 +86,7 @@
                         <Label Grid.Row="1" Grid.Column="2" Content="{Binding Path=CartonCount}"/>
                     </Grid>
                 </GroupBox>                
-                <GroupBox Header="当前订单" Grid.Row="1" Width="250">
+                <GroupBox Header="当前订单" Grid.Row="2" Width="250">
                     <Grid DataContext="{Binding Path=CurrentOrder}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>
