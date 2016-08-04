@@ -422,19 +422,27 @@ namespace Monitor.ViewModel
 
         private void Up(object o)
         {
-            if (orderIndex > 0)
+            if (CurrentOrder != null && barcodeCurrentOrder != null)
             {
-                orderIndex--;
-                CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
+                if (orderIndex > 0)
+                {
+                    orderIndex--;
+                    CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
+                    barcodeCurrentOrder = orders[orderIndex];
+                }
             }
         }
 
         private void Down(object o)
         {
-            if (orderIndex < orders.Count - 1)
+            if (CurrentOrder != null && barcodeCurrentOrder != null)
             {
-                orderIndex++;
-                CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
+                if (orderIndex < orders.Count - 1)
+                {
+                    orderIndex++;
+                    CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
+                    barcodeCurrentOrder = orders[orderIndex];
+                }
             }
         }
 
@@ -446,7 +454,7 @@ namespace Monitor.ViewModel
             }
             else
             {
-                RouteModify window = new RouteModify(routes, orders);
+                RouteModify window = new RouteModify(routes, orders) { Owner = App.Current.MainWindow };
                 window.ShowDialog();
             }
         }
@@ -455,19 +463,18 @@ namespace Monitor.ViewModel
         {
             Message = textResource["submittingToDB2"];
             ShowProgressBar = "Visible";
-            //var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Today.Date);
-            var barcodes = repo.BarCodes.ToList().Where(b => b.DateTime.HasValue && b.DateTime.Value.Date == DateTime.Today.Date.AddDays(-7));
+            var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Today.Date);
+            var barcodes = repo.BarCodes.ToList().Where(b => b.DateTime.HasValue && b.DateTime.Value.Date == DateTime.Today.Date);
 
             string connectionString = ConfigurationManager.ConnectionStrings["weixin"].ConnectionString;
             DB2 weixinDB = new DB2(connectionString);
-            /*
+            
             string qrCmd = "INSERT INTO \"DB2ADMIN\".\"QRCODES\"(\"URL\", \"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\", \"NATIONCUSTCODE\") VALUES('{0}', '{1}', '{2}', '{3}', {4}, '{5}')";
             foreach (QRCode qrcode in qrcodes)
             {
                 string sql = string.Format(qrCmd, qrcode.URL, qrcode.Code, qrcode.OrderNumber, qrcode.DateTime.HasValue ? qrcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", qrcode.Sequence.HasValue ? qrcode.Sequence : -1, qrcode.NationCustCode);
                 weixinDB.Insert(sql);
-            }
-            */
+            }            
            
             //补空
             if (orders == null)
@@ -526,10 +533,10 @@ namespace Monitor.ViewModel
                         var barcodeBrandGroups = barcodeOrderGroup.Where(c => c.Code != ngBarcode).GroupBy(c => c.Code);//扫描后的条码按条码分组
                         int brandCount = barcodeBrandGroups.Count();//扫描后的品牌数量
 
-                        if (o.TotalCount > barcodeOrderGroup.Count)//订单内条烟全部触发 应该是==
+                        if (o.TotalCount == barcodeOrderGroup.Count)//订单内条烟全部触发 应该是==
                         {
                             int index = 0; //条烟在订单内的序号                            
-                            if (o.OrderLines.Count > brandCount)//全部触发且品牌无漏扫 应该是==
+                            if (o.OrderLines.Count == brandCount)//全部触发且品牌无漏扫 应该是==
                             {
                                 for (int i = 0; i < brandCount; i++)
                                 {

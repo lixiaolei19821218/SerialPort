@@ -39,15 +39,12 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-                    <Button Content="开始" Command="{Binding Path=StartCommand}"/>
-                    <Button Content="结束" Grid.Row="1"/>
-                    <Button Content="保存" Grid.Row="2"/>
-                    <Button Content="定位贴标" Grid.Row="3"/>
-                    <Button Content="上一条" Grid.Row="4" Command="{Binding Path=UpCommand}"/>
-                    <Button Content="下一条" Grid.Row="5" Command="{Binding Path=DownCommand}"/>
-                    <Button Content="切户" Grid.Row="6"/>
-                    <Button Content="上传数据库" Grid.Row="7" Margin="0" Command="{Binding Path=SubmitToDBCommand}"/>
-                    <Button Content="线路调整" Grid.Row="8" Command="{Binding Path=ModifyRouteCommand}"/>
+                    <Button Content="开始" Command="{Binding Path=StartCommand}"/>                                
+                    <Button Content="定位贴标" Grid.Row="1"/>
+                    <Button Content="上一条" Grid.Row="2" Command="{Binding Path=UpCommand}"/>
+                    <Button Content="下一条" Grid.Row="3" Command="{Binding Path=DownCommand}"/>                    
+                    <Button Content="上传数据库" Grid.Row="4" Margin="0" Command="{Binding Path=SubmitToDBCommand}"/>
+                    <Button Content="线路调整" Grid.Row="5" Command="{Binding Path=ModifyRouteCommand}"/>
                 </Grid>
             </GroupBox>
             <GroupBox Header="二维码" Grid.Column="1">
