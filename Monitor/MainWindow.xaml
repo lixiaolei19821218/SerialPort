@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Monitor.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="条烟扫码系统" SizeToContent="WidthAndHeight">
+        Title="条烟扫码系统" SizeToContent="WidthAndHeight" ResizeMode="CanMinimize">
     <Window.Resources>
         <Style TargetType="Grid">
             <Setter Property="Margin" Value="5"/>
@@ -57,7 +57,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="450"/>
+                    <RowDefinition Height="500"/>
                 </Grid.RowDefinitions>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -70,25 +70,31 @@
                 <GroupBox Grid.Row="1" Header="订单信息">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition />                           
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
+                            <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
                         <Label Content="订单总数"/>
-                        <Label Grid.Column="2" Content="{Binding Path=OrderCount}"/>
+                        <Label Grid.Column="1" Content="{Binding Path=CurrentOrderNumber}" Visibility="{Binding Path=CurrentNumberVisibility}"/>
+                        <Label Grid.Column="2" Content="/" Visibility="{Binding Path=CurrentNumberVisibility}"/>
+                        <Label Grid.Column="3" Content="{Binding Path=OrderCount}"/>
                         <Label Grid.Row="1" Content="条烟总数"/>
-                        <Label Grid.Row="1" Grid.Column="2" Content="{Binding Path=CartonCount}"/>
+                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=CurrentCartonNumber}" Visibility="{Binding Path=CurrentNumberVisibility}"/>
+                        <Label Grid.Row="1" Grid.Column="2" Content="/" Visibility="{Binding Path=CurrentNumberVisibility}"/>
+                        <Label Grid.Row="1" Grid.Column="3" Content="{Binding Path=CartonCount}"/>
                     </Grid>
                 </GroupBox>                
                 <GroupBox Header="当前订单" Grid.Row="2" Width="250">
                     <Grid DataContext="{Binding Path=CurrentOrder}">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>

@@ -76,6 +76,47 @@ namespace Monitor.ViewModel
 
         public int Delay { get; set; }
 
+        private int currentOrderNumber;
+        public int CurrentOrderNumber
+        {
+            get
+            {
+                return currentOrderNumber;
+            }
+            set
+            {
+                currentOrderNumber = value;
+                RaisePropertyChanged("CurrentOrderNumber");
+            }
+        }
+        private int currentCartonNumber;
+        public int CurrentCartonNumber
+        {
+            get
+            {
+                return currentCartonNumber;
+            }
+            set
+            {
+                currentCartonNumber = value;
+                RaisePropertyChanged("CurrentCartonNumber");
+            }
+        }
+        private string currentNumberVisibility;
+        public string CurrentNumberVisibility
+        {
+            get
+            {
+                return currentNumberVisibility;
+            }
+            set
+            {
+                currentNumberVisibility = value;
+                RaisePropertyChanged("CurrentNumberVisibility");
+            }
+        }
+        private bool firstQR = true;
+        
         private SerialPort shiftSignalPort = new SerialPort(ConfigurationManager.AppSettings["shiftCOM"]);
         private SerialPort qrCodePort = new SerialPort(ConfigurationManager.AppSettings["qrcodeCOM"]);
         private byte[] result = new byte[1024];//接收从网口来的barcode
@@ -145,6 +186,7 @@ namespace Monitor.ViewModel
         {           
             Message = textResource["welcome"];
             ShowProgressBar = "Hidden";
+            CurrentNumberVisibility = "Hidden";
             Delay = int.Parse(ConfigurationManager.AppSettings["delay"]);
             //当前订单和当前订单的二维码条码
             CurrentOrder = new Order();
@@ -258,6 +300,8 @@ namespace Monitor.ViewModel
                     App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
                     barcodeCurrentOrder = orders[orderIndex];
                     orderIndex++;
+
+                    CurrentOrderNumber++;
                 }
             }
             catch (Exception ex)
@@ -272,6 +316,14 @@ namespace Monitor.ViewModel
         {
             try
             {
+                if (firstQR)
+                {
+                    CurrentOrderNumber = 1;
+                    CurrentNumberVisibility = "Visible";
+                    firstQR = false;
+                }
+                CurrentCartonNumber++;
+
                 SerialPort port = sender as SerialPort;
                 string code = port.ReadTo(",");
                 App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddQRCodeToCurrent), code);
