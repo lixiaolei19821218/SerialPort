@@ -30,7 +30,7 @@ namespace Monitor.ViewModel
         private List<OrderLine> orderLines = new List<OrderLine>();
         private List<Order> orders;
         private ObservableCollection<Route> routes;
-        private int orderIndex = 1;//当前分解订单序号，模拟分户信号。首户不发送切户信号
+        private int orderIndex;//当前分解订单序号，模拟分户信号。首户不发送切户信号
         private int orderCount;//当天订单数量
         public int OrderCount 
         {
@@ -293,13 +293,13 @@ namespace Monitor.ViewModel
                     {
                         orderIndex = 1;
                     }
+                    orderIndex++;
                     App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });                    
                     CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
 
                     Thread.Sleep(Delay);
                     App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
-                    barcodeCurrentOrder = orders[orderIndex];
-                    orderIndex++;
+                    barcodeCurrentOrder = orders[orderIndex];                    
 
                     CurrentOrderNumber++;
                 }
@@ -444,12 +444,13 @@ namespace Monitor.ViewModel
             OrderCount = Enumerable.Count(orders);
             CartonCount = orders.Sum(o => o.TotalCount);
             CurrentOrder = orders[0];
+            barcodeCurrentOrder = orders[0];
             Message = textResource["readOrderSuccess"];
         }
 
         private void InitOrdersTest()
         {
-            Thread.Sleep(10000);
+            Thread.Sleep(1);
             string orderFile = ConfigurationManager.AppSettings["orderFilePath"];
             StreamReader sr = new StreamReader(orderFile);
             string line;
@@ -468,6 +469,7 @@ namespace Monitor.ViewModel
             OrderCount = Enumerable.Count(orders);
             CartonCount = orders.Sum(o => o.TotalCount);
             CurrentOrder = orders[0];
+            barcodeCurrentOrder = orders[0];
             Message = textResource["readOrderSuccess"];
         }
         #endregion
@@ -481,6 +483,11 @@ namespace Monitor.ViewModel
                     orderIndex--;
                     CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
                     barcodeCurrentOrder = orders[orderIndex];
+                    if (CurrentNumberVisibility == "Hidden")
+                    {
+                        CurrentNumberVisibility = "Visibility";                        
+                    }
+                    CurrentOrderNumber--;
                 }
             }
         }
@@ -494,6 +501,11 @@ namespace Monitor.ViewModel
                     orderIndex++;
                     CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
                     barcodeCurrentOrder = orders[orderIndex];
+                    if (CurrentNumberVisibility == "Hidden")
+                    {
+                        CurrentNumberVisibility = "Visibility";                        
+                    }
+                    CurrentOrderNumber++;
                 }
             }
         }
@@ -532,7 +544,7 @@ namespace Monitor.ViewModel
             if (orders == null)
             {
                 string orderFolder = ConfigurationManager.AppSettings["orderFolder"];
-                string dayFolder = Path.Combine(orderFolder, DateTime.Today.AddDays(-7).ToString("yyyyMMdd"));           
+                string dayFolder = Path.Combine(orderFolder, DateTime.Today.ToString("yyyyMMdd"));           
                 string orderFile = Directory.GetFiles(dayFolder, "*.Order")[0];
                 StreamReader sr = new StreamReader(orderFile);
                 string line;
@@ -616,7 +628,7 @@ namespace Monitor.ViewModel
                         }
                         else//有没有触发的条烟
                         {
-                            if (o.OrderLines.Count > brandCount)//有漏触发但品牌无漏扫 应该是==
+                            if (o.OrderLines.Count == brandCount)//有漏触发但品牌无漏扫 应该是==
                             {
                                 string mark = string.Empty;
                                 List<BarCode> group = new List<BarCode>();
