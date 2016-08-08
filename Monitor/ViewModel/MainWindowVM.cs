@@ -16,6 +16,8 @@ using System.Net.Sockets;
 using Monitor.View;
 using IBM.Data.DB2;
 using DB2DataAccess;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Monitor.ViewModel
 {
@@ -711,8 +713,36 @@ namespace Monitor.ViewModel
                 weixinDB.Insert(sql);
             }
             weixinDB.Close();
+
+            Sync32BitsCodes();
+
             Message = textResource["submitComplete"];
             ShowProgressBar = "Hidden";
+        }
+
+        private void Sync32BitsCodes()
+        {
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["code32"].ConnectionString);
+            connection.Open();
+            string sql = string.Format("select * from BP_ORDER_BARCODE where OB_SORT_DATE = '{0}'", DateTime.Today);
+            SqlDataAdapter adpter = new SqlDataAdapter(sql, connection);
+            DataTable table = new DataTable();
+            adpter.Fill(table);
+            //DataRow row = table.Rows[0];
+            adpter.Dispose();
+            connection.Close();
+
+            DB2 weixinDB = new DB2(ConfigurationManager.ConnectionStrings["weixin"].ConnectionString);
+            foreach (DataRow row in table.Rows)
+            {
+                string code = row["OB_BCIG_BARCODE"].ToString();
+                string custId = row["OB_RETAILER_CODE"].ToString();
+                string sequence = row["OB_Sequence"].ToString();
+                string date = DateTime.Parse(row["OB_SORT_DATE"].ToString()).ToString("yyyy-MM-dd");
+                sql = string.Format("INSERT INTO \"DB2ADMIN\".\"CODES32\"(\"CODE\", \"NationCustCode\", \"DATE\", \"SEQUENCE\") VALUES('{0}', '{1}', '{2}', {3})", code, custId, date, sequence);
+                weixinDB.Insert(sql);
+            }
+            weixinDB.Close();
         }
 
         private void SubmitToDB(object o)
