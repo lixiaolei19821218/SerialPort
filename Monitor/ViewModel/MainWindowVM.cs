@@ -34,7 +34,7 @@ namespace Monitor.ViewModel
         private ObservableCollection<Route> routes;
         private int orderIndex;//当前分解订单序号，模拟分户信号。首户不发送切户信号
         private int orderCount;//当天订单数量
-        public int OrderCount 
+        public int OrderCount
         {
             get
             {
@@ -47,7 +47,7 @@ namespace Monitor.ViewModel
             }
         }
         private string showProgressBar;
-        public string ShowProgressBar 
+        public string ShowProgressBar
         {
             get
             {
@@ -63,7 +63,7 @@ namespace Monitor.ViewModel
         private int barSequence = 0;//订单内条烟顺序
         private int qrSequence = 0;
         private int cartonCount;//当天条烟数量
-        public int CartonCount 
+        public int CartonCount
         {
             get
             {
@@ -118,7 +118,7 @@ namespace Monitor.ViewModel
             }
         }
         private bool firstQR = true;
-        
+
         private SerialPort shiftSignalPort = new SerialPort(ConfigurationManager.AppSettings["shiftCOM"]);
         private SerialPort qrCodePort = new SerialPort(ConfigurationManager.AppSettings["qrcodeCOM"]);
         private byte[] result = new byte[1024];//接收从网口来的barcode
@@ -183,9 +183,9 @@ namespace Monitor.ViewModel
         public DelegateCommand DownCommand { get; set; }
         public DelegateCommand ModifyRouteCommand { get; set; }
         public DelegateCommand SubmitToDBCommand { get; set; }
-        
+
         public MainWindowVM()
-        {           
+        {
             Message = textResource["welcome"];
             ShowProgressBar = "Hidden";
             CurrentNumberVisibility = "Hidden";
@@ -199,7 +199,7 @@ namespace Monitor.ViewModel
             UpCommand = new DelegateCommand(Up);
             DownCommand = new DelegateCommand(Down);
             ModifyRouteCommand = new DelegateCommand(ModifyRoute);
-            SubmitToDBCommand = new DelegateCommand(SubmitToDB, CanSubmitToDB);     
+            SubmitToDBCommand = new DelegateCommand(SubmitToDB, CanSubmitToDB);
 
             //保存已接收的二维码条码到本地SQL Server数据库
             Thread threadSaveQR = new Thread(SaveQRCode) { IsBackground = true };
@@ -209,20 +209,20 @@ namespace Monitor.ViewModel
 
             App.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
             App.Current.MainWindow.Closed += MainWindow_Closed;
-        }       
+        }
 
         private void Start(object o)
         {
             if (InitComPort() == false)
             {
                 return;
-            }/*
+            }
             if (InitSocket() == false)
             {
                 return;
-            }  */          
+            }
             Message = textResource["waitingOrders"];
-            Thread receivOrders = new Thread(InitOrdersTest) { IsBackground = true };
+            Thread receivOrders = new Thread(InitOrders) { IsBackground = true };
             receivOrders.Start();
             //InitOrdersTest();
         }
@@ -288,7 +288,6 @@ namespace Monitor.ViewModel
                 //string code = port.ReadLine();
                 if (code == "c2")
                 {
-                    barSequence = 0;
                     qrSequence = 0;
 
                     if (orderIndex == OrderCount)
@@ -296,12 +295,13 @@ namespace Monitor.ViewModel
                         orderIndex = 1;
                     }
                     orderIndex++;
-                    App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });                    
+                    App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });
                     CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
 
                     Thread.Sleep(Delay);
+                    barSequence = 0;
                     App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
-                    barcodeCurrentOrder = orders[orderIndex];                    
+                    barcodeCurrentOrder = orders[orderIndex];
 
                     CurrentOrderNumber++;
                 }
@@ -334,11 +334,11 @@ namespace Monitor.ViewModel
                     QRCode qrcode;
                     if (code == "NG")
                     {
-                        qrcode = new QRCode() { URL = code, Code = code, OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++ };                    
+                        qrcode = new QRCode() { URL = code, Code = code, OrderNumber = CurrentOrder == null ? string.Empty : CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++ };
                     }
                     else
                     {
-                        qrcode = new QRCode() { URL = code, Code = code.Split(new string[] { "/q/" }, StringSplitOptions.RemoveEmptyEntries)[1], OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++ };
+                        qrcode = new QRCode() { URL = code, Code = code.Split(new string[] { "/q/" }, StringSplitOptions.RemoveEmptyEntries)[1], OrderNumber = CurrentOrder == null ? string.Empty : CurrentOrder.Number, DateTime = DateTime.Now, NationCustCode = CurrentOrder.RetailerId, Sequence = qrSequence++ };
                     }
                     qrCodes.Enqueue(qrcode);
                 }
@@ -383,7 +383,7 @@ namespace Monitor.ViewModel
                 int receiveLength = clientSocket.Receive(result, length, 0);
                 string code = Encoding.ASCII.GetString(result, 0, receiveLength).Trim();
                 App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
-                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++ };
+                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++ };
                 barCodes.Enqueue(barcode);
             }
         }
@@ -487,7 +487,7 @@ namespace Monitor.ViewModel
                     barcodeCurrentOrder = orders[orderIndex];
                     if (CurrentNumberVisibility == "Hidden")
                     {
-                        CurrentNumberVisibility = "Visibility";                        
+                        CurrentNumberVisibility = "Visibility";
                     }
                     CurrentOrderNumber--;
                 }
@@ -505,7 +505,7 @@ namespace Monitor.ViewModel
                     barcodeCurrentOrder = orders[orderIndex];
                     if (CurrentNumberVisibility == "Hidden")
                     {
-                        CurrentNumberVisibility = "Visibility";                        
+                        CurrentNumberVisibility = "Visibility";
                     }
                     CurrentOrderNumber++;
                 }
@@ -534,19 +534,19 @@ namespace Monitor.ViewModel
 
             string connectionString = ConfigurationManager.ConnectionStrings["weixin"].ConnectionString;
             DB2 weixinDB = new DB2(connectionString);
-            
+
             string qrCmd = "INSERT INTO \"DB2ADMIN\".\"QRCODES\"(\"URL\", \"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\", \"NATIONCUSTCODE\") VALUES('{0}', '{1}', '{2}', '{3}', {4}, '{5}')";
             foreach (QRCode qrcode in qrcodes)
             {
                 string sql = string.Format(qrCmd, qrcode.URL, qrcode.Code, qrcode.OrderNumber, qrcode.DateTime.HasValue ? qrcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", qrcode.Sequence.HasValue ? qrcode.Sequence : -1, qrcode.NationCustCode);
                 weixinDB.Insert(sql);
-            }            
-           
+            }
+
             //补空
             if (orders == null)
             {
                 string orderFolder = ConfigurationManager.AppSettings["orderFolder"];
-                string dayFolder = Path.Combine(orderFolder, DateTime.Today.ToString("yyyyMMdd"));           
+                string dayFolder = Path.Combine(orderFolder, DateTime.Today.ToString("yyyyMMdd"));
                 string orderFile = Directory.GetFiles(dayFolder, "*.Order")[0];
                 StreamReader sr = new StreamReader(orderFile);
                 string line;
@@ -561,7 +561,7 @@ namespace Monitor.ViewModel
                 var t = from ol in orderLines group ol by ol.OrderNumber into g select new Order() { Number = g.Key, Retailer = g.First().Retailer, OrderLines = g.ToList(), TotalCount = g.Sum(l => l.Count), RouteId = g.First().RouteId, RouteName = g.First().RouteName, RetailerId = g.First().RetailerId };
                 orders = t.ToList();
             }
-           
+
             var barcodeOrderGroups = barcodes.GroupBy(b => b.OrderNumber);//扫描后的条码按订单号分组
             foreach (Order o in orders)
             {
@@ -642,7 +642,7 @@ namespace Monitor.ViewModel
                                         groups.Add(group);
                                         group = new List<BarCode>();
                                         mark = barcode.RevisedCode;
-                                    }                                    
+                                    }
                                     group.Add(barcode);
                                 }
                                 if (groups.Count > 1)
@@ -666,7 +666,7 @@ namespace Monitor.ViewModel
                                         else
                                         {
                                             List<BarCode> g = groups[i];
-                                            
+
                                             if (g.First().RevisedCode == ngBarcode)
                                             {
                                                 string codeBefore = groups[i - 1].First().RevisedCode;
@@ -701,14 +701,14 @@ namespace Monitor.ViewModel
                             {
                             }
                         }
-                    }                   
+                    }
                 }
                 repo.SaveChanges();
             }
 
             string barCmd = "INSERT INTO \"DB2ADMIN\".\"BARCODES\"(\"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\") VALUES('{0}', '{1}', '{2}', {3})";
             foreach (BarCode barcode in barcodes)
-            {                
+            {
                 string sql = string.Format(barCmd, barcode.RevisedCode, barcode.OrderNumber, barcode.DateTime.HasValue ? barcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", barcode.Sequence.HasValue ? barcode.Sequence : -1);
                 weixinDB.Insert(sql);
             }
@@ -876,7 +876,7 @@ namespace Monitor.ViewModel
         private bool CanSubmitToDB(object o)
         {
             return true;
-        }        
+        }
 
 
         /// <summary>
@@ -937,7 +937,7 @@ namespace Monitor.ViewModel
                         {
                             try
                             {
-                                BarCode barcode; 
+                                BarCode barcode;
                                 lock (syncObj)
                                 {
                                     barcode = barCodes.Dequeue();
@@ -1008,7 +1008,7 @@ namespace Monitor.ViewModel
                                 lock (syncObj)
                                 {
                                     qrcode = qrCodes.Dequeue();
-                                }                                
+                                }
                                 repo.QRCodes.Add(qrcode);
                                 repo.SaveChanges();
                             }
