@@ -13,7 +13,7 @@
     <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="DateTime" Type="datetime" />
     <Property Name="Sequence" Type="int" />
-    <Property Name="RevisedCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="RevisedCode" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="QRCodes">
     <Key>

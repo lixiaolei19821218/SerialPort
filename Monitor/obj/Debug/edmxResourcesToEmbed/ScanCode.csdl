@@ -13,7 +13,7 @@
     <Property Type="String" Name="OrderNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Type="DateTime" Name="DateTime" Precision="3" />
     <Property Type="Int32" Name="Sequence" />
-    <Property Type="String" Name="RevisedCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RevisedCode" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="QRCode">
     <Key>

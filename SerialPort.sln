@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sync32Code", "Sync32Code\Sy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillOracleConsole", "FillOracleConsole\FillOracleConsole.csproj", "{46F1D14B-BA66-49EF-BFD7-5534FD56EE3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportOrderToDBConsole", "ImportOrderToDBConsole\ImportOrderToDBConsole.csproj", "{761E0C34-2260-42E2-9798-E28A3A074B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{46F1D14B-BA66-49EF-BFD7-5534FD56EE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46F1D14B-BA66-49EF-BFD7-5534FD56EE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46F1D14B-BA66-49EF-BFD7-5534FD56EE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761E0C34-2260-42E2-9798-E28A3A074B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761E0C34-2260-42E2-9798-E28A3A074B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761E0C34-2260-42E2-9798-E28A3A074B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761E0C34-2260-42E2-9798-E28A3A074B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

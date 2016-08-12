@@ -18,8 +18,8 @@ namespace FillOracleConsole
             con.Open();
 
             ScanCodeEntities repo = new ScanCodeEntities();
-            var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Now.Date.AddDays(-5));
-            /*
+            var qrcodes = repo.QRCodes.ToList().Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Now.Date);
+            
             foreach (QRCode qrcode in qrcodes)
             {
                 OracleCommand cmd = new OracleCommand();
@@ -30,8 +30,8 @@ namespace FillOracleConsole
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
             }
-            */
-            StreamReader sr = new StreamReader("QrCode20160720170329.Order");
+
+            StreamReader sr = new StreamReader("QrCode20160811093813.Order");
             List<OrderLine> orderLines = new List<OrderLine>();
             string line;
             while ((line = sr.ReadLine()) != null)
@@ -61,7 +61,7 @@ namespace FillOracleConsole
                 OracleCommand cmd = new OracleCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
                 string sql = string.Format("insert into RETAILERORDER(SORTID, ORDERID, CUSTOMCODE, CUSTOMNAME, CIGARCODE, CIGARNAME, QUANTITY, PCCODE, ORDERSORTID, ORDERTIME, CURRTIME, FJROUT, XLCODE, XLNAME) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}')", 
-                    ol.SortId, "LXL", ol.RetailerId, ol.Retailer, ol.BrandId, ol.Brand, ol.Count, ol.PCCode, ol.OrderSortId, ol.OrderTime, ol.CurrTime, ol.FJROut, ol.RouteId, ol.RouteName
+                    ol.SortId, ol.OrderNumber, ol.RetailerId, ol.Retailer, ol.BrandId, ol.Brand, ol.Count, ol.PCCode, ol.OrderSortId, ol.OrderTime, ol.CurrTime, ol.FJROut, ol.RouteId, ol.RouteName
                     );
                 cmd.CommandText = sql;
                 cmd.Connection = con;
