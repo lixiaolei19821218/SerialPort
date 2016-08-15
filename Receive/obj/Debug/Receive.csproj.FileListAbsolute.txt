@@ -7,3 +7,12 @@ C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\bin\Debug
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\obj\Debug\Receive.csprojResolveAssemblyReference.cache
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\obj\Debug\Receive.exe
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\Receive\obj\Debug\Receive.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\bin\Debug\Receive.exe.config
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\bin\Debug\Receive.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\bin\Debug\Receive.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\bin\Debug\EntityFramework.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\bin\Debug\EntityFramework.xml
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\obj\Debug\Receive.csprojResolveAssemblyReference.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\obj\Debug\Receive.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Receive\obj\Debug\Receive.pdb

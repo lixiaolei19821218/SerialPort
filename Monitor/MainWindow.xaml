@@ -40,7 +40,7 @@
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Button Content="开始" Command="{Binding Path=StartCommand}"/>                                
-                    <Button Content="定位贴标" Grid.Row="1"/>
+                    <Button Content="重置" Grid.Row="1" Command="{Binding Path=ResetCommand}"/>
                     <Button Content="上一条" Grid.Row="2" Command="{Binding Path=UpCommand}"/>
                     <Button Content="下一条" Grid.Row="3" Command="{Binding Path=DownCommand}"/>                    
                     <Button Content="上传数据库" Grid.Row="4" Margin="0" Command="{Binding Path=SubmitToDBCommand}"/>
@@ -48,10 +48,40 @@
                 </Grid>
             </GroupBox>
             <GroupBox Header="二维码" Grid.Column="1">
-                <ListBox ItemsSource="{Binding Path=CurrentQRCodes}" Width="200" Height="600" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="当前订单"/>
+                    <Label Grid.Column="1" Content="{Binding Path=QrcodeOrderNumber}"/>
+                    <Label Grid.Row="1" Content="已读取"/>
+                    <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=QrcodeReceivedCount}"/>
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{Binding Path=CurrentQRCodes}" Width="200" Height="550" />
+                </Grid>                
             </GroupBox>
             <GroupBox Header="条码" Grid.Column="2">
-                <ListBox ItemsSource="{Binding Path=CurrentBarcodes}" Width="200" Height="600"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="当前订单"/>
+                    <Label Grid.Column="1" Content="{Binding Path=BarcodeOrderNumber}"/>
+                    <Label Grid.Row="1" Content="已读取"/>
+                    <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=BarcodeReceivedCount}"/>
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{Binding Path=CurrentBarcodes}" Width="200" Height="550"/>
+                </Grid>                
             </GroupBox>
             <Grid Grid.Column="3" Margin="0">
                 <Grid.RowDefinitions>
@@ -63,30 +93,26 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Label Content="条码切户延时"/>
                     <TextBox Grid.Column="1" Text="{Binding Path=Delay}" Height="20" Width="Auto"/>
+                    <Button Grid.Column="2" Content="确定" Height="20" Width="Auto" Margin="5,0,0,0"/>
                 </Grid>
                 <GroupBox Grid.Row="1" Header="订单信息">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>                           
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <Label Content="订单总数"/>
-                        <Label Grid.Column="1" Content="{Binding Path=CurrentOrderNumber}" Visibility="{Binding Path=CurrentNumberVisibility}"/>
-                        <Label Grid.Column="2" Content="/" Visibility="{Binding Path=CurrentNumberVisibility}"/>
-                        <Label Grid.Column="3" Content="{Binding Path=OrderCount}"/>
-                        <Label Grid.Row="1" Content="条烟总数"/>
-                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=CurrentCartonNumber}" Visibility="{Binding Path=CurrentNumberVisibility}"/>
-                        <Label Grid.Row="1" Grid.Column="2" Content="/" Visibility="{Binding Path=CurrentNumberVisibility}"/>
-                        <Label Grid.Row="1" Grid.Column="3" Content="{Binding Path=CartonCount}"/>
+                        <Label Grid.Column="1" Content="{Binding Path=OrderCount}"/>                        
+                        <Label Grid.Row="1" Content="当前订单"/>
+                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=OrderNumber}"/>                        
                     </Grid>
                 </GroupBox>                
                 <GroupBox Header="当前订单" Grid.Row="2" Width="250">
@@ -100,14 +126,16 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Label Content="订单号"/>
-                        <Label Grid.Column="1" Content="{Binding Path=Number}"/>
+                        <Label Grid.Column="1" Grid.ColumnSpan="3" Content="{Binding Path=Number}"/>
                         <Label Content="零售户" Grid.Row="1"/>
-                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=Retailer}"/>
+                        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Content="{Binding Path=Retailer}"/>
                         <Label Content="条烟总数" Grid.Row="2"/>
-                        <Label Grid.Row="2" Grid.Column="1" Content="{Binding Path=TotalCount}"/>
-                        <GroupBox Grid.Row="3" Grid.ColumnSpan="2" Header="明细">
+                        <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Content="{Binding Path=TotalCount}"/>                        
+                        <GroupBox Grid.Row="3" Grid.ColumnSpan="4" Header="明细">
                             <ItemsControl ItemsSource="{Binding Path=OrderLines}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>

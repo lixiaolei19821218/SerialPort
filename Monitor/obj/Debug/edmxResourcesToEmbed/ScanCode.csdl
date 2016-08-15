@@ -11,8 +11,8 @@
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="OrderNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="DateTime" Precision="3" />
-    <Property Type="Int32" Name="Sequence" />
+    <Property Type="DateTime" Name="DateTime" Precision="3" Nullable="false" />
+    <Property Type="Int32" Name="Sequence" Nullable="false" />
     <Property Type="String" Name="RevisedCode" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="QRCode">
@@ -21,10 +21,10 @@
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="URL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="OrderNumber" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="DateTime" Precision="3" />
-    <Property Type="String" Name="NationCustCode" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="Int32" Name="Sequence" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="String" Name="OrderNumber" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="DateTime" Name="DateTime" Precision="3" Nullable="false" />
+    <Property Type="String" Name="NationCustCode" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="Int32" Name="Sequence" Nullable="false" />
   </EntityType>
 </Schema>

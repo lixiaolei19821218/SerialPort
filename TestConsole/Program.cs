@@ -15,8 +15,9 @@ namespace TestConsole
         static SerialPort qrPortSend = new SerialPort("COM3");       
         static SerialPort shiftPortSend = new SerialPort("COM1");
         static StreamWriter swBar = new StreamWriter("bar.txt");
-        static StreamWriter swQR = new StreamWriter("qr.txt");
-        static StreamReader sr = new StreamReader(@"QrCode20160720170329.Order");
+        static StreamWriter swQR = new StreamWriter("qr.txt");    
+       
+        static StreamReader sr;
 
         static char[] constant = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
@@ -25,13 +26,29 @@ namespace TestConsole
 
         static void Main(string[] args)
         {
+            string orderFolder = @"c:\order";
+            if (!Directory.Exists(orderFolder))
+            {
+                Directory.CreateDirectory(orderFolder);
+            }
+            string dayFolder = Path.Combine(orderFolder, DateTime.Today.ToString("yyyyMMdd"));
+            if (!Directory.Exists(dayFolder))
+            {
+                Directory.CreateDirectory(dayFolder);
+            }
+            string[] orderFiles = Directory.GetFiles(dayFolder, "*.Order", SearchOption.TopDirectoryOnly);
+            sr = new StreamReader(orderFiles[0]);
+
             List<OrderLine> orderLines = new List<OrderLine>();          
             string line;
             while ((line = sr.ReadLine()) != null)
             {
                 string[] temp = line.Split(',');
-                OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]) };
-                orderLines.Add(ol);
+                OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]), FJROut = temp[13] };
+                if (ol.FJROut == "002")
+                {
+                    orderLines.Add(ol);
+                }
             }
             sr.Close();
             IEnumerable<Order> orders = from ol in orderLines group ol by ol.OrderNumber into g select new Order() { Number = g.Key, OrderLines = g.ToList(), TotalCount = g.Sum(l => l.Count) };

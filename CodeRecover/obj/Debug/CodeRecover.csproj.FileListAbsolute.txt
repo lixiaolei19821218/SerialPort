@@ -9,3 +9,6 @@ C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\CodeRecover\obj\D
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\CodeRecover\obj\Debug\CodeRecover.pdb
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\CodeRecover\bin\Debug\Monitor.exe
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\CodeRecover\bin\Debug\Monitor.pdb
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\CodeRecover\obj\Debug\CodeRecover.csprojResolveAssemblyReference.cache
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\CodeRecover\obj\Debug\CodeRecover.exe
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\CodeRecover\obj\Debug\CodeRecover.pdb

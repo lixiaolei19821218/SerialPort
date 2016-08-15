@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\SerialPort\Monitor\obj\Debug\
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\obj\Debug\
 Monitor
 none
 false
 DEBUG;TRACE
-D:\SerialPort\Monitor\App.xaml
+D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\Monitor\App.xaml
 22126958146
 
 21-586133753
-211176410674
+21401719863
 MainWindow.xaml;View\RouteModify.xaml;
 
 False

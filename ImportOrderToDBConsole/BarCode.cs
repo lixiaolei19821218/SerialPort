@@ -17,8 +17,8 @@ namespace ImportOrderToDBConsole
         public int Id { get; set; }
         public string Code { get; set; }
         public string OrderNumber { get; set; }
-        public Nullable<System.DateTime> DateTime { get; set; }
-        public Nullable<int> Sequence { get; set; }
+        public System.DateTime DateTime { get; set; }
+        public int Sequence { get; set; }
         public string RevisedCode { get; set; }
     }
 }

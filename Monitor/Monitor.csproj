@@ -138,6 +138,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,7 +164,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
+    <None Include="ViewModel\App.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

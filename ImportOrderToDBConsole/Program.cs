@@ -19,8 +19,11 @@ namespace ImportOrderToDBConsole
             while ((line = sr.ReadLine()) != null)
             {
                 string[] temp = line.Split(',');
-                OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]), RouteId = temp[9], RouteName = temp[10] };
-                orderLines.Add(ol);
+                OrderLine ol = new OrderLine() { OrderNumber = temp[1], RetailerId = temp[2], Retailer = temp[3], BrandId = temp[4], Brand = temp[5], Count = int.Parse(temp[6]), RouteId = temp[9], RouteName = temp[10], FJROut = temp[13] };
+                if (ol.FJROut == "002")
+                {
+                    orderLines.Add(ol);
+                }
             }
             sr.Close();
             var orders = from ol in orderLines group ol by ol.OrderNumber into g select new Order() { OrderNumber = g.Key, Count = g.Sum(o => o.Count), Date = DateTime.Today };

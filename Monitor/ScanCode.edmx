@@ -16,8 +16,8 @@
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="DateTime" Type="datetime" />
-          <Property Name="Sequence" Type="int" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Sequence" Type="int" Nullable="false" />
           <Property Name="RevisedCode" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="QRCodes">
@@ -26,11 +26,11 @@
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Code" Type="nvarchar" MaxLength="50" />
-          <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
-          <Property Name="DateTime" Type="datetime" />
-          <Property Name="NationCustCode" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sequence" Type="int" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="NationCustCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sequence" Type="int" Nullable="false" />
         </EntityType>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -47,8 +47,8 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="OrderNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="DateTime" Precision="3" />
-          <Property Type="Int32" Name="Sequence" />
+          <Property Type="DateTime" Name="DateTime" Precision="3" Nullable="false" />
+          <Property Type="Int32" Name="Sequence" Nullable="false" />
           <Property Type="String" Name="RevisedCode" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="QRCode">
@@ -57,11 +57,11 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="URL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="OrderNumber" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="DateTime" Precision="3" />
-          <Property Type="String" Name="NationCustCode" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Sequence" />
+          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="OrderNumber" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="DateTime" Name="DateTime" Precision="3" Nullable="false" />
+          <Property Type="String" Name="NationCustCode" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Int32" Name="Sequence" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

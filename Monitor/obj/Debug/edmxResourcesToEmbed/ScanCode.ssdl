@@ -11,8 +11,8 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="DateTime" Type="datetime" />
-    <Property Name="Sequence" Type="int" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
     <Property Name="RevisedCode" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="QRCodes">
@@ -21,10 +21,10 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Code" Type="nvarchar" MaxLength="50" />
-    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="DateTime" Type="datetime" />
-    <Property Name="NationCustCode" Type="nvarchar" MaxLength="50" />
-    <Property Name="Sequence" Type="int" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="NationCustCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
   </EntityType>
 </Schema>
