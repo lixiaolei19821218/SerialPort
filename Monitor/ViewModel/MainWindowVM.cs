@@ -32,7 +32,7 @@ namespace Monitor.ViewModel
         private List<OrderLine> orderLines = new List<OrderLine>();
         private List<Order> orders;
         private ObservableCollection<Route> routes;
-        private int orderIndex = 1207;//当前分解订单序号，模拟分户信号。首户不发送切户信号
+        private int orderIndex;//当前分解订单序号，模拟分户信号。首户不发送切户信号
         private int orderCount;//当天订单数量
         public int OrderCount 
         {
@@ -279,15 +279,10 @@ namespace Monitor.ViewModel
             {
                 try
                 {
-                    SerialPort port = sender as SerialPort;
-                    //int a = port.ReadChar();
-                    //int b = port.ReadChar();//63
+                    SerialPort port = sender as SerialPort;                    
                     int a = port.ReadByte();//194
                     string code = Convert.ToString(a, 16).Trim();
-                    //string code = port.ReadExisting();?
-                    //byte[] buffer = new byte[1024];
-                    //port.Read(buffer, 0, 1024);
-                    //string code = port.ReadLine();
+                    
                     if (code == "c2")
                     {
                         qrSequence = 0;
@@ -296,10 +291,7 @@ namespace Monitor.ViewModel
                         App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });
                         CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
 
-                        Thread.Sleep(Delay);
-                        barSequence = 0;
-                        App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
-                        barcodeCurrentOrder = orders[orderIndex];
+                       
 
                         CurrentOrderNumber++;
                     }
@@ -311,6 +303,14 @@ namespace Monitor.ViewModel
                     swLog.Flush();
                 }
             }
+        }
+
+        private void BarcodeShift()
+        {
+            Thread.Sleep(Delay);
+            barSequence = 0;
+            App.Current.Dispatcher.Invoke(delegate() { CurrentBarcodes.Clear(); });
+            barcodeCurrentOrder = orders[orderIndex];
         }
 
         private void qrCodePort_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -557,6 +557,28 @@ namespace Monitor.ViewModel
             }
         }
 
+        private void SendToDB2New()
+        {
+            Message = textResource["submittingToDB2"];
+
+            string connectionString = ConfigurationManager.ConnectionStrings["weixin"].ConnectionString;
+            DB2 weixinDB = new DB2(connectionString);
+
+            string qrCmd = "INSERT INTO \"DB2ADMIN\".\"QRCODES\"(\"URL\", \"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\", \"NATIONCUSTCODE\") VALUES('{0}', '{1}', '{2}', '{3}', {4}, '{5}')";
+
+            var qrOrderGroups = repo.QRCodes.Where(q => q.DateTime.HasValue && q.DateTime.Value.Date == DateTime.Today.Date).GroupBy(q => q.OrderNumber);
+            foreach (var o in qrOrderGroups)
+            {
+                for (int i = 0; i < o.Count(); i++)
+                {
+                    QRCode qrcode = o.ElementAt(i);
+                    qrcode.Sequence = i;
+                    string sql = string.Format(qrCmd, qrcode.URL, qrcode.Code, qrcode.OrderNumber, qrcode.DateTime.HasValue ? qrcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", qrcode.Sequence.HasValue ? qrcode.Sequence : -1, qrcode.NationCustCode);
+                    weixinDB.Insert(sql);
+                }
+            }
+        }
+
         private void SendToDB2()
         {
             Message = textResource["submittingToDB2"];
@@ -568,10 +590,11 @@ namespace Monitor.ViewModel
             DB2 weixinDB = new DB2(connectionString);
             
             string qrCmd = "INSERT INTO \"DB2ADMIN\".\"QRCODES\"(\"URL\", \"CODE\", \"ORDERNUMBER\", \"SAVETIME\", \"SEQUENCE\", \"NATIONCUSTCODE\") VALUES('{0}', '{1}', '{2}', '{3}', {4}, '{5}')";
+            
             foreach (QRCode qrcode in qrcodes)
             {
                 string sql = string.Format(qrCmd, qrcode.URL, qrcode.Code, qrcode.OrderNumber, qrcode.DateTime.HasValue ? qrcode.DateTime.Value.ToString("yyyy-MM-dd HH:mm:ss") : "0000-00-00 00:00:00", qrcode.Sequence.HasValue ? qrcode.Sequence : -1, qrcode.NationCustCode);
-                //weixinDB.Insert(sql);
+                weixinDB.Insert(sql);
             }            
            
             //补空
@@ -991,69 +1014,31 @@ namespace Monitor.ViewModel
 
         private void SaveBarCode()
         {
-            if (bool.Parse(ConfigurationManager.AppSettings["saveInTxt"]))
+            using (ScanCodeEntities repo = new ScanCodeEntities())
             {
-                using (StreamWriter sw = new StreamWriter(ConfigurationManager.AppSettings["barcode"], false))
+                while (true)
                 {
-                    int i = 0;
-                    while (true)
+                    if (barCodes.Count > 0 && !string.IsNullOrWhiteSpace(CurrentOrder.Number))
                     {
-                        if (barCodes.Count > 0 && !string.IsNullOrWhiteSpace(CurrentOrder.Number))
+                        try
                         {
-                            try
+                            BarCode barcode;
+                            lock (syncObj)
                             {
-                                string code;
-                                lock (syncObj)
-                                {
-                                    //code = barCodes.Dequeue();
-                                    i++;
-                                }
-                                //sw.WriteLine(string.Format("{0}\t{1}\t{2}", i, code, CurrentOrder.Number));
-                                sw.Flush();
-                            }
+                                barcode = barCodes.Dequeue();                                
+                            }                            
+                            repo.BarCodes.Add(barcode);
+                            repo.SaveChanges();
+                        }
 
-                            catch (Exception ex)
-                            {
-                                swLog.WriteLine(ex.Message);
-                                swLog.WriteLine(ex.StackTrace);
-                                swLog.Flush();
-                                //swLog.Close();
-                            }
+                        catch (Exception ex)
+                        {
+                            swLog.WriteLine(ex.Message);
+                            swLog.WriteLine(ex.StackTrace);
+                            swLog.Flush();
                         }
                     }
-                }
-            }
-            else
-            {
-                using (ScanCodeEntities repo = new ScanCodeEntities())
-                {
-                    while (true)
-                    {
-                        if (barCodes.Count > 0 && !string.IsNullOrWhiteSpace(CurrentOrder.Number))
-                        {
-                            try
-                            {
-                                BarCode barcode; 
-                                lock (syncObj)
-                                {
-                                    barcode = barCodes.Dequeue();
-                                    //Console.WriteLine(barCodes.Count);
-                                    //swQueueCount.WriteLine(string.Format("dequeue:{0}", barCodes.Count));
-                                }
-                                //BarCode barCode = new BarCode() { Code = code, OrderNumber = CurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++ };
-                                repo.BarCodes.Add(barcode);
-                                repo.SaveChanges();
-                            }
-
-                            catch (Exception ex)
-                            {
-                                swLog.WriteLine(ex.Message);
-                                swLog.WriteLine(ex.StackTrace);
-                                swLog.Flush();
-                            }
-                        }
-                        Thread.Sleep(1);
-                    }
+                    Thread.Sleep(1);
                 }
             }
         }
