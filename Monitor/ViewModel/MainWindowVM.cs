@@ -23,7 +23,7 @@ namespace Monitor.ViewModel
 {
     class MainWindowVM : ViewModelBase
     {
-        private StreamWriter swShiftSignal = new StreamWriter("shiftSignal.txt");
+        private StreamWriter swShiftSignal = new StreamWriter(string.Format("shiftSignal_{0}.txt", DateTime.Today.ToShortDateString()));
 
         private ScanCodeEntities repo = new ScanCodeEntities();
         private NameValueCollection textResource = ConfigurationManager.GetSection("textResource") as NameValueCollection;
@@ -290,11 +290,11 @@ namespace Monitor.ViewModel
             if (InitComPort() == false)
             {
                 return;
-            }/*
+            }
             if (InitSocket() == false)
             {
                 return;
-            }  */
+            }  
             Message = textResource["waitingOrders"];
             Thread receivOrders = new Thread(InitOrders) { IsBackground = true };
             receivOrders.Start();
@@ -361,7 +361,7 @@ namespace Monitor.ViewModel
                     SerialPort port = sender as SerialPort;                    
                     int a = port.ReadByte();//194
                     string code = Convert.ToString(a, 16).Trim();
-                    swShiftSignal.WriteLine(string.Format("{0}\t{1}", code, DateTime.Now));
+                    swShiftSignal.Write(string.Format("{0}\t{1}\t", code, DateTime.Now));
                     swShiftSignal.Flush();
                     
                     if (code == "c2")
@@ -376,7 +376,12 @@ namespace Monitor.ViewModel
                         App.Current.Dispatcher.Invoke(delegate() { CurrentQRCodes.Clear(); });
                         CurrentOrder = orders[orderIndex];//new Order() { Number = orders.ElementAt(orderIndex).Number, Retailer = orders.ElementAt(orderIndex).Retailer, TotalCount = orders.ElementAt(orderIndex).TotalCount };
                         QrcodeOrderNumber = CurrentOrder.Number;
+                        swShiftSignal.Write(QrcodeOrderNumber);
+                        swShiftSignal.Flush();
                     }
+
+                    swShiftSignal.WriteLine();
+                    swShiftSignal.Flush();
                 }
                 catch (Exception ex)
                 {
