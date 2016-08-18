@@ -36,3 +36,6 @@ D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\zh-H
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\TestConsole\obj\Debug\TestConsole.pdb
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\DB2DataAccess.dll
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\TestConsole\bin\Debug\DB2DataAccess.pdb
+D:\SerialPort\TestConsole\bin\Debug\TestConsole.exe.config
+D:\SerialPort\TestConsole\obj\Debug\TestConsole.exe
+D:\SerialPort\TestConsole\obj\Debug\TestConsole.pdb

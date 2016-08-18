@@ -4,9 +4,12 @@ C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\bin\D
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\obj\Debug\BarcodeTest.csprojResolveAssemblyReference.cache
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\obj\Debug\BarcodeTest.exe
 C:\Users\lei\Documents\Visual Studio 2012\Projects\SerialPoint\BarcodeTest\obj\Debug\BarcodeTest.pdb
-D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\BarcodeTest\bin\Debug\BarcodeTest.exe.config
-D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\BarcodeTest\obj\Debug\BarcodeTest.exe
-D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\BarcodeTest\obj\Debug\BarcodeTest.pdb
-D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\BarcodeTest\bin\Debug\BarcodeTest.exe
-D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\BarcodeTest\bin\Debug\BarcodeTest.pdb
-D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\BarcodeTest\obj\Debug\BarcodeTest.csprojResolveAssemblyReference.cache
+D:\SerialPort\BarcodeTest\bin\Debug\BarcodeTest.exe.config
+D:\SerialPort\BarcodeTest\obj\Debug\BarcodeTest.exe
+D:\SerialPort\BarcodeTest\obj\Debug\BarcodeTest.pdb
+D:\SerialPort\BarcodeTest\bin\Debug\BarcodeTest.exe
+D:\SerialPort\BarcodeTest\bin\Debug\BarcodeTest.pdb
+D:\SerialPort\BarcodeTest\bin\Debug\EntityFramework.dll
+D:\SerialPort\BarcodeTest\bin\Debug\EntityFramework.xml
+D:\SerialPort\BarcodeTest\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\SerialPort\BarcodeTest\obj\Debug\BarcodeTest.csprojResolveAssemblyReference.cache

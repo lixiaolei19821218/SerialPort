@@ -23,7 +23,7 @@ namespace Monitor.ViewModel
 {
     class MainWindowVM : ViewModelBase
     {
-        private StreamWriter swShiftSignal = new StreamWriter(string.Format("shiftSignal_{0}.txt", DateTime.Today.ToShortDateString()));
+        private StreamWriter swShiftSignal = new StreamWriter(string.Format("shiftSignal_{0}.txt", DateTime.Today.ToString("yyyy-MM-dd")));
 
         private ScanCodeEntities repo = new ScanCodeEntities();
         private NameValueCollection textResource = ConfigurationManager.GetSection("textResource") as NameValueCollection;
@@ -142,9 +142,9 @@ namespace Monitor.ViewModel
         private SerialPort shiftSignalPort = new SerialPort(ConfigurationManager.AppSettings["shiftCOM"]);
         private SerialPort qrCodePort = new SerialPort(ConfigurationManager.AppSettings["qrcodeCOM"]);
         private byte[] result = new byte[1024];//接收从网口来的barcode
-
-        private Socket clientSocket;
-
+        IPAddress ip = IPAddress.Parse(ConfigurationManager.AppSettings["barcodeIP"]);        private Socket clientSocket;
+        TcpClient client;
+        NetworkStream stream; 
         /// <summary>
         /// 队列同步锁
         /// </summary>
@@ -401,6 +401,10 @@ namespace Monitor.ViewModel
             barcodeOrderIndex++;
             barcodeCurrentOrder = orders[barcodeOrderIndex];
             BarcodeOrderNumber = barcodeCurrentOrder.Number;
+            
+            //clientSocket.Close();
+            //clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            //clientSocket.Connect(new IPEndPoint(ip, 23)); //配置服务器IP与端口            
         }
 
         private void qrCodePort_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -448,7 +452,7 @@ namespace Monitor.ViewModel
         public bool InitSocket()
         {
             //设定服务器IP地址  
-            IPAddress ip = IPAddress.Parse(ConfigurationManager.AppSettings["barcodeIP"]);
+            /*
             clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
@@ -459,7 +463,7 @@ namespace Monitor.ViewModel
             {
                 Message = textResource["connectBarScanerFail"];
                 return false;
-            }
+            }*/
             Thread thread = new Thread(ReceiveBarcode) { IsBackground = true };
             thread.Start();
             return true;
@@ -471,12 +475,65 @@ namespace Monitor.ViewModel
             int length = 15;//条码13位加两位换行
             while (true)
             {
-                int receiveLength = clientSocket.Receive(result, length, 0);
-                string code = Encoding.ASCII.GetString(result, 0, receiveLength).Trim();
+                clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                clientSocket.Connect("192.168.1.101", 23); //配置服务器IP与端口    
+
+                result = ReceiveFixData(clientSocket, length);
+                //int receiveLength = clientSocket.Receive(result, length, 0);
+                string code = Encoding.ASCII.GetString(result, 0, length).Trim();
                 App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
-                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++ , RevisedCode = ngBarcode};
+                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++, RevisedCode = ngBarcode };
                 barCodes.Enqueue(barcode);
                 BarcodeReceivedCount++;
+
+                clientSocket.Close();
+            }
+        }
+
+        public static byte[] ReceiveFixData(Socket socket, int size)
+        {
+            int offset = 0;
+            int recv = 0;
+            int dataleft = size;
+            byte[] msg = new byte[size];
+            while (dataleft > 0)
+            {                
+                recv = socket.Receive(msg, offset, dataleft, 0);
+                if (recv == 0)
+                {
+                    break;
+                }
+                offset += recv;
+                dataleft -= recv;
+            }
+            return msg;
+        }  
+
+        private bool InitTCPClient()
+        {
+            client = new TcpClient("192.168.1.101", 23);
+            stream = client.GetStream();
+            Thread thread = new Thread(ReceiveBarcodeNew) { IsBackground = true };
+            thread.Start();
+            return true;
+        }
+
+        private void ReceiveBarcodeNew()
+        {
+            while (true)
+            {
+                byte[] bytes = new Byte[15];
+                string data = string.Empty;
+                int length = stream.Read(bytes, 0, bytes.Length);
+                if (length > 0)
+                {
+                    data = Encoding.Default.GetString(bytes, 0, length);
+                    string code = data.Trim();
+                    App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
+                    BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++, RevisedCode = ngBarcode };
+                    barCodes.Enqueue(barcode);
+                    BarcodeReceivedCount++;
+                }
             }
         }
         #endregion
@@ -559,7 +616,7 @@ namespace Monitor.ViewModel
             }
             else
             {
-                orderIndex = orders.FindIndex(o => o.Number == qrcode.OrderNumber);
+                orderIndex = orders.FindIndex(o => o.Number == barcode.OrderNumber);
                 
                 foreach (QRCode q in repo.QRCodes.ToList().Where(q => q.DateTime.Date == DateTime.Today && q.OrderNumber == qrcode.OrderNumber))
                 {

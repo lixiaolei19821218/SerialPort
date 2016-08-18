@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{01C87745-1357-4809-9C79-472515C8C23A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor", "Monitor\Monitor.csproj", "{7C4D7895-C23C-46B3-ADBC-4C61BE138821}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor", "Monitor\Monitor.csproj", "{2C175143-C46A-404A-BC46-B1BF4E91C0A2}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WeiXin", "http://localhost:18601", "{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -46,10 +46,10 @@ Global
 		{01C87745-1357-4809-9C79-472515C8C23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C87745-1357-4809-9C79-472515C8C23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01C87745-1357-4809-9C79-472515C8C23A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C4D7895-C23C-46B3-ADBC-4C61BE138821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C4D7895-C23C-46B3-ADBC-4C61BE138821}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C4D7895-C23C-46B3-ADBC-4C61BE138821}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C4D7895-C23C-46B3-ADBC-4C61BE138821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C175143-C46A-404A-BC46-B1BF4E91C0A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C175143-C46A-404A-BC46-B1BF4E91C0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C175143-C46A-404A-BC46-B1BF4E91C0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C175143-C46A-404A-BC46-B1BF4E91C0A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E34AD0-8E66-4C0D-A479-AD0043ADE19A}.Release|Any CPU.ActiveCfg = Debug|Any CPU

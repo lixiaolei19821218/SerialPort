@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -11,48 +12,55 @@ namespace BarcodeTest
 {
     class Program
     {
-        private static byte[] result = new byte[1024];  
+        private static Queue<BarCode> barcodes = new Queue<BarCode>();
+        private static ScanCodeEntities repo = new ScanCodeEntities();
+        private static byte[] result = new byte[1024];
+        private static Socket clientSocket;
+        private static int count;
 
         static void Main(string[] args)
+        {           
+            IPAddress ip = IPAddress.Parse(ConfigurationManager.AppSettings["barcodeIP"]);
+            clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            clientSocket.Connect(new IPEndPoint(ip, 23));
+
+            Thread receiveThread = new Thread(ReceiveBarcode) { IsBackground = true };
+            receiveThread.Start();
+
+            Thread saveThread = new Thread(SaveBarcode) { IsBackground = true };
+            saveThread.Start();
+
+            Console.ReadLine();
+        }
+
+        private static void ReceiveBarcode()
         {
-            //设定服务器IP地址  
-            IPAddress ip = IPAddress.Parse("192.168.1.101");
-            Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            try
-            {
-                clientSocket.Connect(new IPEndPoint(ip, 23)); //配置服务器IP与端口  
-                Console.WriteLine("连接服务器成功");
-            }
-            catch
-            {
-                Console.WriteLine("连接服务器失败，请按回车键退出！");
-                return;
-            }
-            //通过clientSocket接收数据 
+            int length = 15;
             while (true)
             {
-                int receiveLength = clientSocket.Receive(result);
-                Console.WriteLine("接收服务器消息：{0}", Encoding.ASCII.GetString(result, 0, receiveLength));
+                int receiveLength = clientSocket.Receive(result, length, 0);
+                string code = Encoding.ASCII.GetString(result, 0, receiveLength).Trim();
+                BarCode barcode = new BarCode() { Code = code, OrderNumber = "testOrder", DateTime = DateTime.Now, RevisedCode = "0000000000000", Sequence = -1 };
+                Console.WriteLine(string.Format("Code: {0}, Count: {1}", code, ++count));
+                barcodes.Enqueue(barcode);
+                Thread.Sleep(1);
             }
-            //通过 clientSocket 发送数据  
-            for (int i = 0; i < 10; i++)
+        }
+
+        private static void SaveBarcode()
+        {
+            while (true)
             {
-                try
+                if (barcodes.Count > 0)
                 {
-                    Thread.Sleep(1000);    //等待1秒钟  
-                    string sendMessage = "client send Message Hellp" + DateTime.Now;
-                    clientSocket.Send(Encoding.ASCII.GetBytes(sendMessage));
-                    Console.WriteLine("向服务器发送消息：{0}" + sendMessage);
+                    BarCode barcode = barcodes.Dequeue();
+                    repo.BarCodes.Add(barcode);
+                    repo.SaveChanges();                    
                 }
-                catch
-                {
-                    clientSocket.Shutdown(SocketShutdown.Both);
-                    clientSocket.Close();
-                    break;
-                }
+                Thread.Sleep(1);
             }
-            Console.WriteLine("发送完毕，按回车键退出");
-            Console.ReadLine();  
         }
     }
+
+    
 }

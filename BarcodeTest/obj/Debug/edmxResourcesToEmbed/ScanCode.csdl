@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScanCodeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ScanCodeEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="BarCodes" EntityType="ScanCodeModel.BarCode" />
+    <EntitySet Name="QRCodes" EntityType="ScanCodeModel.QRCode" />
+  </EntityContainer>
+  <EntityType Name="BarCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Sequence" Type="Int32" />
+    <Property Name="RevisedCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QRCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OrderNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="NationCustCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Sequence" Type="Int32" />
+  </EntityType>
+</Schema>
