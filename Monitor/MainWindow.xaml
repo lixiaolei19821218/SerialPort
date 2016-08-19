@@ -38,6 +38,8 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Button Content="开始" Command="{Binding Path=StartCommand}"/>                                
                     <Button Content="重置" Grid.Row="1" Command="{Binding Path=ResetCommand}"/>
@@ -45,6 +47,14 @@
                     <Button Content="下一条" Grid.Row="3" Command="{Binding Path=DownCommand}"/>                    
                     <Button Content="上传数据库" Grid.Row="4" Margin="0" Command="{Binding Path=SubmitToDBCommand}"/>
                     <Button Content="线路调整" Grid.Row="5" Command="{Binding Path=ModifyRouteCommand}"/>
+                    <StackPanel Grid.Row="6">
+                        <Label Content="总读取"/>
+                        <Label Content="{Binding Path=BarcodeReadCount}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="7">
+                        <Label Content="未读取"/>
+                        <Label Content="{Binding Path=BarcodeUnReadCount}"/>
+                    </StackPanel>
                 </Grid>
             </GroupBox>
             <GroupBox Header="二维码" Grid.Column="1">

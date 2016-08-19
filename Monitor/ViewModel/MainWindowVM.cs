@@ -23,6 +23,32 @@ namespace Monitor.ViewModel
 {
     class MainWindowVM : ViewModelBase
     {
+        private int barcodeReadCount;
+        public int BarcodeReadCount
+        {
+            get
+            {
+                return barcodeReadCount;
+            }
+            set
+            {
+                barcodeReadCount = value;
+                RaisePropertyChanged("BarcodeReadCount");
+            }
+        }
+        private int barcodeUnReadCount;
+        public int BarcodeUnReadCount
+        {
+            get
+            {
+                return barcodeUnReadCount;
+            }
+            set
+            {
+                barcodeUnReadCount = value;
+                RaisePropertyChanged("BarcodeUnReadCount");
+            }
+        }
         private StreamWriter swShiftSignal = new StreamWriter(string.Format("shiftSignal_{0}.txt", DateTime.Today.ToString("yyyy-MM-dd")));
 
         private ScanCodeEntities repo = new ScanCodeEntities();
@@ -142,7 +168,8 @@ namespace Monitor.ViewModel
         private SerialPort shiftSignalPort = new SerialPort(ConfigurationManager.AppSettings["shiftCOM"]);
         private SerialPort qrCodePort = new SerialPort(ConfigurationManager.AppSettings["qrcodeCOM"]);
         private byte[] result = new byte[1024];//接收从网口来的barcode
-        IPAddress ip = IPAddress.Parse(ConfigurationManager.AppSettings["barcodeIP"]);        private Socket clientSocket;
+        IPAddress ip = IPAddress.Parse(ConfigurationManager.AppSettings["barcodeIP"]);        
+        private Socket clientSocket;
         TcpClient client;
         NetworkStream stream; 
         /// <summary>
@@ -291,7 +318,7 @@ namespace Monitor.ViewModel
             {
                 return;
             }
-            if (InitSocket() == false)
+            if (InitTCPClient() == false)
             {
                 return;
             }  
@@ -451,8 +478,7 @@ namespace Monitor.ViewModel
         #region 初始化网口，接收条码
         public bool InitSocket()
         {
-            //设定服务器IP地址  
-            /*
+            //设定服务器IP地址              
             clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
@@ -463,8 +489,8 @@ namespace Monitor.ViewModel
             {
                 Message = textResource["connectBarScanerFail"];
                 return false;
-            }*/
-            Thread thread = new Thread(ReceiveBarcode) { IsBackground = true };
+            }
+            Thread thread = new Thread(ReceiveBarcode2) { IsBackground = true };
             thread.Start();
             return true;
         }
@@ -487,6 +513,19 @@ namespace Monitor.ViewModel
                 BarcodeReceivedCount++;
 
                 clientSocket.Close();
+            }
+        }
+
+        private void ReceiveBarcode2()
+        {
+            int length = 15;
+            while (true)
+            {
+                int receiveLength = clientSocket.Receive(result, length, 0);
+                string code = Encoding.ASCII.GetString(result, 0, receiveLength).Trim();
+                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder.Number, DateTime = DateTime.Now, RevisedCode = ngBarcode, Sequence = barSequence++ };
+                barCodes.Enqueue(barcode);
+                App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);             
             }
         }
 
@@ -525,15 +564,12 @@ namespace Monitor.ViewModel
                 byte[] bytes = new Byte[15];
                 string data = string.Empty;
                 int length = stream.Read(bytes, 0, bytes.Length);
-                if (length > 0)
-                {
-                    data = Encoding.Default.GetString(bytes, 0, length);
-                    string code = data.Trim();
-                    App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
-                    BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++, RevisedCode = ngBarcode };
-                    barCodes.Enqueue(barcode);
-                    BarcodeReceivedCount++;
-                }
+                data = Encoding.Default.GetString(bytes, 0, length);
+                string code = data.Trim();
+                App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
+                BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++, RevisedCode = ngBarcode };
+                barCodes.Enqueue(barcode);
+                BarcodeReceivedCount++;
             }
         }
         #endregion
@@ -616,7 +652,7 @@ namespace Monitor.ViewModel
             }
             else
             {
-                orderIndex = orders.FindIndex(o => o.Number == barcode.OrderNumber);
+                orderIndex = orders.FindIndex(o => o.Number == qrcode.OrderNumber);
                 
                 foreach (QRCode q in repo.QRCodes.ToList().Where(q => q.DateTime.Date == DateTime.Today && q.OrderNumber == qrcode.OrderNumber))
                 {
@@ -1189,6 +1225,14 @@ namespace Monitor.ViewModel
         private void AddBarCodeToCurrent(string code)
         {
             CurrentBarcodes.Add(code);
+            if (code == ngBarcode)
+            {
+                BarcodeUnReadCount++;
+            }
+            else
+            {
+                BarcodeReadCount++;
+            }
         }
 
         private void SaveBarCode()
