@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<NLS_STRINGS>
+  <!--  NOTE: don't use \", use ' instead -->
+  <!--  NOTE: leave the [strings] alone -->
+
+  <!--  These are the managed resources for IBM.Data.DB2.dll.   -->
+
+  <!-- To Translators:
+
+  I) Encoding
+     Although most (if not all) XML editors automatically insert the proper
+     encoding data in the XML prolog section of the db2vsnls.xml, it is
+     beneficial for the translators to note the following:
+
+     For European/Unicode languages the xml prolog must be:
+       <?xml version="1.0" encoding="ISO-8859-X" ?>
+       where X is the specific number for the region.
+
+     For Japanese the xml prolog must be:
+       <?xml version="1.0" encoding="Shift-JIS" ?>
+
+     For Chinese the xml prolog must be one of the following:
+
+       Traditional Chinese
+         <?xml version="1.0" encoding="Big5" ?>
+       Simplified Chinese
+         <?xml version="1.0" encoding="GB2312" ?>
+
+  II) String substitution
+      Please note that the tokens %1, %2, %3, etc. appearing in strings are
+      place holders for  text substitutions. So for example:
+              Hello my name is %1 and I work at %2
+      Above string indicates that at runtime the caller will pass
+      a name to be replaced in place of %1, and a location name to replace
+      %2. So for example in this case the program will pass the string
+      "John" and "SVL" the returned string would be
+      "Hello my name is John and I work at SVL".
+  -->
+
+  <DataCategory_Behavior>行为</DataCategory_Behavior>
+  <DataCategory_Data>数据</DataCategory_Data>
+  <DataCategory_Fill>填充</DataCategory_Fill>
+  <DataCategory_InfoMessage>参考消息</DataCategory_InfoMessage>
+  <DataCategory_StateChange>状态更改</DataCategory_StateChange>
+  <DataCategory_Update>更新</DataCategory_Update>
+
+  <!--  ConnectionStringPermission -->
+  <ADP_NotAPermissionElement>“elem”不是许可权元素。</ADP_NotAPermissionElement>
+  <ADP_InvalidXMLBadVersion>Xml 无效；只能对版本 1 的元素进行语法分析。</ADP_InvalidXMLBadVersion>
+  <ADP_WrongType>已尝试对类型 %1 执行操作，但目标的类型不正确。</ADP_WrongType>
+
+  <!--  CommandBuilder -->
+  <ADP_NoQuoteChange>在生成 Insert、Update 或 Delete 命令之后，不能更改 QuotePrefix 和 QuoteSuffix 属性。</ADP_NoQuoteChange>
+  <ADP_MissingSourceCommand>需要初始化 DataAdapter.SelectCommand 属性。</ADP_MissingSourceCommand>
+  <ADP_MissingSourceCommandConnection>需要初始化 DataAdapter.SelectCommand.Connection 属性。</ADP_MissingSourceCommandConnection>
+
+  <!--  Data Provider Collection -->
+  <!--  ArgumentException -->
+  <ADP_CollectionUniqueValue>%1.%2 必须是唯一的，“%3”在集合中已存在。</ADP_CollectionUniqueValue>
+  <ADP_CollectionIsNotParent>另一个 %4 已包含带有 %2“%3”的 %1。</ADP_CollectionIsNotParent>
+  <ADP_CollectionIsParent>这个 %4 已包含带有 %2“%3”的 %1。</ADP_CollectionIsParent>
+  <ADP_CollectionRemoveInvalidObject>已尝试除去这个 %2 没有包含的 %1。</ADP_CollectionRemoveInvalidObject>
+  <!--  IndexOutOfRangeException -->
+  <ADP_CollectionIndexInt32>这个计数为 %3 的 %2 的索引 %1 无效。</ADP_CollectionIndexInt32>
+  <ADP_CollectionIndexString>这个 %4 没有包含带有 %2“%3”的 %1。</ADP_CollectionIndexString>
+  <!--  InvalidCastException -->
+  <ADP_CollectionNullValue>%1 只接受非空 %2 类型对象。</ADP_CollectionNullValue>
+  <ADP_CollectionInvalidType>%1 只接受非空 %2 类型对象，而不接受 %3 对象。</ADP_CollectionInvalidType>
+
+  <!--  DataColumnMapping -->
+  <!--  ArgumentNullException -->
+  <ADP_NullDataTable>意外的空 DataTable 自变量</ADP_NullDataTable>
+  <!--  DataMappingException -->
+  <ADP_ColumnSchemaExpression>由于 DataColumn“%2”是计算的列，所以源于 SourceColumn“%1”的列映射失败。</ADP_ColumnSchemaExpression>
+  <ADP_ColumnSchemaMismatch>%2 的 SourceColumn“%1”与 %4 的 DataColumn“%3”之间的不可转换类型不匹配。</ADP_ColumnSchemaMismatch>
+  <ADP_ColumnSchemaMissing1>SourceColumn“%2”缺少 DataColumn“%1”。</ADP_ColumnSchemaMissing1>
+  <ADP_ColumnSchemaMissing2>在 DataTable“%2”，SourceColumn“%3”缺少 DataColumn“%1”。</ADP_ColumnSchemaMissing2>
+
+  <!--  DataColumnMappingsCollection -->
+  <!--  ArgumentException -->
+  <ADP_InvalidSourceColumn>SourceColumn 必须是非空字符串。</ADP_InvalidSourceColumn>
+  <!--  DataMappingException -->
+  <ADP_MissingColumnMapping>缺少“%1”的 SourceColumn 映射。</ADP_MissingColumnMapping>
+
+  <!--  DataAdapter -->
+  <!--  ArgumentException -->
+  <ADP_InvalidAction>%1 枚举值 %2 无效。</ADP_InvalidAction>
+
+  <!--  DataTableMapping -->
+  <!--  ArgumentNullException -->
+  <ADP_NullDataSet>意外的空 DataSet 自变量。</ADP_NullDataSet>
+  <!--  SystemException -->
+  <ADP_MissingTableSchema>“%2”SourceTable 缺少“%1”DataTable。</ADP_MissingTableSchema>
+
+  <!--  Adapter.DataTableMappingsCollection -->
+  <!--  ArgumentException -->
+  <ADP_InvalidSourceTable>SourceTable 必须是非空字符串</ADP_InvalidSourceTable>
+  <!--  DataMappingException -->
+  <ADP_MissingTableMapping>缺少 SourceTable 映射“%1”</ADP_MissingTableMapping>
+
+  <!--  IDbCommand -->
+  <!--  ArgumentException -->
+  <ADP_InvalidCommandType>CommandType 枚举值 %1 无效。</ADP_InvalidCommandType>
+  <ADP_InvalidUpdateRowSource>UpdateRowSource 枚举值 %1 无效。</ADP_InvalidUpdateRowSource>
+  <!--  InvalidOperationException -->
+  <ADP_CommandTextRequired>%1：尚未初始化 CommandText 属性</ADP_CommandTextRequired>
+  <ADP_ConnectionRequired>%1：尚未初始化 %2 属性。</ADP_ConnectionRequired>
+  <ADP_NoStoredProcedureExists>存储过程“%1”不存在。</ADP_NoStoredProcedureExists>
+  <ADP_OpenConnectionRequired>%1 需要打开的连接。连接的当前状态是 %2。</ADP_OpenConnectionRequired>
+  <ADP_TransactionConnectionMismatch>事务对象没有与连接对象相关联。</ADP_TransactionConnectionMismatch>
+  <ADP_TransactionRequired_Execute>当对命令指定的连接位于暂挂的本地事务中时，执行要求命令有事务对象。尚未初始化命令的 Transaction 属性。</ADP_TransactionRequired_Execute>
+  <ADP_TransactionCompleted>对此命令指定的事务必须是嵌套程度最高的暂挂本地事务。</ADP_TransactionCompleted>
+  <ADP_OpenReaderExists>已有一个打开的 DataReader 与此命令相关联，必须先将该 DataReader 关闭。</ADP_OpenReaderExists>
+  <ADP_DeriveParametersNotSupported>%1 DeriveParameters 只支持 CommandType.StoredProcedure，而不支持 CommandType.%2</ADP_DeriveParametersNotSupported>
+
+  <!--  DbDataAdapter -->
+  <!--  InvalidCastException -->
+  <ADP_MissingSelectCommand>在调用“%1”之前尚未初始化 SelectCommand 属性。</ADP_MissingSelectCommand>
+
+  <!--  DbDataAdapter.FillSchema -->
+  <!--  ArgumentException -->
+  <ADP_InvalidSchemaType>SchemaType 枚举值 %1 无效。</ADP_InvalidSchemaType>
+  <!--  System -->
+  <ADP_FillSchemaRequiresSourceTableName>FillSchema：期望 SourceTable 名是非空字符串。</ADP_FillSchemaRequiresSourceTableName>
+
+  <!--  DbDataAdapter.Fill -->
+  <!--  ArgumentException -->
+  <ADP_InvalidMaxRecords>MaxRecords 值 %1 无效；值必须 >= 0。</ADP_InvalidMaxRecords>
+  <ADP_InvalidStartRecord>StartRecord 值 %1 无效；值必须 >= 0。</ADP_InvalidStartRecord>
+  <!--  SystemException -->
+  <ADP_FillRequiresSourceTableName>Fill：期望 SourceTable 名是非空字符串。</ADP_FillRequiresSourceTableName>
+  <ADP_FillChapterAutoIncrement>分层章列必须映射至 AutoIncrement DataColumn。</ADP_FillChapterAutoIncrement>
+
+  <!--  DbDataAdapter.Update -->
+  <!--  InvalidOperationException -->
+  <ADP_UpdateRequiresSourceTable>Update 找不到 TableMapping['%1'] 或 DataTable '%1'。</ADP_UpdateRequiresSourceTable>
+  <ADP_InvalidUpdateStatus>UpdateStatus 无效：%1</ADP_InvalidUpdateStatus>
+  <ADP_UpdateRequiresSourceTableName>Update：期望非空白 SourceTable 名。</ADP_UpdateRequiresSourceTableName>
+  <ADP_MissingTableMappingDestination>当 TableMapping.DataSetTable='%1' 时，缺少 TableMapping。</ADP_MissingTableMappingDestination>
+
+  <ADP_UpdateRequiresCommandClone>Update 要求命令克隆有效。</ADP_UpdateRequiresCommandClone>
+  <ADP_UpdateRequiresCommandSelect>Update 期间的自动 SQL 生成需要有效的 SelectCommand。</ADP_UpdateRequiresCommandSelect>
+  <ADP_UpdateRequiresCommandInsert>当传递带有新行的 DataRow 集合时，Update 需要有效的 InsertCommand。</ADP_UpdateRequiresCommandInsert>
+  <ADP_UpdateRequiresCommandUpdate>当传递带有经过修改的行的 DataRow 集合时，Update 需要有效的 UpdateCommand。</ADP_UpdateRequiresCommandUpdate>
+  <ADP_UpdateRequiresCommandDelete>当传递带有已删除的行的 DataRow 集合时，Update 需要有效的 DeleteCommand。</ADP_UpdateRequiresCommandDelete>
+
+  <!--  SystemException -->
+  <ADP_UpdateNullRow>dataRows[%1]。</ADP_UpdateNullRow>
+  <ADP_UpdateNullRowTable>DataRow 不属于 DataTable。</ADP_UpdateNullRowTable>
+  <ADP_UpdateMismatchRowTable>DataRow[%1] 来自不同于 DataRow[0] 的 DataTable。</ADP_UpdateMismatchRowTable>
+  <ADP_RowUpdateErrors>%1：发生错误；没有其他信息可用。</ADP_RowUpdateErrors>
+  <ADP_UpdateConcurrencyViolation>并行违例：%1 影响了 0 个记录。</ADP_UpdateConcurrencyViolation>
+  <ADP_SumOverflow>%1：%2 与 %3 的总和不能超过 %4。</ADP_SumOverflow>
+  <ADP_Interrupted>由于 %2 已到期，因此 %1 被中断。</ADP_Interrupted>
+
+  <!--  WFCInvalidStateException -->
+  <ADP_UpdateUnknownRowState>Adapter.Update：遇到意外的 DataRowStateEnum：%1。</ADP_UpdateUnknownRowState>
+
+  <!--  : IDbCommand -->
+  <ADP_InvalidCommandTimeout>CommandTimeout 值 %1 无效；值必须 >= 0。</ADP_InvalidCommandTimeout>
+  <!--  InvalidOperationException -->
+  <ADP_CommandIsActive>%1 当前正忙 %2。</ADP_CommandIsActive>
+  <ADP_UninitializedParameterSize>参数 %1：类型为 %3 的“%2”，属性 Size 的大小无效：%4</ADP_UninitializedParameterSize>
+  <ADP_PrepareParameterType>%1.Prepare 要求所有参数都具有显式设置的类型。</ADP_PrepareParameterType>
+  <ADP_PrepareParameterSize>%1.Prepare 要求所有可变长度参数都具有显式设置的非零 Size。</ADP_PrepareParameterSize>
+  <ADP_PrepareParameterScale>%1.Prepare 要求类型为“%2”的参数具有显式设置的 Precision 和 Scale。</ADP_PrepareParameterScale>
+
+  <!--  : IDbConnection -->
+  <!--  InvalidOperationException -->
+  <ADP_ClosedConnectionError>操作无效。连接已关闭。</ADP_ClosedConnectionError>
+  <ADP_ConnectionAlreadyOpen>连接已打开（状态 = %1）。</ADP_ConnectionAlreadyOpen>
+  <ADP_NoConnectionString>尚未初始化 ConnectionString 属性。</ADP_NoConnectionString>
+  <ADP_OpenConnectionPropertySet>当连接状态 = %2 时不允许更改“%1”属性。</ADP_OpenConnectionPropertySet>
+  <ADP_EmptyDatabaseName>数据库不能为空、空字符串或只包含空格的字符串。</ADP_EmptyDatabaseName>
+  <ADP_InvalidConnectTimeoutValue>“连接超时”值“%1”无效。此值必须是 >= 0 的整数。</ADP_InvalidConnectTimeoutValue>
+  <ADP_InvalidIsolationLevel>IsolationLevel 值 %1 无效。</ADP_InvalidIsolationLevel>
+  <ADP_InvalidPersistSecurityInfo>“持久安全性信息”值“%1”无效。此值必须是布尔值“true”或“false”。</ADP_InvalidPersistSecurityInfo>
+  <ADP_PoolFull>连接池已达到最大连接数。</ADP_PoolFull>
+
+  <!--  : DBDataReader -->
+  <!--  ArgumentException -->
+  <ADP_InvalidSourceBufferIndex>源缓冲区（大小为 %1）偏移 %2 无效</ADP_InvalidSourceBufferIndex>
+  <ADP_InvalidDestinationBufferIndex>目标缓冲区（大小为 %1）偏移 %2 无效</ADP_InvalidDestinationBufferIndex>
+  <!--  InvalidCast -->
+  <ADP_DataReaderNoData>不存在行/列的数据。</ADP_DataReaderNoData>
+  <!--  InvalidOperationException -->
+  <ADP_DataReaderClosed>当阅读器处于关闭状态时，%1 尝试无效。</ADP_DataReaderClosed>
+
+  <!--  : DbDataStream -->
+  <ADP_StreamClosed>当流处于关闭状态时，%1 尝试无效。</ADP_StreamClosed>
+
+  <!--  : DbDataAdapter -->
+  <ADP_DynamicSQLJoinUnsupported>不支持对多个基本表执行动态 SQL 生成。</ADP_DynamicSQLJoinUnsupported>
+  <ADP_DynamicSQLNoTableInfo>不支持对不返回任何基本表信息的 SelectCommand 执行动态 SQL 生成。</ADP_DynamicSQLNoTableInfo>
+  <ADP_DynamicSQLNoKeyInfo>不支持对不返回任何键列信息的 SelectCommand 执行 %1 的动态 SQL 生成。</ADP_DynamicSQLNoKeyInfo>
+  <ADP_DynamicSQLReadOnly>不支持对不返回任何可修改列的 SelectCommand 执行 %1 的动态 SQL 生成。</ADP_DynamicSQLReadOnly>
+  <ADP_DynamicSQLNestedQuote>不支持对包含 QuotePrefix 或 QuoteSuffic 字符“%2”的表名“%1”执行动态 SQL 生成。</ADP_DynamicSQLNestedQuote>
+  <ADP_NonSequentialColumnAccess>尝试读取序数为“%1”的列无效。借助 CommandBehavior.SequentialAccess，只能读取序数为“%2”或更大的列。</ADP_NonSequentialColumnAccess>
+
+  <!--  : IDataParameter -->
+  <!--  ArgumentException -->
+  <ADP_InvalidDataRowVersion>%1：“DataRow 版本”枚举值无效：%2。</ADP_InvalidDataRowVersion>
+  <ADP_InvalidParameterDirection>“%2”参数的方向“%1”无效。</ADP_InvalidParameterDirection>
+  <ADP_InvalidDataType>参数数据类型 %1 无效。</ADP_InvalidDataType>
+  <ADP_UnknownDataType>不存在从 DbType %1 到已知 %2 的映射。</ADP_UnknownDataType>
+  <ADP_UnknownDataTypeCode>无法处理 DataType 为 %1 的未知 TypeCode %1。</ADP_UnknownDataTypeCode>
+  <ADP_InvalidSizeValue>参数 Size 的值“%1”无效。此值必须大于或等于 0。</ADP_InvalidSizeValue>
+  <ADP_WhereClauseUnspecifiedValue>包含在带有 SourceColumn“%2”的自动生成 WHERE 子句中的 Parameter['%1'] 在 DataRow 中的列“%3”处没有指定序数值。</ADP_WhereClauseUnspecifiedValue>
+  <ADP_TruncatedBytes>错误：已将字节数组截断成长度为 %1。</ADP_TruncatedBytes>
+  <ADP_TruncatedString>错误：字符串截断：最大 =%1，长度 =%2，值 =“%3”</ADP_TruncatedString>
+  <ArrayLength_InvalidParameterValue>如果设置了 %2，那么参数“%1”的值应该为一维数组。</ArrayLength_InvalidParameterValue>
+  <ArrayLength_InvalidParameterPrecisionOrScale>如果设置为了 %2，那么必须对参数“%1”的精度和小数位进行初始化。</ArrayLength_InvalidParameterPrecisionOrScale>
+  <ArrayLength_InvalidParameterDirection>仅输入参数支持 %1 属性。</ArrayLength_InvalidParameterDirection>
+  <ArrayLength_InvalidValue>参数“%1”的 ArrayLength 值无效。它必须在 0 到 %2 之间（包括 0 和 %2）。</ArrayLength_InvalidValue>
+  <ADP_PropertyOrKeywordNotSupported>对于所连接的服务器，属性/关键字“%1”不受支持。</ADP_PropertyOrKeywordNotSupported>
+
+  <!--  : IDbTransaction -->
+  <!--  InvalidOperationException -->
+  <ADP_ParallelTransactionsNotSupported>%1 不支持并行事务。</ADP_ParallelTransactionsNotSupported>
+  <ADP_TransactionZombied>这个 %1 已完成；它不再可用。</ADP_TransactionZombied>
+  <ADP_Reenlist>当前已有事务加入该连接。请完成当前事务，然后再次尝试。</ADP_Reenlist>
+
+  <!--  : IDbConnection Property/Method Descriptions -->
+  <DbConnection_InfoMessage>当有来自 DataSource 的消息抵达时触发了事件。</DbConnection_InfoMessage>
+  <DbConnection_StateChange>当连接更改状态时触发了事件。</DbConnection_StateChange>
+  <DbConnection_State>ConnectionState 指示连接是处于打开状态还是关闭状态。</DbConnection_State>
+
+  <!--  Data.DB2 -->
+  <!--  ArgumentException -->
+  <DB2Connection_ConnectionStringTooLong>连接字符串超出所允许的最大长度 %1。</DB2Connection_ConnectionStringTooLong>
+  <!--  SystemException -->
+  <DB2_UnknownSQLType>未知 SQL 类型 - %1。</DB2_UnknownSQLType>
+  <DB2_UnknownURTType>未知 URT 类型 - %1。</DB2_UnknownURTType>
+  <DB2_InvalidHandle>句柄无效</DB2_InvalidHandle>
+  <DB2_UnsupportedCommandTypeTableDirect>DB2 .NET Data Provider 不支持 CommandType.TableDirect</DB2_UnsupportedCommandTypeTableDirect>
+  <DB2_NegativeArgument>负数自变量无效</DB2_NegativeArgument>
+  <DB2_InvalidArgument>自变量无效</DB2_InvalidArgument>
+  <DB2_CantSetPropertyOnOpenConnection>无法对打开的连接设置属性。</DB2_CantSetPropertyOnOpenConnection>
+  <DB2_UnsupportedIsolationLevel>不受支持的隔离级别 - %1</DB2_UnsupportedIsolationLevel>
+  <DB2_CantEnableConnectionpooling>%1 - 无法启用连接池...</DB2_CantEnableConnectionpooling>
+  <DB2_CantAllocateEnvironmentHandle>%1 - 无法分配环境句柄。</DB2_CantAllocateEnvironmentHandle>
+  <DB2_NotInTransaction>不在事务中</DB2_NotInTransaction>
+  <DB2_UnknownSQLCType>未知的 SQL C 类型 - %1</DB2_UnknownSQLCType>
+  <DB2_UnknownDB2Type>无效的“DB2 类型”枚举值 =%1。</DB2_UnknownDB2Type>
+  <DB2_ExceptionMessage>%1 [%2] %3</DB2_ExceptionMessage>
+  <DB2_ExceptionNoInfoMsg>%1 - 没有错误信息可用</DB2_ExceptionNoInfoMsg>
+  <DB2_MissingProperty>%1 需要 %2 属性值。</DB2_MissingProperty>
+
+  <DB2CommandBuilder_DataAdapter>为其自动生成 DB2Command 的 DataAdapter</DB2CommandBuilder_DataAdapter>
+  <DB2CommandBuilder_QuotePrefix>在文本命令中用作包含特殊字符的带引号标识的左引号的字符。</DB2CommandBuilder_QuotePrefix>
+  <DB2CommandBuilder_QuoteSuffix>在文本命令中用作包含特殊字符的带引号标识的右引号的字符。</DB2CommandBuilder_QuoteSuffix>
+
+  <DB2Parameter_DB2Type>参数固有类型。</DB2Parameter_DB2Type>
+  <DB2Types_NullValue>DB2Type 的值为空。</DB2Types_NullValue>
+  <DB2Types_TruncateValue>DB2Type 的此值将被截断。</DB2Types_TruncateValue>
+  <DB2Types_DecimalOverflow>值对于十进制来说太大或太小。</DB2Types_DecimalOverflow>
+  <DB2Types_InvalidFormat>输入字符串的格式不正确。</DB2Types_InvalidFormat>
+
+  <DB2MetaDataFactory_TooManyRestrictions>提供的限制多于请求的模式 '%1' 所支持的限制。</DB2MetaDataFactory_TooManyRestrictions>
+  <DB2MetaDataFactory_NullOrPatternRestrictionValueSpecified>对限制 '%2' 指定的值不能为空，也不能是 GetSchema '%1' 集合的模式。</DB2MetaDataFactory_NullOrPatternRestrictionValueSpecified>
+
+  <DB2ResultSet_ColumnNotUpdatable>列 %1 是不可更新的。</DB2ResultSet_ColumnNotUpdatable>
+  <DB2ResultSet_CanNotUpdateNewRow>键集游标的新插入的行是不可更新的。</DB2ResultSet_CanNotUpdateNewRow>
+  <DB2ResultSet_NeedsUpdatableCursor>%1：方法需要可更新游标。</DB2ResultSet_NeedsUpdatableCursor>
+  <DB2ResultSet_NeedsScrollableCursor>%1：方法需要可滚动游标。</DB2ResultSet_NeedsScrollableCursor>
+  <DB2ResultSet_InvalidResultSetOptions>（%1）不是有效的 DB2ResultSetOptions 组合。</DB2ResultSet_InvalidResultSetOptions>
+  <DB2ResultSet_CursorDowngraded>游标已从 %1 降级到 %2。</DB2ResultSet_CursorDowngraded>
+  <DB2ResultSet_UpdatableRecordNotCreatedByResultSet>此 DB2ResultSet 实例未创建 DB2UpdatableRecord。</DB2ResultSet_UpdatableRecordNotCreatedByResultSet>
+  <DB2ResultSet_RowsHasBeenDeleted>操作 %1 无效。该行已被删除。</DB2ResultSet_RowsHasBeenDeleted>
+  <DB2ResultSet_CursorClosed>当游标处于关闭状态时，%1 尝试无效。</DB2ResultSet_CursorClosed>
+  <DB2_ExclusiveUseOfConnection>%1 要求对数据库连接进行互斥访问。</DB2_ExclusiveUseOfConnection>
+
+  <DB2BulkCopy_MappingConflict>源列“%1”和“%2”都映射到同一个目标列“%3”。</DB2BulkCopy_MappingConflict>
+  <DB2BulkCopy_DestinationNotExist>列映射中的目标列“%1”在目标表中不存在。</DB2BulkCopy_DestinationNotExist>
+  <DB2BulkCopy_SourceNotExist>列映射中的源列“%1”在源表中不存在。</DB2BulkCopy_SourceNotExist>
+  <DB2BulkCopy_LeftOverMapping>源列“%1”的映射存在于 DB2BulkCopyColumnMappingCollection 中，但在源表中不存在。</DB2BulkCopy_LeftOverMapping>
+  <DB2BulkCopy_InvalidSourceColumnType>源列“%1”的类型为“%2”，目标列“%3”的类型为“%4”。</DB2BulkCopy_InvalidSourceColumnType>
+  <DB2BulkCopy_NumSrcColumnsGtDest>源列多于目标表中的列。</DB2BulkCopy_NumSrcColumnsGtDest>
+  <DB2BulkCopy_InTransaction>DB2BulkCopy 不能在事务控制下工作。</DB2BulkCopy_InTransaction>
+  <DB2BulkCopy_Aborted>由于应用程序设置 DB2RowsCopiedEventArgs.Abort 为 true，因此 DB2BulkCopy.WriteToServer 已被中断。</DB2BulkCopy_Aborted>
+
+  <DB2Command_SelectOnly>%1 仅支持 SELECT 和 VALUES 语句。</DB2Command_SelectOnly>
+  
+  <DB2XmlCommand_InvalidCommandText>%1 不是 DB2XmlCommand 的有效 CommandText。</DB2XmlCommand_InvalidCommandText>
+  <DB2XmlCommand_InvalidRootTag>%1 不是 DB2XmlCommand 的有效 RootTag。</DB2XmlCommand_InvalidRootTag>
+  
+  <ADP_InvalidConnectionOption>指定的连接选项值对于 %1 来说是无效的。</ADP_InvalidConnectionOption>
+  <DB2ConnectionStringBuilder_Category_Source>源</DB2ConnectionStringBuilder_Category_Source>
+  <DB2ConnectionStringBuilder_Category_Security>安全性</DB2ConnectionStringBuilder_Category_Security>
+  <DB2ConnectionStringBuilder_Category_Pooling>池</DB2ConnectionStringBuilder_Category_Pooling>
+  <DB2ConnectionStringBuilder_Category_Initialization>初始化</DB2ConnectionStringBuilder_Category_Initialization>
+  <DB2ConnectionStringBuilder_Category_SchemaKeywords>模式关键字</DB2ConnectionStringBuilder_Category_SchemaKeywords>
+  <DB2ConnectionStringBuilder_Category_pureQuery>pureQuery</DB2ConnectionStringBuilder_Category_pureQuery>
+
+  <DB2ConnectionStringBuilder_Database>要连接的数据库的名称。</DB2ConnectionStringBuilder_Database>
+  <DB2ConnectionStringBuilder_UserID>表示用户名的值</DB2ConnectionStringBuilder_UserID>
+  <DB2ConnectionStringBuilder_Password>表示用户密码的值</DB2ConnectionStringBuilder_Password>
+  <DB2ConnectionStringBuilder_ServerType> 要连接至的服务器的类型（UniData 或 UniVerse）</DB2ConnectionStringBuilder_ServerType>
+  <DB2ConnectionStringBuilder_CodePage>编码的代码页标识。</DB2ConnectionStringBuilder_CodePage>
+  <DB2ConnectionStringBuilder_WalletID>U2 数据服务器的加密密钥电子钱包的标识。</DB2ConnectionStringBuilder_WalletID>
+  <DB2ConnectionStringBuilder_WalletPwd>U2 数据服务器的加密密钥电子钱包的密码。</DB2ConnectionStringBuilder_WalletPwd>
+  <DB2ConnectionStringBuilder_Server>
+用于直接连接的服务器名以及可选的端口号。语法：服务器名[:端口]
+  </DB2ConnectionStringBuilder_Server>
+  <DB2ConnectionStringBuilder_Pooling>连接池开关（true/false）</DB2ConnectionStringBuilder_Pooling>
+  <DB2ConnectionStringBuilder_MinPoolSize>表示池中要保留的最小连接数的值</DB2ConnectionStringBuilder_MinPoolSize>
+  <DB2ConnectionStringBuilder_MaxPoolSize>表示各个池中最大连接数的值</DB2ConnectionStringBuilder_MaxPoolSize>
+  <DB2ConnectionStringBuilder_ConnectionReset>
+True - 在这个特定连接关闭后，将把它放入连接池。
+False - 在这个特定连接关闭后，不会把它放入连接池
+</DB2ConnectionStringBuilder_ConnectionReset>
+  <DB2ConnectionStringBuilder_ConnectionLifetime>连接在连接池中可以保持空闲状态的时间长度（秒）。缺省值是 60 秒。</DB2ConnectionStringBuilder_ConnectionLifetime>
+  <DB2ConnectionStringBuilder_Enlist>
+True - 允许加入到分布式事务协调程序（DTC）中（仅当进行连接时有某个 COM+ 事务正在执行时，才会加入）
+False - 不允许加入到分布式事务协调程序（DTC）中</DB2ConnectionStringBuilder_Enlist>
+  <DB2ConnectionStringBuilder_PersistSecurityInfo>
+True - 在打开连接后，或者如果该连接曾处于打开状态，允许在连接字符串中返回安全敏感信息（例如密码）。
+False - 不在连接字符串中返回安全敏感信息。强烈建议使用 False。
+</DB2ConnectionStringBuilder_PersistSecurityInfo>
+  <DB2ConnectionStringBuilder_ConnectionTimeout>表示连接超时之前尝试等待的秒数的值</DB2ConnectionStringBuilder_ConnectionTimeout>
+  <DB2ConnectionStringBuilder_QueryTimeout>表示查询超时检查之间的时间间隔的值（以秒计）</DB2ConnectionStringBuilder_QueryTimeout>
+  <DB2ConnectionStringBuilder_IsolationLevel>
+连接的隔离级别：可能的值是：
+ReadCommitted
+ReadUncommitted
+RepeatableRead
+Serializable
+只有参与分布式事务的应用程序（例如 COM+ 应用程序）才支持此关键字。对于未参与分布式事务的应用程序来说，不支持此关键字，并且将抛出 InvalidArgument 异常。
+</DB2ConnectionStringBuilder_IsolationLevel>
+  <DB2ConnectionStringBuilder_CurrentSchema>用于连接中使用的所有非限定 SQL 对象的模式名称的值</DB2ConnectionStringBuilder_CurrentSchema>
+  <DB2ConnectionStringBuilder_CLISchema>此关键字指定一组 db2ocat 表，应该查询这组表以生成模式功能结果集。
+  字符串值设置是 db2ocat 表的模式名。
+  例如，CLISCHEMA=CAT001 使用 CAT001 作为 db2ocat 表的模式。
+  </DB2ConnectionStringBuilder_CLISchema>
+  <DB2ConnectionStringBuilder_SysSchema>此关键字指示应该使用一组影子目录表来代替实际系统目录表。
+  schemaName 值是影子目录表的模式。
+  </DB2ConnectionStringBuilder_SysSchema>
+  <DB2ConnectionStringBuilder_DBName>此值指定数据库名称以缩短应用程序查询 z/OS 或 OS/390 表信息时所花的时间。</DB2ConnectionStringBuilder_DBName>
+  <DB2ConnectionStringBuilder_TableType>
+TABLETYPE 关键字用来将 SQLTables 存储过程的结果集限制为一组表类型。
+语法：TABLETYPE="type1,type2,typeN"
+  </DB2ConnectionStringBuilder_TableType>
+  <DB2ConnectionStringBuilder_SchemaList>
+SCHEMALIST 关键字用来将模式功能的结果集限制为一组模式。
+语法：SCHEMALIST ="schema1,schema2,schema3,..."
+  </DB2ConnectionStringBuilder_SchemaList>
+  <DB2ConnectionStringBuilder_MapDate>
+MAPDATE 关键字指示应该将 DATE 类型报告为另一数据类型。
+语法：MAPDATE = 0 | 1 | 2   （缺省值为 0）
+0 - 不执行映射
+1 - 将 DATE 列报告为 SQL_CHAR (1)
+2 - 将 DATE 列报告为 SQL_WCHAR ( -8 )
+  </DB2ConnectionStringBuilder_MapDate>
+  <DB2ConnectionStringBuilder_MapTime>
+MAPTIME 关键字指示应该将 TIME 类型报告为另一数据类型。
+语法：MAPTIME = 0 | 1 | 2   （缺省值为 0）
+0 - 不执行映射
+1 - 将 TIME 列报告为 SQL_CHAR (1)
+2 - 将 TIME 列报告为 SQL_WCHAR ( -8 )
+  </DB2ConnectionStringBuilder_MapTime>
+  <DB2ConnectionStringBuilder_MapTimestamp>
+MAPTIMESTAMP 关键字指示应该将 TIMESTAMP 类型报告为另一数据类型。
+语法：MAPTIMESTAMP = 0 | 1 | 2   （缺省值为 0）
+0 - 不执行映射
+1 - 将 TIMESTAMP 列报告为 SQL_CHAR (1)
+2 - 将 TIMESTAMP 列报告为 SQL_WCHAR ( -8 )
+  </DB2ConnectionStringBuilder_MapTimestamp>
+  <DB2ConnectionStringBuilder_StaticLatch>
+打开静态锁存
+  </DB2ConnectionStringBuilder_StaticLatch>
+  <DB2ConnectionStringBuilder_Graphic>
+打开图形
+  </DB2ConnectionStringBuilder_Graphic>
+  <DB2ConnectionStringBuilder_ConvertToLong>
+打开转换为长整型
+  </DB2ConnectionStringBuilder_ConvertToLong>
+
+  <!--  SQLServer.SQLServerDataReader -->
+  <!--  NotSupportedException -->
+  <ADP_NonSeqByteAccess>在 dataIndex“%1”处尝试的 %3 无效。借助 CommandBehavior.SequentialAccess，只能读取 dataIndex 为“%2”或更大的数据。</ADP_NonSeqByteAccess>
+
+  <!--  DbCommand Property/Method Descriptions -->
+  <DbCommand_CommandText>要执行的命令文本。</DbCommand_CommandText>
+  <DbCommand_CommandTimeout>等待命令执行的时间。</DbCommand_CommandTimeout>
+  <DbCommand_CommandType>如何解释 CommandText。</DbCommand_CommandType>
+  <DbCommand_Connection>命令使用的连接。</DbCommand_Connection>
+  <DbCommand_Parameters>参数集合。</DbCommand_Parameters>
+  <DbCommand_Transaction>命令使用的事务。</DbCommand_Transaction>
+  <DbCommand_UpdatedRowSource>当由 DataAdapter.Update 使用时，如何将命令结果应用于当前 DataRow。</DbCommand_UpdatedRowSource>
+  <DB2Command_DisableCursorHold>表示在落实事务之后游标是否应该保留为打开的值。</DB2Command_DisableCursorHold>
+
+  <!--  -->
+  <!--  XXX Connection Property/Method Descriptions -->
+  <DB2Connection_ConnectionString>用来连接至“数据源”的信息。</DB2Connection_ConnectionString>
+  <DB2Connection_ConnectionTimeout>当前连接超时值，无法在 ConnectionString 中设置。</DB2Connection_ConnectionTimeout>
+  <DB2Connection_Database>当前数据源目录值，连接字符串中的“Database=X”。</DB2Connection_Database>
+  <DB2Connection_DataSource>当前数据源，连接字符串中的“Server=X”。</DB2Connection_DataSource>
+  <DB2Connection_Driver>当前 DB2 驱动程序。</DB2Connection_Driver>
+  <DB2Connection_ServerVersion>DB2 驱动程序访问的服务器的版本。</DB2Connection_ServerVersion>
+  <DB2Connection_ServerType>DB2 驱动程序访问的服务器的类型。</DB2Connection_ServerType>
+  <DB2Connection_ClientUser>发送至数据库的客户机用户标识。</DB2Connection_ClientUser>
+  <DB2Connection_ClientWorkStation>发送至数据库的客户机工作站名称。</DB2Connection_ClientWorkStation>
+  <DB2Connection_ClientAccountingInformation>发送至数据库的客户机记帐字符串。</DB2Connection_ClientAccountingInformation>
+  <DB2Connection_ClientApplicationInformation>发送至数据库的客户机应用程序名称。</DB2Connection_ClientApplicationInformation>
+  <DB2Connection_ClientProgramName>监视时，用来标识服务器应用程序的用户定义的名称的缺省客户机应用程序名称。</DB2Connection_ClientProgramName>
+  <DB2Connection_ClientProgramID>用户定义的用于使应用程序与连接相关联的字符串。</DB2Connection_ClientProgramID>
+  <DB2Connection_ConnectionBusyWithUpdateBatch>%1：正在进行更新批处理，连接处于繁忙状态</DB2Connection_ConnectionBusyWithUpdateBatch>
+  
+  <!--  DbDataAdapter Property/Method Descriptions -->
+  <DbDataAdapter_DeleteCommand>在 DataSet 中的已删除行的 Update 期间使用。</DbDataAdapter_DeleteCommand>
+  <DbDataAdapter_InsertCommand>在 DataSet 中的新行的 Update 期间使用。</DbDataAdapter_InsertCommand>
+  <DbDataAdapter_SelectCommand>在 Fill/FillSchema 期间使用。</DbDataAdapter_SelectCommand>
+  <DbDataAdapter_UpdateCommand>在 DataSet 中的已修改行的 Update 期间使用。</DbDataAdapter_UpdateCommand>
+
+  <!--  XXX Parameter Property/Method Descriptions -->
+  <DataParameter_DbType>参数类属类型。</DataParameter_DbType>
+  <DataParameter_Direction>输入、输出或双向参数。</DataParameter_Direction>
+  <DataParameter_IsNullable>指示参数是否可空的属性。</DataParameter_IsNullable>
+  <DataParameter_ParameterName>参数的名称。</DataParameter_ParameterName>
+  <DataParameter_SourceColumn>当由 DataAdapter.Update 使用时，用来在 ColumnMappings 中查找 DataSetColumn 名的源列名。这用来在参数与数据行之间复制值。</DataParameter_SourceColumn>
+  <DataParameter_SourceVersion>当由 DataAdapter.Update（仅 UpdateCommand）使用时，用来更新数据源的 DataRow 值的版本。</DataParameter_SourceVersion>
+  <DataParameter_Value>参数的值。</DataParameter_Value>
+  <DbDataParameter_Precision>用于十进制、数字和 varnumeric DBType。</DbDataParameter_Precision>
+  <DbDataParameter_Scale>用于十进制、数字和 varnumeric DBType。</DbDataParameter_Scale>
+  <DbDataParameter_Size>可变长度的数据类型（字符串和数组）的大小。</DbDataParameter_Size>
+  <DB2Parameter_ArrayLength>指示在所给定的输入数组中要考虑的元素数目。</DB2Parameter_ArrayLength>
+
+  <DB2DataAdapter_UpdateNotAllowedWhenChainingOn>当打开链接时，DataAdapter.Update 不受支持</DB2DataAdapter_UpdateNotAllowedWhenChainingOn>
+  <DB2_ObjectNotAccessibleFromCurrentRow>不可从当前行访问对象。</DB2_ObjectNotAccessibleFromCurrentRow>
+  <DB2_NoMoreData>没有更多数据返回。</DB2_NoMoreData>
+  <DB2_CanNotMixStreaming>当禁用了数据高速缓存时，不能同时使用流式和非流式数据访问方法。</DB2_CanNotMixStreaming>
+  <DB2ConnectionStringBuilder_Authentication>
+服务器认证方式
+  </DB2ConnectionStringBuilder_Authentication>
+  <DB2ConnectionStringBuilder_Instance>
+指定特定实例
+  </DB2ConnectionStringBuilder_Instance>
+  <DB2ConnectionStringBuilder_Interrupt>
+设置中断方式
+  </DB2ConnectionStringBuilder_Interrupt>
+  <DB2ConnectionStringBuilder_ClientEncAlg>
+启用 AES 加密
+  </DB2ConnectionStringBuilder_ClientEncAlg>
+  <DB2ConnectionStringBuilder_captureMode>
+指定是否捕获有关 SQL 语句的信息。
+  </DB2ConnectionStringBuilder_captureMode>
+  <DB2ConnectionStringBuilder_executionMode>
+指定是否以静态方式运行由 pureQueryXml 选项指定的捕获文件中的 SQL 语句。
+  </DB2ConnectionStringBuilder_executionMode>
+  <DB2ConnectionStringBuilder_pureQueryXML>
+如果 .NET 应用程序是在将 executionMode 设置为 STATIC 的情况下运行，
+那么指定在捕获 SQL 语句过程中创建的文件或者所读取文件的标准路径或相对路径。
+  </DB2ConnectionStringBuilder_pureQueryXML>
+  <DB2ConnectionStringBuilder_collection>
+程序包的限定符。
+  </DB2ConnectionStringBuilder_collection>
+  <DB2ConnectionStringBuilder_rootPkgName>
+指定要为 DB2 程序包指定的名称的主干。
+  </DB2ConnectionStringBuilder_rootPkgName>
+  <DB2ConnectionStringBuilder_traceFile>
+对 pureQuery 活动启用跟踪，并指定要将日志写入的物理文件。
+  </DB2ConnectionStringBuilder_traceFile>
+  <DB2ConnectionStringBuilder_allowDynamicSQL>
+指定是否允许应用程序以动态方式运行下列类型的 SQL 语句：pureQueryXML 文件中未捕获的 SQL 语句以及 pureQueryXML 文件中已捕获但尚未由 StaticBinder 实用程序绑定的 SQL 语句。
+</DB2ConnectionStringBuilder_allowDynamicSQL>
+  <DB2ConnectionStringBuilder_capturedOnly>
+指定是否仅运行 pureQueryXML 文件中的 SQL 语句。
+  </DB2ConnectionStringBuilder_capturedOnly>
+  <DB2ConnectionStringBuilder_enableDynamicSQLReplacement>
+指定在 StaticBinder 实用程序未绑定 pureQueryXML 文件中的备用 SQL 语句和相应的原始语句的情况下是否运行这些备用 SQL 语句。
+  </DB2ConnectionStringBuilder_enableDynamicSQLReplacement>
+  <DB2ConnectionStringBuilder_maxNonParmSQL>
+指定要捕获的未参数化的 SQL 语句的最大数目。仅当 captureMode 的值为 ON 时，此选项才适用。当 captureMode 为 OFF 时，pureQuery 会忽略此参数。
+  </DB2ConnectionStringBuilder_maxNonParmSQL>
+  <DB2ConnectionStringBuilder_sqlLiteralSubstitution>    
+指定是否执行字面值替换。启用了此选项时，pureQuery 运行时会尝试使用参数标记来替换 SQL 语句中的字面值并捕获这些语句的参数化版本。
+  </DB2ConnectionStringBuilder_sqlLiteralSubstitution>
+  <DB2ConnectionStringBuilder_traceLevel>
+指定写至日志文件的详细信息的级别。
+  </DB2ConnectionStringBuilder_traceLevel>
+  <DB2ConnectionStringBuilder_propertiesGroupId>
+指定在数据库中创建的存储库中的一个运行时组标识。
+  </DB2ConnectionStringBuilder_propertiesGroupId>
+  <DB2ConnectionStringBuilder_pureQueryXmlRepository>
+指定要与启用了 pureQuery 的应用程序配合使用的 PDQXML 文件的存储库位置。
+  </DB2ConnectionStringBuilder_pureQueryXmlRepository>
+  <DB2ConnectionStringBuilder_repositoryRequired>
+指定在检索或写入 pureQuery 数据期间发生错误的情况下，pureQuery 客户机的优化行为。
+  </DB2ConnectionStringBuilder_repositoryRequired>
+  <DB2Connection_SystemNaming>对支持系统命名方式和 SQL 命名方式的 DB2 for i 服务器使用时，设置系统命名方式或 SQL 命名方式。</DB2Connection_SystemNaming>
+  <DB2Connection_BatchCommandTimeout>获取或设置链接的命令超时。</DB2Connection_BatchCommandTimeout>  
+  <DB2Connection_GetSchema_MissingDescribeInfo>GetSchema 无法确定结果集的完整描述信息</DB2Connection_GetSchema_MissingDescribeInfo>  
+  <Auth_rule_names_cant_contain_char>授权规则名称不能包含“%1”字符。</Auth_rule_names_cant_contain_char>
+  <Connection_name_not_specified>缺少属性“connectionStringName”或该属性为空。</Connection_name_not_specified>
+  <Connection_string_not_found>在应用程序配置中找不到连接名称“%1”或连接字符串为空。</Connection_string_not_found>
+  <Membership_AccountLockOut>用户帐户已被锁定。</Membership_AccountLockOut>
+  <Membership_Custom_Password_Validation_Failure>定制密码验证失败。</Membership_Custom_Password_Validation_Failure>
+  <Membership_InvalidAnswer>提供的密码答案无效。</Membership_InvalidAnswer>
+  <Membership_InvalidEmail>提供的电子邮件无效。</Membership_InvalidEmail>
+  <Membership_InvalidPassword>提供的密码无效。密码必须符合为缺省提供程序配置的密码长度要求。</Membership_InvalidPassword>
+  <Membership_InvalidProviderUserKey>提供的提供程序用户密钥无效。它必须属于 System.Guid 类型。</Membership_InvalidProviderUserKey>
+  <Membership_InvalidQuestion>提供的密码问题无效。注意，当前提供程序配置需要有效密码问题和答案。因此，还必须使用接受问题和答案参数的 CreateUser 过载。</Membership_InvalidQuestion>
+  <Membership_more_than_one_user_with_email>多个用户具有该指定电子邮件地址。</Membership_more_than_one_user_with_email>
+  <Membership_password_too_long>密码太长：加密后密码长度不能超过 128 个字符。</Membership_password_too_long>
+  <Membership_PasswordRetrieval_not_supported>此成员资格提供程序未配置为支持密码检索。</Membership_PasswordRetrieval_not_supported>
+  <Membership_PasswordReset_not_supported>此成员资格提供程序未配置为支持密码重置。</Membership_PasswordReset_not_supported>
+  <Membership_UserNotFound>找不到该用户。</Membership_UserNotFound>
+  <Membership_WrongAnswer>提供的密码答案不正确。</Membership_WrongAnswer>
+  <Membership_WrongPassword>提供的密码不正确。</Membership_WrongPassword>
+  <PageIndex_bad>pageIndex 必须大于或等于零。</PageIndex_bad>
+  <PageIndex_PageSize_bad>pageIndex 和 pageSize 的组合不能超过 System.Int32 的最大值。</PageIndex_PageSize_bad>
+  <PageSize_bad>pageSize 必须大于零。</PageSize_bad>
+  <Parameter_array_empty>数组参数“%1”不应为空。</Parameter_array_empty>
+  <Parameter_can_not_be_empty>参数“%1”不能为空。</Parameter_can_not_be_empty>
+  <Parameter_can_not_contain_comma>参数“%1”不能包含逗号。</Parameter_can_not_contain_comma>
+  <Parameter_duplicate_array_element>数组“%1”不应包含重复的值。</Parameter_duplicate_array_element>
+  <Parameter_too_long>参数“%1”太长：参数长度不能超过 %2 个字符。</Parameter_too_long>
+  <Password_does_not_match_regular_expression>参数“%1”与配置文件中指定的正则表达式不匹配。</Password_does_not_match_regular_expression>
+  <Password_need_more_non_alpha_numeric_chars>“%1”中的非字母数字字符数应该大于或等于“%2”。</Password_need_more_non_alpha_numeric_chars>
+  <Password_too_short>参数“%1”的长度应该大于或等于“%2”。</Password_too_short>
+  <PersonalizationProvider_ApplicationNameExceedMaxLength>ApplicationName 不能超过字符长度 %1。</PersonalizationProvider_ApplicationNameExceedMaxLength>
+  <PersonalizationProvider_BadConnection>未注册指定的 connectionStringName（即“%1”）。</PersonalizationProvider_BadConnection>
+  <PersonalizationProvider_CantAccess>不能由使用指定注册的 %1 个性化提供程序进行连接。</PersonalizationProvider_CantAccess>
+  <PersonalizationProvider_NoConnection>注册个性化提供程序时，必须指定 connectionStringName 属性。</PersonalizationProvider_NoConnection>
+  <PersonalizationProvider_UnknownProp>在“%2”个性化提供程序注册中指定的属性“%2”无效。</PersonalizationProvider_UnknownProp>
+  <ProfileDB2Provider_description>DB2 概要文件提供程序。</ProfileDB2Provider_description>
+  <Profile_empty>概要文件集合为空</Profile_empty>
+  <Property_Had_Malformed_Url>“%1”属性的 URL 的格式不正确：%2</Property_Had_Malformed_Url>
+  <Provider_application_name_too_long>应用程序名称太长。</Provider_application_name_too_long>
+  <Provider_bad_password_format>指定的密码格式无效。</Provider_bad_password_format>
+  <Provider_can_not_retrieve_hashed_password>配置的设置无效：不能检索散列密码。将密码格式设置为另一类型，或将 supportsPasswordRetrieval 设置为 false。</Provider_can_not_retrieve_hashed_password>
+  <Provider_Error>提供程序遇到了未知错误。</Provider_Error>
+  <Provider_Not_Found>找不到提供程序“%1”。</Provider_Not_Found>
+  <Provider_role_already_exists>角色“%1”已存在。</Provider_role_already_exists>
+  <Provider_role_not_found>找不到角色“%1”。</Provider_role_not_found>
+  <Provider_Schema_Version_Not_Match>“%1”需要与模式版本“%2”兼容的数据库模式。但是，当前数据库模式与此版本不兼容。可能需要使用框架安装目录中提供的 aspnet_regsql.exe 来安装兼容模式，或将提供程序升级为更高版本。</Provider_Schema_Version_Not_Match>
+  <Provider_this_user_already_in_role>用户“%1”已属于角色“%2”。</Provider_this_user_already_in_role>
+  <Provider_this_user_not_found>找不到用户“%1”。</Provider_this_user_not_found>
+  <Provider_unknown_failure>未知提供程序故障。</Provider_unknown_failure>
+  <Provider_unrecognized_attribute>不识别的属性“%1”</Provider_unrecognized_attribute>
+  <Provider_user_not_found>在数据库中找不到该用户。</Provider_user_not_found>
+  <Role_is_not_empty>不能删除此角色，因为有许多用户属于此角色。</Role_is_not_empty>
+  <RoleDB2Provider_description>DB2 角色提供程序。</RoleDB2Provider_description>
+  <SiteMapProvider_description>DB2 站点图提供程序</SiteMapProvider_description>
+  <SiteMapProvider_cannot_remove_root_node>不能从提供程序中除去根节点，请改为使用 RemoveProvider(string providerName)。</SiteMapProvider_cannot_remove_root_node>
+  <DB2Error_Connection_String>尝试初始化 IBM.Data.DB2.DB2Connection 对象时发生了错误。为连接字符串提供的值可能不正确，或者它可能包含无效语法。</DB2Error_Connection_String>
+  <DB2Express_file_not_found_in_connection_string>在连接字符串中找不到 SQL Express 文件名。</DB2Express_file_not_found_in_connection_string>
+  <DB2PersonalizationProvider_Description>将数据存储在 IBM 数据服务器数据库中的个性化提供程序。</DB2PersonalizationProvider_Description>
+  <Value_must_be_boolean>对于属性“%1”，该值必须为布尔值（true 或 false）。</Value_must_be_boolean>
+  <Value_must_be_non_negative_integer>对于属性“%1”，该值必须为 32 位非负整数。</Value_must_be_non_negative_integer>
+  <Value_must_be_positive_integer>对于属性“%1”，该值必须为 32 位正整数。</Value_must_be_positive_integer>
+  <Value_too_big>值“%1”不能大于“%2”。</Value_too_big>
+  <PersonalizationProviderHelper_TrimmedEmptyString>输入参数“%1”不能是空字符串。</PersonalizationProviderHelper_TrimmedEmptyString>
+  <StringUtil_Trimmed_String_Exceed_Maximum_Length>输入参数“%2”的调整字符串值“%1”不能超过字符串长度 %3。</StringUtil_Trimmed_String_Exceed_Maximum_Length>
+  <MembershipDB2Provider_description>DB2 成员资格提供程序。</MembershipDB2Provider_description>
+  <MinRequiredNonalphanumericChars_can_not_be_more_than_MinRequiredPasswordLen>minRequiredNonalphanumericCharacters 不能大于 minRequiredPasswordLength。</MinRequiredNonalphanumericChars_can_not_be_more_than_MinRequiredPasswordLen>
+  <PersonalizationProviderHelper_Empty_Collection>输入参数“%1”不能是空集合。</PersonalizationProviderHelper_Empty_Collection>
+  <PersonalizationProviderHelper_Null_Or_Empty_String_Entries>输入参数“%1”不能包含 null 或空字符串条目。</PersonalizationProviderHelper_Null_Or_Empty_String_Entries>
+  <PersonalizationProviderHelper_CannotHaveCommaInString>输入参数“%1”的字符串值“%2”中不能有逗号。</PersonalizationProviderHelper_CannotHaveCommaInString>
+  <PersonalizationProviderHelper_Trimmed_Entry_Value_Exceed_Maximum_Length>输入参数“%2”的调整条目值“%1”不能超过字符串长度 %3。</PersonalizationProviderHelper_Trimmed_Entry_Value_Exceed_Maximum_Length>
+  <PersonalizationProviderHelper_More_Than_One_Path>“%2”包含若干条目时，输入参数“%1”只能包含一个条目。</PersonalizationProviderHelper_More_Than_One_Path>
+  <PersonalizationProviderHelper_Negative_Integer>输入参数不能为负。</PersonalizationProviderHelper_Negative_Integer>
+  <PersonalizationAdmin_UnexpectedPersonalizationProviderReturnValue>调用提供程序的“%2”方法时，返回了负值“%1”。该方法应返回非负整数。</PersonalizationAdmin_UnexpectedPersonalizationProviderReturnValue>
+  <PersonaliizationProviderHelper_Null_Entries>输入参数“%1”不能包含空条目。</PersonaliizationProviderHelper_Null_Entries>
+  <PersonalizationProviderHelper_Invalid_Less_Than_Parameter>输入参数“%1”必须大于或等于 %2。</PersonalizationProviderHelper_Invalid_Less_Than_Parameter>
+  <PersonalizationProviderHelper_No_Usernames_Set_In_Shared_Scope>“%2”设置为“%3”时，不能提供输入参数“%1”。</PersonalizationProviderHelper_No_Usernames_Set_In_Shared_Scope>
+  <Provider_this_user_already_not_in_role>用户“%1”已不属于角色“%2”。</Provider_this_user_already_not_in_role>
+  <Not_configured_to_support_password_resets>此提供程序未配置为允许密码重置。为了能够重置密码，请在配置文件中将 enablePasswordReset 设置为“true”。</Not_configured_to_support_password_resets>
+  <Parameter_collection_empty>集合参数“%1”不应为空。</Parameter_collection_empty>
+  <Provider_can_not_decode_hashed_password>不能对散列密码进行解码。</Provider_can_not_decode_hashed_password>
+  <DbFileName_can_not_contain_invalid_chars>数据库文件名不能包含下列 3 个字符：[（左方括号）、]（右方括号）和 '（单引号）。</DbFileName_can_not_contain_invalid_chars>
+  <Error_parsing_sql_partition_resolver_string>解析 IPartitionResolver 类型为”%1“的实例返回的 SQL 连接字符串 %2 时出错</Error_parsing_sql_partition_resolver_string>
+  <Error_parsing_session_sqlConnectionString>解析 sessionState sqlConnectionString 属性 %1 时出错</Error_parsing_session_sqlConnectionString>
+  <No_database_allowed_in_sqlConnectionString>sqlConnectionString 属性或它引用的连接字符串不能包含连接选项“Database”、“Initial Catalog”或“AttachDbFileName”。为了允许包含这些选项，allowCustomDB2Database 属性必须设置为 true，并且需要对应用程序授予无限制 DB2ClientPermission 这一许可权。如果应用程序没有此许可权，请咨询管理员。</No_database_allowed_in_sqlConnectionString>
+  <No_database_allowed_in_sql_partition_resolver_string>IPartitionResolver 类型为“%1”的实例返回的 SQL 连接字符串（server='%2', database='%3'）不能包含连接选项“Database”、“Initial Catalog”或“AttachDbFileName”。为了允许包含这些选项，allowCustomDB2Database 属性必须设置为 true，并且需要对应用程序授予无限制 DB2ClientPermission 这一许可权。如果应用程序没有此许可权，请咨询管理员。</No_database_allowed_in_sql_partition_resolver_string>
+  <Cant_connect_sql_session_database>无法连接至 IBM 数据服务器会话数据库。</Cant_connect_sql_session_database>
+  <Cant_connect_sql_session_database_partition_resolver>无法连接至 IBM 数据服务器会话数据库。IPartitionResolver 类型为“%1”的实例返回了连接字符串（server='%2', database='%3'）。</Cant_connect_sql_session_database_partition_resolver>
+  <Login_failed_sql_session_database>未能登录用户“%1”的 IBM 数据服务器的会话状态。</Login_failed_sql_session_database>
+  <Invalid_session_state>会话状态信息无效或可能已毁坏。</Invalid_session_state>
+  <Missing_required_attribute>必须对“%2”标记指定“%1”属性。</Missing_required_attribute>
+  <Invalid_boolean_attribute>“%1”属性必须设置为“true”或“false”。</Invalid_boolean_attribute>
+  <Empty_attribute>“%1”属性不能为空字符串。</Empty_attribute>
+  <Config_base_unrecognized_attribute>不识别的属性“%1”。注意属性名称是区分大小写的。</Config_base_unrecognized_attribute>
+  <Config_base_no_child_nodes>不允许使用子节点。</Config_base_no_child_nodes>
+  <Unexpected_provider_attribute>“%2”提供程序的配置中意外地出现了属性“%1”。</Unexpected_provider_attribute>
+  <Only_one_connection_string_allowed>DB2WebEventProvider：指定 connectionString 或 connectionStringName，但不能同时指定两者。</Only_one_connection_string_allowed>
+  <Cannot_use_integrated_security>DB2WebEventProvider：connectionString 只能包含使用 DB2 服务器认证的连接字符串。可信连接安全性不受支持。</Cannot_use_integrated_security>
+  <Must_specify_connection_string_or_name>DB2WebEventProvider：必须指定 connectionString 或 connectionStringName。</Must_specify_connection_string_or_name>
+  <Invalid_max_event_details_length>对“%1”提供程序的 maxEventDetailsLength 属性指定的值“%2”无效。它应介于 0 与 1073741823 之间。</Invalid_max_event_details_length>
+  <DB2_webevent_provider_events_dropped>对 %2 发出上一通知以来废弃了 %1 个事件，因为已超出事件缓冲区容量。</DB2_webevent_provider_events_dropped>
+  <Invalid_provider_positive_attributes>属性“%1”在“%2”提供程序的配置中无效。该属性必须设置为非负整数。</Invalid_provider_positive_attributes>
+  <ApplicationId_not_found>未能获取 ApplicationID</ApplicationId_not_found>
+  <SessionStateStore_Description>DB2 会话状态提供程序</SessionStateStore_Description>
+  <SiteMapProvider_MissingNodeID>缺少节点标识</SiteMapProvider_MissingNodeID>
+  <SiteMapProvider_Duplicate_NodeID>节点标识重复</SiteMapProvider_Duplicate_NodeID>
+  <SiteMapProvider_MissingParentID>缺少父标识</SiteMapProvider_MissingParentID>
+  <SiteMapParovider_Invalid_ParentID>父标识无效</SiteMapParovider_Invalid_ParentID>
+  <SiteMapProvider_Invalid_ConnString>缺少 connectionStringName 或 connectionStringName 为空</SiteMapProvider_Invalid_ConnString>
+  <SiteMapProvider_Missing_ConnString>缺少连接字符串</SiteMapProvider_Missing_ConnString>
+  <SiteMapProvider_Empty_ConnString>连接字符串为空</SiteMapProvider_Empty_ConnString>
+  <DB2ConnectionStringBuilder_Security>要启用 SSL，请将此值设置为 SSL</DB2ConnectionStringBuilder_Security>
+  <DB2ConnectionStringBuilder_SSLClientKeystoredb>将 SSLClientKeystoredb 设置为标准密钥数据库文件文件名。</DB2ConnectionStringBuilder_SSLClientKeystoredb>
+  <DB2ConnectionStringBuilder_SSLClientKeystash>将 SSLClientKeystash 设置为标准隐藏文件名。</DB2ConnectionStringBuilder_SSLClientKeystash>
+  <DB2ConnectionStringBuilder_SSLClientLabel>此值指示在密钥库数据库内部唯一地标识证书的 SSL 标签。</DB2ConnectionStringBuilder_SSLClientLabel>
+  <DB2ConnectionStringBuilder_SSLClientKeystoreDBPassword>此值指示密钥库数据库密码。</DB2ConnectionStringBuilder_SSLClientKeystoreDBPassword>  
+  <DB2ConnectionStringBuilder_TrustedContextSystemUserID>表示可信上下文的 SYSTEM AUTHID 的值</DB2ConnectionStringBuilder_TrustedContextSystemUserID>
+  <DB2ConnectionStringBuilder_TrustedContextSystemPassword>表示可信上下文的 SYSTEM AUTHID 的密码的值</DB2ConnectionStringBuilder_TrustedContextSystemPassword>
+  <DB2ConnectionStringBuilder_ConcurrentAccessResolution>表示当访问正在插入、更新或删除的行时数据库管理器将使用的方式的值</DB2ConnectionStringBuilder_ConcurrentAccessResolution>
+  <DB2ConnectionStringBuilder_HostVarParameters>表示是否在 SQL 语句中处理主变量样式参数的值。</DB2ConnectionStringBuilder_HostVarParameters>
+  <DB2ConnectionStringBuilder_NamedParameters>表示是否在 SQL 语句中处理指定参数的值。</DB2ConnectionStringBuilder_NamedParameters>
+  <DB2ConnectionStringBuilder_EnsureDefaultDFRM>表示是否确保将 DecimalFloatRoundingMode 设置为 HalfEven 的值。</DB2ConnectionStringBuilder_EnsureDefaultDFRM>
+  <DB2ConnectionStringBuilder_DelimIdent>表示带双引号的字符串是不是定界数据库标识的值。</DB2ConnectionStringBuilder_DelimIdent>
+  <DB2ConnectionStringBuilder_UseIsnullSP>表示是否使用 IsNull 存储过程的值。</DB2ConnectionStringBuilder_UseIsnullSP>
+  <DB2ConnectionStringBuilder_DisableCursorHold>表示在落实事务之后游标是否应该保留为打开的值。</DB2ConnectionStringBuilder_DisableCursorHold>
+  <DB2ConnectionStringBuilder_RetrieveXmlInBinaryFormat>表示是否应该以二进制格式返回 XML 数据的值。</DB2ConnectionStringBuilder_RetrieveXmlInBinaryFormat>
+  <DB2ConnectionStringBuilder_StatementConcentrator>在服务器上对 StatementConcentrator 设置进行配置的值。</DB2ConnectionStringBuilder_StatementConcentrator>
+  <DB2ConnectionStringBuilder_SkipSynonymProcessing>表示在将连接字符串添加至许可权集合之前是否必须处理该连接字符串以处理同义词的值。</DB2ConnectionStringBuilder_SkipSynonymProcessing>
+  <DB2Connection_ExtendedIndicatorsUnsupported>此数据库服务器不支持扩展指示符。</DB2Connection_ExtendedIndicatorsUnsupported>
+  <DB2Parameter_ExtendedIndicatorsNotEnabled>尚未对此命令启用扩展指示符。</DB2Parameter_ExtendedIndicatorsNotEnabled>
+  <DB2Parameter_Default_Unassigned_Conflict>无法同时启用 IsDefault 和 IsUnassigned。</DB2Parameter_Default_Unassigned_Conflict>
+  <DB2ConnectionStringBuilder_DB2Explain>表示应当由服务器如何生成 Explain 信息的值。</DB2ConnectionStringBuilder_DB2Explain>
+  <DB2ConnectionStringBuilder_SessionTimeZone>用于设置 zOS 服务器上的 SESSION TIMEZONE 专用寄存器的值。</DB2ConnectionStringBuilder_SessionTimeZone>
+  <ExtendedIndicators_WrongValue>无法显式地禁用扩展的指示符。</ExtendedIndicators_WrongValue>
+  <DB2Command_ExtendedIndicators_Prepared>无法在已准备的命令上启用扩展的指示符。</DB2Command_ExtendedIndicators_Prepared>
+  <DB2Connection_ExtendedIndicators_Prepared>与此连接相关联的一个或多个命令处于已准备的状态。</DB2Connection_ExtendedIndicators_Prepared>
+  <DB2Parameter_CursorOutparam_ExecNonQuery>如果已使用 ExecuteNonQuery 执行查询，那么只能从输出参数访问游标</DB2Parameter_CursorOutparam_ExecNonQuery>
+  <DB2ConnectionStringBuilder_FitHighPrecisionType>返回 .NET 系统类型时将处理用于指示数据类型的精确程度的值。</DB2ConnectionStringBuilder_FitHighPrecisionType>
+  <DB2ConnectionStringBuilder_TargetPrincipal>用于表示目标服务器的标准 Kerberos 主体名称的值。</DB2ConnectionStringBuilder_TargetPrincipal>
+  <DB2Command_ArrayBindCount>用于指示要针对每个参数绑定的数组中的期望元素数的值。</DB2Command_ArrayBindCount>
+  <DB2Command_AtomicArrayInput>用于指示设置 ArrayBindCount 属性后底层处理是应该以原子方式还是非原子方式进行的值。</DB2Command_AtomicArrayInput>
+  <DB2Parameter_ArrayLength_Error>DB2Command.ArrayBindCount 设置不支持数组数据类型。</DB2Parameter_ArrayLength_Error>
+  <DB2Parameter_ArrayLength_ArrayBindCount_Error>如果设置了 DB2Command.ArrayBindCount，那么不得设置 DB2Parameter.ArraySize 属性。</DB2Parameter_ArrayLength_ArrayBindCount_Error>
+  <BlockForNRows_WrongValue>BlockForNRows 必须大于或等于零。</BlockForNRows_WrongValue>
+  <DB2ConnectionStringBuilder_ConnectNodeNumber>此值指示要与其建立连接的数据库分区号。</DB2ConnectionStringBuilder_ConnectNodeNumber>
+  <DB2ConnectionStringBuilder_CurrentPackageSet>此值指示用于选择要用于后续 SQL 语句的包的集合标识。</DB2ConnectionStringBuilder_CurrentPackageSet>
+  <DB2ConnectionStringBuilder_CurrentSQLID>此值指示要用于连接的 SQLID。</DB2ConnectionStringBuilder_CurrentSQLID>
+  <DB2ConnectionStringBuilder_NewPWD>用户的新密码的值。</DB2ConnectionStringBuilder_NewPWD>   
+  <DB2ConnectionStringBuilder_RetryParameterBindingOnError>此值指示提供者是否将重新执行因为参数类型不匹配而导致执行失败的语句。</DB2ConnectionStringBuilder_RetryParameterBindingOnError>   
+  <DB2ConnectionStringBuilder_ClientCorrelationToken>此值帮助使应用程序服务器和应用程序请求器之间的处理相关。</DB2ConnectionStringBuilder_ClientCorrelationToken>   
+  <DB2Connection_ClientCorrelationToken>此值帮助使应用程序服务器和应用程序请求器之间的处理相关。</DB2Connection_ClientCorrelationToken>
+  <DB2ConnectionStringBuilder_CurrentFunctionPath>此属性指示模式，这些模式用于解析动态 SQL 语句中的函数引用和数据类型引用。</DB2ConnectionStringBuilder_CurrentFunctionPath>
+  <DB2ConnectionStringBuilder_EnableEFCaseSensitivity>设置实体数据模型属性，以指示此实体数据模型对象是否区分大小写。</DB2ConnectionStringBuilder_EnableEFCaseSensitivity>
+  <DB2ConnectionStringBuilder_SSLServerCertificate>此值指示服务器的自签名证书或服务器的 CA 证书的标准文件名。</DB2ConnectionStringBuilder_SSLServerCertificate>
+  <DB2ConnectionStringBuilder_Db2DumpSQLCodes>指定当所指定的 SQL 代码遇到与 zOS 服务器的连接时是否收集诊断日志。</DB2ConnectionStringBuilder_Db2DumpSQLCodes>
+  <DB2ConnectionStringBuilder_Db2DumpSQLCodesInterval>指定不捕获 SQLCODE 的日志信息的时间段（以秒计）。</DB2ConnectionStringBuilder_Db2DumpSQLCodesInterval>
+  
+</NLS_STRINGS>
