@@ -8,3 +8,23 @@ D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\obj\Debu
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.dll
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.xml
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\FillOracleConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.exe.config
+D:\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.exe
+D:\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.pdb
+D:\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.exe
+D:\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.pdb
+D:\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.dll
+D:\SerialPort\FillOracleConsole\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.xml
+D:\SerialPort\FillOracleConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.csprojResolveAssemblyReference.cache
+C:\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.exe.config
+C:\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.exe
+C:\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.pdb
+C:\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.exe
+C:\SerialPort\FillOracleConsole\bin\Debug\FillOracleConsole.pdb
+C:\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.dll
+C:\SerialPort\FillOracleConsole\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\SerialPort\FillOracleConsole\bin\Debug\EntityFramework.xml
+C:\SerialPort\FillOracleConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\SerialPort\FillOracleConsole\obj\Debug\FillOracleConsole.csprojResolveAssemblyReference.cache

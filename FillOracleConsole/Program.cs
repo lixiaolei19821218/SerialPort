@@ -24,14 +24,26 @@ namespace FillOracleConsole
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
-                string sql = string.Format("insert into qrcodetable(orderid, qrcode, addtime, sequense) values('{0}', '{1}', '{2}', '{3}')", "LXL", "lay", qrcode.DateTime.Value.ToString("dd-M月-yyyy hh:mm:ss"), qrcode.Sequence);
+                string sql = string.Format("insert into qrcodetable(orderid, qrcode, addtime, sequense) values('{0}', '{1}', '{2}', '{3}')", qrcode.OrderNumber, qrcode.Code, qrcode.DateTime.Value.ToString("dd-M月-yyyy hh:mm:ss"), qrcode.Sequence);
                 cmd.CommandText = sql;
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
             }
 
-            StreamReader sr = new StreamReader("QrCode20160811093813.Order");
+            string orderFolder = @"c:\order";
+            if (!Directory.Exists(orderFolder))
+            {
+                Directory.CreateDirectory(orderFolder);
+            }
+            string dayFolder = Path.Combine(orderFolder, DateTime.Today.ToString("yyyyMMdd"));
+            if (!Directory.Exists(dayFolder))
+            {
+                Directory.CreateDirectory(dayFolder);
+            }
+            string[] orderFiles = Directory.GetFiles(dayFolder, "*.Order", SearchOption.TopDirectoryOnly);
+            StreamReader sr = new StreamReader(orderFiles[0]);
+
             List<OrderLine> orderLines = new List<OrderLine>();
             string line;
             while ((line = sr.ReadLine()) != null)

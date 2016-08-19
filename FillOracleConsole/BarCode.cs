@@ -19,5 +19,6 @@ namespace FillOracleConsole
         public string OrderNumber { get; set; }
         public Nullable<System.DateTime> DateTime { get; set; }
         public Nullable<int> Sequence { get; set; }
+        public string RevisedCode { get; set; }
     }
 }

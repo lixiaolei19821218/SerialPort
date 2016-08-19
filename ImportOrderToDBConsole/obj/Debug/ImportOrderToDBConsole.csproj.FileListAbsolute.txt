@@ -7,3 +7,12 @@ D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\ImportOrderToDBConsole\bin
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\ImportOrderToDBConsole\obj\Debug\ImportOrderToDBConsole.csprojResolveAssemblyReference.cache
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\ImportOrderToDBConsole\obj\Debug\ImportOrderToDBConsole.exe
 D:\VS_Projects\Visual Studio 2012\Projects\SerialPort\ImportOrderToDBConsole\obj\Debug\ImportOrderToDBConsole.pdb
+D:\SerialPort\ImportOrderToDBConsole\bin\Debug\ImportOrderToDBConsole.exe.config
+D:\SerialPort\ImportOrderToDBConsole\obj\Debug\ImportOrderToDBConsole.exe
+D:\SerialPort\ImportOrderToDBConsole\obj\Debug\ImportOrderToDBConsole.pdb
+D:\SerialPort\ImportOrderToDBConsole\bin\Debug\ImportOrderToDBConsole.exe
+D:\SerialPort\ImportOrderToDBConsole\bin\Debug\ImportOrderToDBConsole.pdb
+D:\SerialPort\ImportOrderToDBConsole\bin\Debug\EntityFramework.dll
+D:\SerialPort\ImportOrderToDBConsole\bin\Debug\EntityFramework.xml
+D:\SerialPort\ImportOrderToDBConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\SerialPort\ImportOrderToDBConsole\obj\Debug\ImportOrderToDBConsole.csprojResolveAssemblyReference.cache

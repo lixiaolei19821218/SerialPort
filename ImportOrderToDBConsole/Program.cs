@@ -13,7 +13,19 @@ namespace ImportOrderToDBConsole
         {
             ScanCodeEntities repo = new ScanCodeEntities();
 
-            StreamReader sr = new StreamReader("QrCode20160812090944.Order");
+            string orderFolder = @"c:\order";
+            if (!Directory.Exists(orderFolder))
+            {
+                Directory.CreateDirectory(orderFolder);
+            }
+            string dayFolder = Path.Combine(orderFolder, DateTime.Today.ToString("yyyyMMdd"));
+            if (!Directory.Exists(dayFolder))
+            {
+                Directory.CreateDirectory(dayFolder);
+            }
+            string[] orderFiles = Directory.GetFiles(dayFolder, "*.Order", SearchOption.TopDirectoryOnly);
+            StreamReader sr = new StreamReader(orderFiles[0]);
+
             List<OrderLine> orderLines = new List<OrderLine>();
             string line;
             while ((line = sr.ReadLine()) != null)

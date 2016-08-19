@@ -449,7 +449,7 @@ namespace Monitor.ViewModel
                 */
                 SerialPort port = sender as SerialPort;
                 string code = port.ReadTo(",");
-                App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddQRCodeToCurrent), code);
+                App.Current.Dispatcher.BeginInvoke(new AddCodeToCollectionEvent(AddQRCodeToCurrent), code);
                 lock (syncObj)
                 {                    
                     QRCode qrcode;
@@ -507,7 +507,7 @@ namespace Monitor.ViewModel
                 result = ReceiveFixData(clientSocket, length);
                 //int receiveLength = clientSocket.Receive(result, length, 0);
                 string code = Encoding.ASCII.GetString(result, 0, length).Trim();
-                App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
+                App.Current.Dispatcher.BeginInvoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
                 BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder == null ? string.Empty : barcodeCurrentOrder.Number, DateTime = DateTime.Now, Sequence = barSequence++, RevisedCode = ngBarcode };
                 barCodes.Enqueue(barcode);
                 BarcodeReceivedCount++;
@@ -523,9 +523,10 @@ namespace Monitor.ViewModel
             {
                 int receiveLength = clientSocket.Receive(result, length, 0);
                 string code = Encoding.ASCII.GetString(result, 0, receiveLength).Trim();
+                App.Current.Dispatcher.BeginInvoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);
                 BarCode barcode = new BarCode() { Code = code, OrderNumber = barcodeCurrentOrder.Number, DateTime = DateTime.Now, RevisedCode = ngBarcode, Sequence = barSequence++ };
                 barCodes.Enqueue(barcode);
-                App.Current.Dispatcher.Invoke(new AddCodeToCollectionEvent(AddBarCodeToCurrent), code);             
+                BarcodeReceivedCount++;          
             }
         }
 
